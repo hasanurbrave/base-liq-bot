@@ -55,11 +55,14 @@ contract FlashLoanTest is Script {
     address constant USDC_WHALE = 0x3304E22ddaa22bCdC5F618ee876fEA379A20b416; // Arbitrary USDC holder on Base
 
     function run() external {
-        vm.deal(address(this), 100 ether); // Deal ETH to the script address to deploy contracts
+        address deployer = address(0x123);
+        vm.deal(deployer, 100 ether); 
+        vm.startPrank(deployer);
 
         // 1. Deploy Receiver
         FlashLoanReceiver receiver = new FlashLoanReceiver(AAVE_ADDRESSES_PROVIDER);
         console.log("Receiver deployed at:", address(receiver));
+        vm.stopPrank();
 
         // 2. Fund the receiver with USDC to pay the flash loan fee
         uint256 borrowAmount = 1000 * 1e6; // 1000 USDC
@@ -73,6 +76,7 @@ contract FlashLoanTest is Script {
         console.log("Receiver USDC balance:", IERC20(USDC).balanceOf(address(receiver)));
 
         // 3. Trigger Flash Loan
+        vm.prank(deployer);
         receiver.requestFlashLoan(USDC, borrowAmount);
         
         console.log("Flash loan executed successfully!");
