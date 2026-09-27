@@ -30,10 +30,7 @@ contract FlashLoanReceiver is IFlashLoanSimpleReceiver {
         console.log("Asset borrowed:", asset);
         console.log("Amount borrowed:", amount);
         console.log("Premium to pay:", premium);
-
-        // Do nothing with the borrowed amount (bare flash loan)
         
-        // Approve the Pool to pull the borrowed amount + premium
         uint256 amountToRepay = amount + premium;
         IERC20(asset).approve(address(POOL), amountToRepay);
         
@@ -55,33 +52,28 @@ contract FlashLoanReceiver is IFlashLoanSimpleReceiver {
 contract FlashLoanTest is Script {
     address constant AAVE_ADDRESSES_PROVIDER = 0xe20fCBdBfFC4Dd138cE8b2E6FBb6CB49777ad64D; // Base Aave V3
     address constant USDC = 0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913; // Base USDC
-    address constant USDC_WHALE = 0x3304E22DDaa22bCdC5f618EE876feA379a20B416; // Arbitrary USDC holder on Base
+    address constant USDC_WHALE = 0x3304E22ddaa22bCdC5F618ee876fEA379A20b416; // Arbitrary USDC holder on Base
 
     function run() external {
-        uint256 deployerPrivateKey = vm.envUint("PRIVATE_KEY");
-        vm.startBroadcast(deployerPrivateKey);
+        vm.deal(address(this), 100 ether); // Deal ETH to the script address to deploy contracts
 
         // 1. Deploy Receiver
         FlashLoanReceiver receiver = new FlashLoanReceiver(AAVE_ADDRESSES_PROVIDER);
         console.log("Receiver deployed at:", address(receiver));
 
-        vm.stopBroadcast();
-
         // 2. Fund the receiver with USDC to pay the flash loan fee
-        // We prank a whale to send some USDC to the receiver
         uint256 borrowAmount = 1000 * 1e6; // 1000 USDC
         uint256 expectedPremium = (borrowAmount * 5) / 10000; // 0.05% fee = 0.5 USDC
         
-        vm.prank(USDC_WHALE);
+        vm.startPrank(USDC_WHALE);
         IERC20(USDC).transfer(address(receiver), expectedPremium + 1e6); // Send fee + extra
+        vm.stopPrank();
         
         console.log("Receiver funded with USDC for premium");
         console.log("Receiver USDC balance:", IERC20(USDC).balanceOf(address(receiver)));
 
         // 3. Trigger Flash Loan
-        vm.startBroadcast(deployerPrivateKey);
         receiver.requestFlashLoan(USDC, borrowAmount);
-        vm.stopBroadcast();
         
         console.log("Flash loan executed successfully!");
     }
