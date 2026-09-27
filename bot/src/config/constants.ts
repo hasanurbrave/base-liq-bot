@@ -13,7 +13,6 @@ export const POOL_ABI = [
   "function flashLoan(address receiverAddress, address[] calldata assets, uint256[] calldata amounts, uint256[] calldata interestRateModes, address onBehalfOf, bytes calldata params, uint16 referralCode) external",
   "function flashLoanSimple(address receiverAddress, address asset, uint256 amount, bytes calldata params, uint16 referralCode) external",
   "function getUserAccountData(address user) external view returns (uint256 totalCollateralBase, uint256 totalDebtBase, uint256 availableBorrowsBase, uint256 currentLiquidationThreshold, uint256 ltv, uint256 healthFactor)",
-  // Events
   "event Borrow(address indexed reserve, address user, address indexed onBehalfOf, uint256 amount, uint8 interestRateMode, uint256 borrowRate, uint16 indexed referralCode)",
   "event Repay(address indexed reserve, address indexed user, address indexed repayer, uint256 amount, bool useATokens)",
   "event Supply(address indexed reserve, address user, address indexed onBehalfOf, uint256 amount, uint16 indexed referralCode)",
@@ -32,16 +31,15 @@ export const POOL_DATA_PROVIDER_ABI = [
   "function getReserveTokensAddresses(address asset) external view returns (address aTokenAddress, address stableDebtTokenAddress, address variableDebtTokenAddress)"
 ];
 
-// Asset Interfaces & Data
 export interface AssetMetadata {
   symbol: string;
   address: string;
   decimals: number;
   aTokenAddress: string;
   variableDebtTokenAddress: string;
-  ltv: number;                 // Represented as basis points (e.g., 8000 = 80%)
-  liquidationThreshold: number;// Represented as basis points (e.g., 8300 = 83%)
-  liquidationBonus: number;    // Represented as basis points (e.g., 10500 = 5% bonus)
+  ltv: number;
+  liquidationThreshold: number;
+  liquidationBonus: number;
   isFrozen: boolean;
 }
 
@@ -104,3 +102,17 @@ export const ASSETS: Record<string, AssetMetadata> = {
 };
 
 export const SUPPORTED_ASSETS: AssetMetadata[] = Object.values(ASSETS);
+
+// DEX Router Addresses
+export const UNISWAP_V3_ROUTER = "0x2626664c2603336E57B271c5C0b26F421741e481"; 
+export const UNISWAP_V3_QUOTER = "0x3d4e44Eb1374240CE5F1B871ab261CD16335B76a"; // QuoterV2
+export const AERODROME_ROUTER = "0xcF77a3Ba9A5CA399B7c97c74d54e5b1Beb874E43"; 
+
+export const SWAP_ROUTER_ABI = [
+  "function exactInputSingle((address tokenIn, address tokenOut, uint24 fee, address recipient, uint256 deadline, uint256 amountIn, uint256 amountOutMinimum, uint160 sqrtPriceLimitX96)) external payable returns (uint256 amountOut)",
+  "function exactInput((bytes path, address recipient, uint256 deadline, uint256 amountIn, uint256 amountOutMinimum)) external payable returns (uint256 amountOut)"
+];
+
+export const QUOTER_ABI = [
+  "function quoteExactInputSingle(address tokenIn, address tokenOut, uint24 fee, uint256 amountIn, uint160 sqrtPriceLimitX96) external returns (uint256 amountOut, uint160 sqrtPriceX96After, uint32 initializedTicksCrossed, uint256 gasEstimate)"
+];
