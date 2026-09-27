@@ -1,0 +1,11 @@
+node_modules
+.env
+out
+cache
+artifacts
+data/*.json
+data/liquidation_history/*
+data/health_factor_snapshots/*
+dist
+!data/liquidation_history/.gitkeep
+!data/health_factor_snapshots/.gitkeep
