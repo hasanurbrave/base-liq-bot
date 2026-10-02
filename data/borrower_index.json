@@ -1,0 +1,7340 @@
+[
+  {
+    "address": "0xed270a2d4017050de1864ae5ed79552e843a125e",
+    "lastSeenBlock": 51991746,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x84c47eb3757f739460d04e330389647828a8d980",
+    "lastSeenBlock": 52025484,
+    "estimatedHF": 33.890685178211434,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xe5ec006540be4f7cbb2cbc7be79708a6d96f90dc",
+    "lastSeenBlock": 52072756,
+    "estimatedHF": 1.3127143200408717,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xb1569ec05aba57fd9256ba3816ae9221f23306ee",
+    "lastSeenBlock": 52078901,
+    "estimatedHF": 1.4905130092028906,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xf2c3468a8837b19e91b540fba69385b336372aa2",
+    "lastSeenBlock": 52005825,
+    "estimatedHF": 1.7165047366697421,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x4c8bd236ff9994f669016da018df233854be5000",
+    "lastSeenBlock": 51981378,
+    "estimatedHF": 1.6546182993518017,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x4a25755115ca3b5c7ae3871b146269a270ac388c",
+    "lastSeenBlock": 51981513,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xd75b1608961d1ae19ee4e67eaa6334e14087888a",
+    "lastSeenBlock": 52028714,
+    "estimatedHF": 1.2847356043461085,
+    "tier": "Watch"
+  },
+  {
+    "address": "0x54db076bfac96c02e9a2a66410d69f35ac481fe6",
+    "lastSeenBlock": 52078675,
+    "estimatedHF": 1.4878719912802125,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xcba49df8c1e79c70b564e9a93d35c6aae1e5f2c3",
+    "lastSeenBlock": 52067665,
+    "estimatedHF": 46.57021002289075,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x2631313b8731f57e9fffa4293b4fc54b4f9fbf2e",
+    "lastSeenBlock": 51981824,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x22f061fbe9a4cfd1e4ae5755d9c56be30aa811f2",
+    "lastSeenBlock": 51991094,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x5ef7146a88d32c6d48a9af6542164ebaed3c368a",
+    "lastSeenBlock": 52039924,
+    "estimatedHF": 1.2064513430810446,
+    "tier": "Watch"
+  },
+  {
+    "address": "0x7ebf23e8c7f86a49d1317a301399a34f3680d3a0",
+    "lastSeenBlock": 51982531,
+    "estimatedHF": 3.251681964521493,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xa0d9c1e9e48ca30c8d8c3b5d69ff5dc1f6dffc24",
+    "lastSeenBlock": 52080676,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x160bce7cd9d54a849c28449fc52575f9d9f0436c",
+    "lastSeenBlock": 51982647,
+    "estimatedHF": 3.2148317622042417,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x0d72f21eb70d4cad761216c56298c74f66378a5a",
+    "lastSeenBlock": 52019664,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xb585a63a2bfe2dde6ebe1eaafb0768551e37ebb5",
+    "lastSeenBlock": 52067269,
+    "estimatedHF": 2.380713839690495,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x12314a83c193f7b5aeabdbd69da59d328329d111",
+    "lastSeenBlock": 52080473,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x3df8d6e26ff0b7ad8ae70d3cb963958038c17fee",
+    "lastSeenBlock": 52080880,
+    "estimatedHF": 1.237005872844101,
+    "tier": "Watch"
+  },
+  {
+    "address": "0xb563283175ed28ff69ff6b3a21e14c1061a40650",
+    "lastSeenBlock": 52025868,
+    "estimatedHF": 5.722286003714334,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xdceb0bb3311342e3ce9e49f57affce9deac40ba1",
+    "lastSeenBlock": 52064888,
+    "estimatedHF": 3.775977717849827,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xf4caf0dfb5dbd0f09eea366cc818eff3a3c7baca",
+    "lastSeenBlock": 51983172,
+    "estimatedHF": 1.249651307596513,
+    "tier": "Watch"
+  },
+  {
+    "address": "0xd8b703f42c01a7979a820bb9204e64f6b4aead21",
+    "lastSeenBlock": 51983174,
+    "estimatedHF": 1.225852163454555,
+    "tier": "Watch"
+  },
+  {
+    "address": "0x768449b1e096381e70299e5cdc9745f5594ec14b",
+    "lastSeenBlock": 51983509,
+    "estimatedHF": 2.239791881023335,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x969a58ba48713f300cddde61372944446664048f",
+    "lastSeenBlock": 51983732,
+    "estimatedHF": 1.2259293238587174,
+    "tier": "Watch"
+  },
+  {
+    "address": "0xc9aaf34a64db8debf991f8e25635abe0b9d3ee40",
+    "lastSeenBlock": 51983862,
+    "estimatedHF": 1.2241015867851188,
+    "tier": "Watch"
+  },
+  {
+    "address": "0xd201b0947ae7b057b0751e227b07d37b1a771570",
+    "lastSeenBlock": 51983964,
+    "estimatedHF": 1.083697489936131,
+    "tier": "Warning"
+  },
+  {
+    "address": "0xccccccf25584cafbd4d80e9464361af1e7280b44",
+    "lastSeenBlock": 51984135,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x065c8c2cabf489b80634a16269df7a4935c788ce",
+    "lastSeenBlock": 52080456,
+    "estimatedHF": 1.0789175440262198,
+    "tier": "Warning"
+  },
+  {
+    "address": "0xb549ca43c6c650cc9430e6a39d1a518f5bb22990",
+    "lastSeenBlock": 52080436,
+    "estimatedHF": 1.08108722343122,
+    "tier": "Warning"
+  },
+  {
+    "address": "0xaf9fb18985d9404c7a4ba59bde714b4dd6ad1e9e",
+    "lastSeenBlock": 51984196,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xdff3371028d1c6791fce6fe6712c8fb6ff16e857",
+    "lastSeenBlock": 52064240,
+    "estimatedHF": 3.3656039200892005,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x93b40541784192db203c4c3abdb97275b2c082ca",
+    "lastSeenBlock": 51984269,
+    "estimatedHF": 5.304012957421984,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xfb8486901b4d87e79eb9596084bfed78e7b617ff",
+    "lastSeenBlock": 51984307,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x0f3563d5a39f6add7e60630bd14f9d8ded0cdc5e",
+    "lastSeenBlock": 51984316,
+    "estimatedHF": 7.8008998017990585,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x3a03200418aa734bdaee7174a09674fa7a83d06c",
+    "lastSeenBlock": 51984440,
+    "estimatedHF": 2.182119245168479,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x33a7ec1055edd4cc35ef289156c7a7a078043474",
+    "lastSeenBlock": 52037508,
+    "estimatedHF": 1.1044083928526354,
+    "tier": "Warning"
+  },
+  {
+    "address": "0x24166f5f1fcf0de3c0e113503619fcf603c1586c",
+    "lastSeenBlock": 51984508,
+    "estimatedHF": 5.509982420106598,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x66dbcee7fea3287b3356227d6f3dff3cefbc6f3c",
+    "lastSeenBlock": 51984544,
+    "estimatedHF": 1.3818690954104402,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x5d55be4250c9ca4d73a2e31f0d1c1fb80868f3e7",
+    "lastSeenBlock": 51984546,
+    "estimatedHF": 1.4664819005790246,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xef46b4d976f177324c3eab76b5a8dab655d0eefc",
+    "lastSeenBlock": 52065212,
+    "estimatedHF": 21.39053829123369,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x5e2bc0bdea27abf967ce955c552d132e55022612",
+    "lastSeenBlock": 51984921,
+    "estimatedHF": 1.1850380899942883,
+    "tier": "Watch"
+  },
+  {
+    "address": "0xbadc9c0018214cd6bce769a53e702e412927ec65",
+    "lastSeenBlock": 52061589,
+    "estimatedHF": 1.4731698834288938,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x925bafe572f3c0d9a32e02180ef77c9bb0cee159",
+    "lastSeenBlock": 51984954,
+    "estimatedHF": 2.250622823822498,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x7b8e120c8cde2f41ec30f3426427d840465931c6",
+    "lastSeenBlock": 51984964,
+    "estimatedHF": 38.87243731831532,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x99212fef5cec45b4808a6e38b10daf27ffd059e8",
+    "lastSeenBlock": 52025879,
+    "estimatedHF": 2.1381023642424495,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xa925b077392eeb7b9f70d7301489199284b0cadb",
+    "lastSeenBlock": 51985007,
+    "estimatedHF": 2.149634248043427,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x6709b07a0336995f2772131652b4804e56cbd74b",
+    "lastSeenBlock": 51985020,
+    "estimatedHF": 1.718314023077515,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x3ed9ccb16b65496049fc51234029fdaeaf73366d",
+    "lastSeenBlock": 51985047,
+    "estimatedHF": 1.4125818050094217,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x54f5c24ce6e2501b37b8cb0fea91af6c28aaed4c",
+    "lastSeenBlock": 51985085,
+    "estimatedHF": 31.031493617021276,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xb6398389d568ec78a682b09e38227273de0137e5",
+    "lastSeenBlock": 51985103,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x273c4282663e07d3241e3f74e0b9f70ca39aee09",
+    "lastSeenBlock": 51985127,
+    "estimatedHF": 3.378147765708327,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x7b2435c5337d3de93fff8be1b0df8b952732176b",
+    "lastSeenBlock": 51985208,
+    "estimatedHF": 1.6239453528596899,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x17ab93cbd0daaef23b8860aa5a8c53c6a4a547c9",
+    "lastSeenBlock": 51985246,
+    "estimatedHF": 1.8457698702187284,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xaf3f07c6e437b948e849d126dfe81f4b7687350b",
+    "lastSeenBlock": 51985342,
+    "estimatedHF": 1.2288180164895501,
+    "tier": "Watch"
+  },
+  {
+    "address": "0x30e3ef002c502cef946b9a2aad232eb88557dee3",
+    "lastSeenBlock": 51986889,
+    "estimatedHF": 1.718949230814781,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xa7ac810c71781482427ebd7d98255acb0e0375d6",
+    "lastSeenBlock": 52005242,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x7229c5c1a30f51a5867cb1c9fe2d3353379a5f96",
+    "lastSeenBlock": 51985597,
+    "estimatedHF": 2.7897021602520584,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x4b2c27ff18ac6d1717c07f8137a095cdda3d7422",
+    "lastSeenBlock": 51985640,
+    "estimatedHF": 1.496745069247234,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x9027433e56bfeaf8103673708cfd8bec29427a48",
+    "lastSeenBlock": 51985667,
+    "estimatedHF": 1.624947565759114,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x52c5a7ca080d28eff1f5c40946644a01c2f9d3dc",
+    "lastSeenBlock": 51985722,
+    "estimatedHF": 1.716186465949204,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x5559e48282ff8ae6b196eb07bcfb2f907a07c800",
+    "lastSeenBlock": 51985744,
+    "estimatedHF": 2.026932404679971,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xf61a57d63a5f346014ed4e45f757e3554f35b2ee",
+    "lastSeenBlock": 52043177,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x50fc03bdff1abaac0125f352084394912d48d6ab",
+    "lastSeenBlock": 51985819,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xe33f2050adb6f8f9967f2eecef43bee49eca4679",
+    "lastSeenBlock": 52076955,
+    "estimatedHF": 1.0969559632741805,
+    "tier": "Warning"
+  },
+  {
+    "address": "0xb7c59e446a7a75ba3ada79eb6563cc13871572ef",
+    "lastSeenBlock": 52065887,
+    "estimatedHF": 1.426775235114811,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x290485cd842e7e32ee3d767f1c84934ab5badbc8",
+    "lastSeenBlock": 52044649,
+    "estimatedHF": 1.0637985429329835,
+    "tier": "Warning"
+  },
+  {
+    "address": "0x486729a5aec20db535adf62e34163cc178c78416",
+    "lastSeenBlock": 51986156,
+    "estimatedHF": 1.9134537216874152,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xe5d1cf7b5615e2edc7d56209051e5f19bf8a2bb0",
+    "lastSeenBlock": 51986195,
+    "estimatedHF": 2.3759117099239297,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x9fa9a0c62f942623620713daae92899a92bbb95b",
+    "lastSeenBlock": 51986251,
+    "estimatedHF": 1.228996449924176,
+    "tier": "Watch"
+  },
+  {
+    "address": "0xb670b1337b702b45ecc3ae2c97ec169ce7b7a84d",
+    "lastSeenBlock": 51986252,
+    "estimatedHF": 2.8740028671444335,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xb3d0f05418e9b2972adf0c62170cb11982c833fb",
+    "lastSeenBlock": 51986393,
+    "estimatedHF": 2.528294253125274,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x2464139d8bf85c2e9a1fb9826e7192e41db4de85",
+    "lastSeenBlock": 52054276,
+    "estimatedHF": 1.2681431957708942,
+    "tier": "Watch"
+  },
+  {
+    "address": "0xeee072349a531cbd66ba9fd1a6d55197a1fc022b",
+    "lastSeenBlock": 51992952,
+    "estimatedHF": 2.3278308607272864,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x37ce54e6b2374d043fef0f1d4d497af5a6c2346e",
+    "lastSeenBlock": 52078563,
+    "estimatedHF": 1.3086668792206908,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xac64aec349d3bfb3e6317f037780ec856b00ddff",
+    "lastSeenBlock": 52034832,
+    "estimatedHF": 1.667634300347283,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x2e1b6beb2a2cdd9de100d488ae415e11df4b3fa7",
+    "lastSeenBlock": 51986620,
+    "estimatedHF": 2.1415527287233793,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x10d10588694da68efd40544a90177b1ba9dd4e9e",
+    "lastSeenBlock": 51986718,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xdfb6dc963c5c6f4858c7a76ba37858944e906206",
+    "lastSeenBlock": 51986773,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xe883426b4fc84a7f5cc86415cabbef43e73a4cc8",
+    "lastSeenBlock": 52080748,
+    "estimatedHF": 1.0727394955245866,
+    "tier": "Warning"
+  },
+  {
+    "address": "0x4010ec72fab72417ab664b746b2a63c9358ba140",
+    "lastSeenBlock": 51986981,
+    "estimatedHF": 1.958000404759234,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xb6ac879ec846960c575c446ffaab17f479ea32fd",
+    "lastSeenBlock": 51988671,
+    "estimatedHF": 1.253710980086228,
+    "tier": "Watch"
+  },
+  {
+    "address": "0xc29726e55443683b9c6112b51b9f9e7c103017ed",
+    "lastSeenBlock": 52025225,
+    "estimatedHF": 1.6257314626261377,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xfe7c17f3b63817da3eb8c5867c2361f1b4e579f3",
+    "lastSeenBlock": 51987204,
+    "estimatedHF": 1.9833681401028624,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x69b8257c611d978e4d05803391e4976eb60b1203",
+    "lastSeenBlock": 52075945,
+    "estimatedHF": 1.068929442036463,
+    "tier": "Warning"
+  },
+  {
+    "address": "0x784ecbf6d777b7cd5512d6c6e94462d3db4f6c63",
+    "lastSeenBlock": 52079445,
+    "estimatedHF": 1.1584477591918494,
+    "tier": "Watch"
+  },
+  {
+    "address": "0x2e0284b4c38cb91c99ed3ffefa41b92ba9eb0566",
+    "lastSeenBlock": 51987403,
+    "estimatedHF": 2.0061553490858537,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xfce72d041f46dc9063db8c0a9fe39c7b60634c53",
+    "lastSeenBlock": 51993394,
+    "estimatedHF": 2.088648190838441,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xaa35bb20a512eb9b6b5ef7099528d5e6bda809c1",
+    "lastSeenBlock": 51987427,
+    "estimatedHF": 3.127174629324547,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xb5ea55d7dea11d7b64430731cd022b6ca82f399f",
+    "lastSeenBlock": 51987444,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xa5c7f0a64efec19c2409158aaff86c189df37776",
+    "lastSeenBlock": 52056112,
+    "estimatedHF": 1.2836844300810633,
+    "tier": "Watch"
+  },
+  {
+    "address": "0x64b17a3af6079635479aeabf5aa1332e34d7244f",
+    "lastSeenBlock": 51987788,
+    "estimatedHF": 1.76787105862539,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x4120e15784ccfd7acf246532ce4d3a62914f52cf",
+    "lastSeenBlock": 51987809,
+    "estimatedHF": 1.4133418531405457,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x20d5a99cd8ed38cfee863faf9b5f789d165f6c8b",
+    "lastSeenBlock": 51987914,
+    "estimatedHF": 2.2131893004115226,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x18643f05fdcc4ede5b9e364f459f828d8b8311da",
+    "lastSeenBlock": 51987964,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x0dfb9d422abcb7a08f63b6a7e6b63fed1b2328e1",
+    "lastSeenBlock": 51988008,
+    "estimatedHF": 5.332944606222831,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xd18d3f3cf6b51ebee39d16277cc9904a1ab20504",
+    "lastSeenBlock": 51988060,
+    "estimatedHF": 1.433505658982316,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x98dd9222db06f9833fb7abc1dec3af57d9a0b709",
+    "lastSeenBlock": 51988209,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xb34c50cacbbdc395b4757f4a7f4d1ebc7e82f5db",
+    "lastSeenBlock": 51988320,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x00998fe13b5f2d9d75125f647ef07a5f1ca8f4e4",
+    "lastSeenBlock": 51988343,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x2708570b947a8d5b6113d943d103b84b8686bc78",
+    "lastSeenBlock": 52075709,
+    "estimatedHF": 1.3877303485716395,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x1bc7a137169c456bd32ab1fa09f608b0248c8b5b",
+    "lastSeenBlock": 51988434,
+    "estimatedHF": 1.6950790512511822,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xcf70b86d64d9c6d327bf6afa88fddc7eb5914d22",
+    "lastSeenBlock": 52037735,
+    "estimatedHF": 1.8037611268933915,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x4ef98c25df87acf04455bc1ffa23102e250f7ce3",
+    "lastSeenBlock": 51988462,
+    "estimatedHF": 22.892862652488784,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x77b8bb66f230e150b079efec58c8e0a607e1edd7",
+    "lastSeenBlock": 51988499,
+    "estimatedHF": 1.6918376138862932,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x64653a0ec32aec2e3932b9f37c36ce8287e1cd0d",
+    "lastSeenBlock": 51988573,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x49a5492fdfe5acc966dd5f41310dfdfe8daa349c",
+    "lastSeenBlock": 52081064,
+    "estimatedHF": 3.337161838371447,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x8fcb3f6b7e6c6bce5c0ce935a653cac2c3e7ee07",
+    "lastSeenBlock": 51988691,
+    "estimatedHF": 1.9631610513738649,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x93bcd7a5dc254df76e2bedb444b0f2c463f2fbef",
+    "lastSeenBlock": 51988712,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xaf349d9a70a6398db6ed98502796e7f0983ba474",
+    "lastSeenBlock": 52057087,
+    "estimatedHF": 1.6611499809888612,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x6c8663e70fa8299d09073ec8f7e073a001974092",
+    "lastSeenBlock": 51988739,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xa95867b23955f98a3a5774645db2b603baba4003",
+    "lastSeenBlock": 51989468,
+    "estimatedHF": 2.179638461759414,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x42e1c28dd7f4c56f76ccb0f1d271b8b81d96b15e",
+    "lastSeenBlock": 51990735,
+    "estimatedHF": 2.4843709266843175,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x9209161748c98ce0585f06d2a717487c423fffc4",
+    "lastSeenBlock": 51988866,
+    "estimatedHF": 1.1835621246625516,
+    "tier": "Watch"
+  },
+  {
+    "address": "0x358b8dc804a1077cdb74f4a4b92d1bba70a3d176",
+    "lastSeenBlock": 51988885,
+    "estimatedHF": 3.773442398975326,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x51cc87dc2d12614c1d3e1f8a6045aefd9c549bfc",
+    "lastSeenBlock": 51988904,
+    "estimatedHF": 2.479672448512665,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x4234a4dcc1525acf0ad2a4f44c29e4f40e5fb5e4",
+    "lastSeenBlock": 51988958,
+    "estimatedHF": 1.672556528299934,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xfdc2d83ead97e58cd38037d2b39f9e2532b39026",
+    "lastSeenBlock": 51996938,
+    "estimatedHF": 2.3349627234082067,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x6a937e1f0c02903de88a40c848d452a9ec08c061",
+    "lastSeenBlock": 52063269,
+    "estimatedHF": 5.8059017100801515,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x2378f8f3668c07c9d14885fe775c88e197cfe9c8",
+    "lastSeenBlock": 52049552,
+    "estimatedHF": 3.2386703107341672,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xfb13c64bc02555e769cd06d5f5fc2d54785271b3",
+    "lastSeenBlock": 51989090,
+    "estimatedHF": 1.6555286525316109,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xe48eb006edf61620ed9b36f23dddbf06a94657c7",
+    "lastSeenBlock": 51989304,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x6b1c7eafdddd6563ed536db493764be6175c4241",
+    "lastSeenBlock": 51989337,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xe47fec55d066e9d6a8b956064bf07db9a13a4925",
+    "lastSeenBlock": 51989344,
+    "estimatedHF": 1.6146313077985217,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x404b98847e30f2b94a09b5cde6dda4f534926103",
+    "lastSeenBlock": 51989348,
+    "estimatedHF": 1.8133487128536123,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x77ddfacabebba703e32efececfb061ed383c8e89",
+    "lastSeenBlock": 51989372,
+    "estimatedHF": 1.5829090141771491,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x035fb109166024d09c648d9d81fab28c58b40f5c",
+    "lastSeenBlock": 51989599,
+    "estimatedHF": 1.7688504496711321,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x3d34a356fa185a316f8182d61a12c47fa4773c7c",
+    "lastSeenBlock": 52076195,
+    "estimatedHF": 1.916328944981563,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xcae598eedf417dc1c4e3637fdb5748dffd31d33d",
+    "lastSeenBlock": 52036475,
+    "estimatedHF": 1.2814024631661782,
+    "tier": "Watch"
+  },
+  {
+    "address": "0x5529e0608cfc0cab5bb86b59cba7e88f0f66dfef",
+    "lastSeenBlock": 52047892,
+    "estimatedHF": 1.7867911771958973,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x8bca10d02bbd54331af2f2b0178da73f1d1892a0",
+    "lastSeenBlock": 51989951,
+    "estimatedHF": 1.5363623022039659,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x7216231309e6480b57cea74018211ff41f9156b0",
+    "lastSeenBlock": 51990045,
+    "estimatedHF": 2.2666459530488936,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x7a7acf2241c2b388b6b7eb8bba78f615f6f773b2",
+    "lastSeenBlock": 52076911,
+    "estimatedHF": 2.264072413538823,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xfcb74fb2cc0e18f36d0345554dbe51e094fa712d",
+    "lastSeenBlock": 51990135,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xef2486bd8a25e1250d48c16bca465de0c4fe2a45",
+    "lastSeenBlock": 51990211,
+    "estimatedHF": 4.328268202100085,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x572c699a4e4135ade7c3eb6ca8ec57cb18b40710",
+    "lastSeenBlock": 51990744,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x95b0cb330519db2bcaf74b90c1bde3d62f673718",
+    "lastSeenBlock": 51990805,
+    "estimatedHF": 1.6404869295391102,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x67fc63312c619aa4dd433c2501db5f66619db011",
+    "lastSeenBlock": 51990970,
+    "estimatedHF": 1.234629159428037,
+    "tier": "Watch"
+  },
+  {
+    "address": "0x7247afca4c57e3d625405e6cd342adb2519474e0",
+    "lastSeenBlock": 51991182,
+    "estimatedHF": 13.269791751425467,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xd80e1d33145087c8e27597b3a101f45f82524137",
+    "lastSeenBlock": 52070279,
+    "estimatedHF": 1.085006841698949,
+    "tier": "Warning"
+  },
+  {
+    "address": "0x73619f23e327d4190627ca71edaf2f8c77471eba",
+    "lastSeenBlock": 51991345,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xf4088cc6aae36e8fcce6d21cdd94fee6803616f9",
+    "lastSeenBlock": 51991374,
+    "estimatedHF": 2.202797623251293,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xda0d95c69d3bdb65bc98e5889025ecbc1a23094f",
+    "lastSeenBlock": 52045403,
+    "estimatedHF": 1.0682606307956386,
+    "tier": "Warning"
+  },
+  {
+    "address": "0x5d6bb3519cc1f484aae443d4b0650f0af8a3c0e6",
+    "lastSeenBlock": 52079724,
+    "estimatedHF": 1.1458645150466058,
+    "tier": "Warning"
+  },
+  {
+    "address": "0x0422e03c79abbe1f3bad4c23a30bed2f1d61cda2",
+    "lastSeenBlock": 51991462,
+    "estimatedHF": 3.439966078697422,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xca42b31c9ade40610d2372d8ee5ccba9265732c4",
+    "lastSeenBlock": 51992127,
+    "estimatedHF": 2.9522964449714526,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x4a5ec179879619a80a90e6cf250a347a545e7cbb",
+    "lastSeenBlock": 51991672,
+    "estimatedHF": 3.3997099441393313,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x5fa1f0d808e97373f5f6c35c9aa0a7712d2af018",
+    "lastSeenBlock": 51991614,
+    "estimatedHF": 1.5304871611559054,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x1677e8ca22421f92e207569f8d622529dda5eb17",
+    "lastSeenBlock": 52078501,
+    "estimatedHF": 1.0304036935967578,
+    "tier": "Critical"
+  },
+  {
+    "address": "0x0951d2b93fd762c91fcc878a10dffad18ecac808",
+    "lastSeenBlock": 51991701,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x103be310dc9cc38c2efe02daa329d85d9628e375",
+    "lastSeenBlock": 52066961,
+    "estimatedHF": 1.3079627280078823,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x120b075d9794bbe4eb86e1517290a788a5b8ad00",
+    "lastSeenBlock": 51991778,
+    "estimatedHF": 1.8369117508334174,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xb12e82df057bf16ecfa89d7d089dc7e5c1dc057b",
+    "lastSeenBlock": 52079574,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x99064f44b7162260fe324791a2fa5051370f8ae4",
+    "lastSeenBlock": 51991885,
+    "estimatedHF": 1.2364721513152543,
+    "tier": "Watch"
+  },
+  {
+    "address": "0x199354a01eefd2e2469e784681f78207574ed2d9",
+    "lastSeenBlock": 52033754,
+    "estimatedHF": 3.7024761193351803,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x534489f74fecac730515e145ad8747ca6065e450",
+    "lastSeenBlock": 52078540,
+    "estimatedHF": 1.039225784168396,
+    "tier": "Critical"
+  },
+  {
+    "address": "0x5900c3b72458f12967dc1bef35b92d271f5cdbc1",
+    "lastSeenBlock": 52036115,
+    "estimatedHF": 1.1047452181509105,
+    "tier": "Warning"
+  },
+  {
+    "address": "0x9bba7ebc9c69db92950def377d732b91bb22d02f",
+    "lastSeenBlock": 51992020,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xdc8a30622f964217ee16676eef4fc58044e97f08",
+    "lastSeenBlock": 51992440,
+    "estimatedHF": 1.7562725562419967,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x68134acd9d7375ee7b4aa02832d1d1488fce3509",
+    "lastSeenBlock": 52037271,
+    "estimatedHF": 1.6994973193157528,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x14f9012a333e24f5bbaaecbe1bfef315c41608b3",
+    "lastSeenBlock": 52045606,
+    "estimatedHF": 1.522484436188185,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xc2ab765bfdb86ca8ec98d7367833816fa7990a6f",
+    "lastSeenBlock": 51992226,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x24b051daacea8b4ccbf7aec60019173e96261167",
+    "lastSeenBlock": 51992262,
+    "estimatedHF": 2.9989458656774537,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xb19153d3da0da449b5927368ec721d5817f4970e",
+    "lastSeenBlock": 51992290,
+    "estimatedHF": 3.3077177963911426,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x3a1e468fe91d34c2060b3cc36cc5c105c6a02606",
+    "lastSeenBlock": 52052905,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x84338720a4b2347c9f101745b5d79ce84e7fb227",
+    "lastSeenBlock": 51992323,
+    "estimatedHF": 3.1167855977218943,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xd23275ed17f2d6c7c212032ec291b1d31b734d8a",
+    "lastSeenBlock": 52061222,
+    "estimatedHF": 1.7294367174309146,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xdcf9da1434b6b1c7e9e9c90a20f67bb64d2ec375",
+    "lastSeenBlock": 52051644,
+    "estimatedHF": 1.6537810500009948,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xdfb00c8f3d2e23f68aa49aeb382c62cbfc53985a",
+    "lastSeenBlock": 51992505,
+    "estimatedHF": 7.529269685761712,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xfcea29c4a6723c2b7d631bcd550b4a562799871b",
+    "lastSeenBlock": 51992509,
+    "estimatedHF": 3.53828880116621,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xaafc84760f8947b383cadca5a4424e4fa3a77035",
+    "lastSeenBlock": 52063966,
+    "estimatedHF": 1.2921384238096139,
+    "tier": "Watch"
+  },
+  {
+    "address": "0x285fbe847e13aa64dddde926cf13e5c542cb0010",
+    "lastSeenBlock": 52055759,
+    "estimatedHF": 1.906231224644843,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x8eff2008401ac4e9b7ab4b057b627a025a3f2f1d",
+    "lastSeenBlock": 51992566,
+    "estimatedHF": 1.6598378577355966,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x61ce058c2abffefc16aa77bffed9bcd6ef377cb9",
+    "lastSeenBlock": 51992667,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x4bfb8a390b6dbfc5df4f5c6688f5236690c363cd",
+    "lastSeenBlock": 51992806,
+    "estimatedHF": 2.21961648920631,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x202acb8d2e65ef24999a4adf3d6029b77f435c5f",
+    "lastSeenBlock": 51992855,
+    "estimatedHF": 1.5475136546224721,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xe9c89e684fca7403a393b4f069212171ff1298f9",
+    "lastSeenBlock": 51992855,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xf0d047b4538da966b8434663528dd9a1a64d19f8",
+    "lastSeenBlock": 51992859,
+    "estimatedHF": 2.0221170626903575,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x44802b30d4c3c20b1741f4b86dd20395216e2e4f",
+    "lastSeenBlock": 52070133,
+    "estimatedHF": 1.6587763958565316,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xbf8b4ae647e4247d048e6187424bd4d2c4678bbf",
+    "lastSeenBlock": 51992958,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x426b7d9ef0cec39a78ee3bf02d437ca6d3695c07",
+    "lastSeenBlock": 51992976,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x6691158e10f60d85fa0f8c7242b1ab458790ea0b",
+    "lastSeenBlock": 51993163,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x9c89964f2b024b7876ec552b46780ab6235faf26",
+    "lastSeenBlock": 52018710,
+    "estimatedHF": 3.1430512569475635,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x5c38a0ab51ac64d93203247eefbc5b6b3ee7f4f6",
+    "lastSeenBlock": 52027143,
+    "estimatedHF": 1.089065572381364,
+    "tier": "Warning"
+  },
+  {
+    "address": "0xa39c0ace9f0e0ab0f2fe19e91ee894650f4b0223",
+    "lastSeenBlock": 51993306,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x7970801d9479d808b5e41fce30b8da49f656b28b",
+    "lastSeenBlock": 51993352,
+    "estimatedHF": 2.0776926235560516,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xe0ba52f7e00c4d919ce3f2a31790c6939becfe18",
+    "lastSeenBlock": 51998007,
+    "estimatedHF": 4.5458601373144845,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x9decc72049c5d32aaaff1f643ec14b72497d1058",
+    "lastSeenBlock": 52012416,
+    "estimatedHF": 1.32676998183198,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xa0f1910aa8f3bdbf7c4cc7b50b6af331c2a03fb7",
+    "lastSeenBlock": 52006910,
+    "estimatedHF": 2.775916283865483,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x761bdde2bab269d24cedea0edb84f15d76269770",
+    "lastSeenBlock": 51993551,
+    "estimatedHF": 1.224703344653657,
+    "tier": "Watch"
+  },
+  {
+    "address": "0x03d9aacc572daab55ea688788a2061d1ea0083e8",
+    "lastSeenBlock": 51993567,
+    "estimatedHF": 2.018096204519061,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xc1e9553319d3b945f09e71f86dab9ceb48bc6f92",
+    "lastSeenBlock": 52081079,
+    "estimatedHF": 1.9305521340567993,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x56161e0c759e6a882050831d9ef9cc458cba1e5a",
+    "lastSeenBlock": 51993660,
+    "estimatedHF": 2.084717245980065,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x26deeb9c78ef3facfda079b4f2ef6908d9ee8f8f",
+    "lastSeenBlock": 51993747,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x0f046755ff9501f07fe09ef2f20719f703083b18",
+    "lastSeenBlock": 51993755,
+    "estimatedHF": 1.4976529760155874,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x8c58153c492d0727602f49a9f49b74de98677d6c",
+    "lastSeenBlock": 51993787,
+    "estimatedHF": 1.6485953895254057,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x731bfadaf268f6a388558fad07cfcc5ec9e9323f",
+    "lastSeenBlock": 52076806,
+    "estimatedHF": 1.2871028337848018,
+    "tier": "Watch"
+  },
+  {
+    "address": "0x8eb6b057e9b508a5895b0984a684f970466fb361",
+    "lastSeenBlock": 51994078,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x1b9f859e0c9d14f516273552d8de48b77388603c",
+    "lastSeenBlock": 52049488,
+    "estimatedHF": 1.097212242788405,
+    "tier": "Warning"
+  },
+  {
+    "address": "0x15d220a61ff56364fbedf8fa8593182d69e67c91",
+    "lastSeenBlock": 51994200,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x045ebadb99d61d60df86af3e39dad794d5e1d8e1",
+    "lastSeenBlock": 51994259,
+    "estimatedHF": 2.0653413722135467,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x629f3d31cbff5b99054f114c08cbac4f52b194c6",
+    "lastSeenBlock": 51994451,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xd54c98fe020bdc3abb16b8d6da503c02d534bf64",
+    "lastSeenBlock": 52068629,
+    "estimatedHF": 2.44092040306166,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x6e1c5acbabaf0b3c73d4412c17c40d2f1d2e183b",
+    "lastSeenBlock": 51994495,
+    "estimatedHF": 3.1568748810354754,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x46560b7207bb490a2115c334e36a70d6ad4bdebd",
+    "lastSeenBlock": 52080183,
+    "estimatedHF": 1.5681260133111152,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x12617737e6bbef7bcd1fffb51dcee48fb4220c30",
+    "lastSeenBlock": 51994669,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xda37497d2797938765da7d4ca4985236dbb629c2",
+    "lastSeenBlock": 51994836,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x78c5120d3a7b710b652f5629738ae325530bb0ee",
+    "lastSeenBlock": 51994906,
+    "estimatedHF": 2.4787279890118397,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xd8f63a7fe8656939cf16ca0abb9b2aa4a10b19ba",
+    "lastSeenBlock": 51994916,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xd864a377b19f06d0f6bb9c5ff8fdbfb87d8d974b",
+    "lastSeenBlock": 51994957,
+    "estimatedHF": 2.265821038273364,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x5e3461331849a084aae99c729a5d05220784d69d",
+    "lastSeenBlock": 51994961,
+    "estimatedHF": 7.4583277348733175,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xe34634f9fb4287547f6e05469bb84077c57075bb",
+    "lastSeenBlock": 51995005,
+    "estimatedHF": 1.990827640561797,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xca343e56994daba3752ad39b274fd5eeffaef93e",
+    "lastSeenBlock": 51995157,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xe0d0b89998b05f86f284e82b6e8c8c1bc2ca6d54",
+    "lastSeenBlock": 51995231,
+    "estimatedHF": 2.0569960602954804,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x0a1956582e7093e51be01b2bc95321eae78f375e",
+    "lastSeenBlock": 51995261,
+    "estimatedHF": 2.9542266173082186,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x630aa07a3a0be3196779c95afae9d4be6104d743",
+    "lastSeenBlock": 51995315,
+    "estimatedHF": 1.9539038602073702,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x2ffeb1ebde7f715944705d8c0a0b1a9f1d950a06",
+    "lastSeenBlock": 52002325,
+    "estimatedHF": 1.9033616394697637,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x338a54ec180a569837e1a4c34265fbffa64f142d",
+    "lastSeenBlock": 52075502,
+    "estimatedHF": 3.3856890756218156,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x1fe4c8398e30586e0a8238494216c8682caa8eb2",
+    "lastSeenBlock": 51995728,
+    "estimatedHF": 2.1441468325301285,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x1653e443b3e52ce266bd4f3b2e7bfcab3d2710c0",
+    "lastSeenBlock": 51995794,
+    "estimatedHF": 2.4872205722563265,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x24aedda519ca8fb52355a3ed57fd1e66b3634ab3",
+    "lastSeenBlock": 52077505,
+    "estimatedHF": 1.4137378859091911,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x25096e4c0347105b12fdf3aea370aec090b7952b",
+    "lastSeenBlock": 51995860,
+    "estimatedHF": 1.6578217405888203,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x05e0990aa0ac33628286bcb5408cc31e76efc25f",
+    "lastSeenBlock": 51995868,
+    "estimatedHF": 1.4052206245595835,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x4dd0a5282b1f804fac6d2db37b6f9cef77125971",
+    "lastSeenBlock": 51995957,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x97ece16286b7df5f699272f22023ab928709a494",
+    "lastSeenBlock": 52005158,
+    "estimatedHF": 2.67696755759357,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x61fecc89c4afd006293a3c50860f47b66fdb3718",
+    "lastSeenBlock": 51995995,
+    "estimatedHF": 11.79542549975038,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x9b81775ea2baa36dc9405d1304b1c76d36a19bcf",
+    "lastSeenBlock": 51996026,
+    "estimatedHF": 3.895493102116893,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x87b8fc00be45918f7c07d762bc198fc2775c3005",
+    "lastSeenBlock": 51996178,
+    "estimatedHF": 2.0202894572336594,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x9163df41c0952299f8a59e40762a65aaf6be7fcb",
+    "lastSeenBlock": 51996051,
+    "estimatedHF": 1.6246815397716856,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x007006adb95def8440a5f0aaf07d4a3104eb5a6d",
+    "lastSeenBlock": 51996093,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x6e4341173c49ce8c1739fc44e850b7e742bfbbe3",
+    "lastSeenBlock": 51996136,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x4b21b408ed1d9fc34be8411adacdbe423daeb7e4",
+    "lastSeenBlock": 51996144,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x58b1e86104d06062f2a826bfdfa43d933b9cc90b",
+    "lastSeenBlock": 51996178,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x781273af2e36d89cb41ab51c6c3667e7760eeb17",
+    "lastSeenBlock": 51996216,
+    "estimatedHF": 2.0098897708141936,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x02cb30d4b4fd5020c3a7338676df07079553b03c",
+    "lastSeenBlock": 51996220,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x8ecce0594c2d74bfaab32443da08337cebd75eeb",
+    "lastSeenBlock": 51996255,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x546357bd66e9b366f0603bb6072c57675dc79a76",
+    "lastSeenBlock": 52062519,
+    "estimatedHF": 3.623985531501701,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x9afa6e668430a6ef801ddbd55b070a2a8fb47ee4",
+    "lastSeenBlock": 51996558,
+    "estimatedHF": 2.119011221333741,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x4c3c5359ea14607068a69fb0b52f7f7c09a958ea",
+    "lastSeenBlock": 51997216,
+    "estimatedHF": 3.3566194247643093,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x5a97ac1bb6113603cfaf769266b768a772dc4db4",
+    "lastSeenBlock": 51996624,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x7e78ab3fa3b5794ea61e247ddd470fbffaea93d1",
+    "lastSeenBlock": 51996686,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x3ce020839bca572d67fbf2029aa0b7bf43744122",
+    "lastSeenBlock": 51996820,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x4cff826ed74ecf74374f691fe454c2c847645f75",
+    "lastSeenBlock": 52062515,
+    "estimatedHF": 1.0555724312706383,
+    "tier": "Warning"
+  },
+  {
+    "address": "0x0b96c1f007ee929d6a5c23a1806ed7be83179f95",
+    "lastSeenBlock": 51996901,
+    "estimatedHF": 14.738456833952515,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xd1849715025e1bd09e8969b48d6b13c7acf13a53",
+    "lastSeenBlock": 52079351,
+    "estimatedHF": 1.3495640601567245,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xc761415988a69a5b66c9c1098dec0ee70d8bf0ff",
+    "lastSeenBlock": 51997011,
+    "estimatedHF": 1.7086546789098511,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x7c23b8fb2f8b74e48b0b5d4c283b391d1ce5b07e",
+    "lastSeenBlock": 51997184,
+    "estimatedHF": 1.2842150817682125,
+    "tier": "Watch"
+  },
+  {
+    "address": "0x7ea7e78021849eb27b32c5bfc61d08257ec3cbaa",
+    "lastSeenBlock": 51997237,
+    "estimatedHF": 1.2928920927850038,
+    "tier": "Watch"
+  },
+  {
+    "address": "0x4aec202f425aa646b75ca514f8e75c302e217394",
+    "lastSeenBlock": 51997953,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x9ceaa27b0bd5d78d897386a681e7dcb860b9a2ba",
+    "lastSeenBlock": 51997617,
+    "estimatedHF": 2.150362892572918,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xa3a1625a6d5620e7eb1a3b2964854da3f1b3d600",
+    "lastSeenBlock": 52080619,
+    "estimatedHF": 1.39213491593804,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x04ade557f81f6a0952e18cd86aa90b58f64fcec2",
+    "lastSeenBlock": 51997663,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x7b513e2f2d954d988e002b3d75153f264cfbca5b",
+    "lastSeenBlock": 51997665,
+    "estimatedHF": 3.793652731377664,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x71b87378177fa68c26e48f770e53052b95a078d2",
+    "lastSeenBlock": 51997922,
+    "estimatedHF": 1.2334506123657327,
+    "tier": "Watch"
+  },
+  {
+    "address": "0x99ad487a96f87c8b854cf91455b004149fe3f0ac",
+    "lastSeenBlock": 52071245,
+    "estimatedHF": 1.0966881809851226,
+    "tier": "Warning"
+  },
+  {
+    "address": "0xb028522b0914e29da2dd4e58521103de8cc5de41",
+    "lastSeenBlock": 52031582,
+    "estimatedHF": 1.2348052304449573,
+    "tier": "Watch"
+  },
+  {
+    "address": "0x58e03d622a88b4012ee0a97235c6b110077fb867",
+    "lastSeenBlock": 51997726,
+    "estimatedHF": 1.0961595788042462,
+    "tier": "Warning"
+  },
+  {
+    "address": "0xc42e40a6c35d293b0918284707e39e8300d940d7",
+    "lastSeenBlock": 51997730,
+    "estimatedHF": 2.799179575004745,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x3d6493c22537ac98ee4bd75bc8de7327df5a78b0",
+    "lastSeenBlock": 52045490,
+    "estimatedHF": 1.881565643025371,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xd55b9658164de66f622583eac9739c810715b2b7",
+    "lastSeenBlock": 51997769,
+    "estimatedHF": 1.4424510445487653,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x341a55b26ec87e804e39490a51f10392da3daa32",
+    "lastSeenBlock": 51997820,
+    "estimatedHF": 2.5465617657961106,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x0e13424af817cc366c4437841224dfb06868dc99",
+    "lastSeenBlock": 51997821,
+    "estimatedHF": 1.553745291240429,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x4ed48f78de3feb45666ba5c62bcb83685c63172d",
+    "lastSeenBlock": 52078107,
+    "estimatedHF": 2.092493043483408,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x3bbf020bf3b4dcf5bcf4704c71a1d9d3017142ac",
+    "lastSeenBlock": 51997984,
+    "estimatedHF": 1.8871579033263541,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x0145a7308d9c28ef66f11d71d06c71ee7179e3bc",
+    "lastSeenBlock": 51997999,
+    "estimatedHF": 2.2766155750283508,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x5a7b5bd7f36a9ff6513f03d7a720c130b264cc8d",
+    "lastSeenBlock": 52080075,
+    "estimatedHF": 1.4572588282733716,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x7d0bb815d8392fa6bbe8be1ba321f7ca143e88d4",
+    "lastSeenBlock": 52047395,
+    "estimatedHF": 1.451395657801893,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x5df89fe9c7f81ea733b093dafd61490512bf6186",
+    "lastSeenBlock": 51998017,
+    "estimatedHF": 6.355270078765817,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xb9e60694395de770c8cac48320082a2b14ec4cfd",
+    "lastSeenBlock": 51998034,
+    "estimatedHF": 1.2651275523950545,
+    "tier": "Watch"
+  },
+  {
+    "address": "0x3e36152b9dcd5754c5e64b44a8d4eaf7bf639bc5",
+    "lastSeenBlock": 52006725,
+    "estimatedHF": 1.7980688209125115,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xc5f266a9d495d5f432a12c5f83c9a86d6c55b1c2",
+    "lastSeenBlock": 52009488,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x534acf7b9ac89e8102415463b51eaea88cc386a5",
+    "lastSeenBlock": 51998230,
+    "estimatedHF": 85.291875,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xbf262d5efac49b8146867cf2cb4127ce5aaecd87",
+    "lastSeenBlock": 52043232,
+    "estimatedHF": 2.839275903815148,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x60afb1c63bd240cfa36d4b367668bddedc5a465a",
+    "lastSeenBlock": 52080664,
+    "estimatedHF": 1.6176157073470228,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xcdd08b984b4fa5a53b6380613bf6bb293f1f8edd",
+    "lastSeenBlock": 52043824,
+    "estimatedHF": 1.316210980504261,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x7164e94817b5d9a8ce1487584a19d528dfc3f490",
+    "lastSeenBlock": 51998969,
+    "estimatedHF": 2.473978618942338,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x67d67cb45a9c358883e82052049f67e912756957",
+    "lastSeenBlock": 52000270,
+    "estimatedHF": 2.134026834388722,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x36e7b4d810ce87b51c97e96d08d2f5da1754e198",
+    "lastSeenBlock": 52017184,
+    "estimatedHF": 1.4283230976904544,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x42170b274ffd580e3a401d965105267e9153829d",
+    "lastSeenBlock": 51999287,
+    "estimatedHF": 2.5120922808926105,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x0becec921b3f27187c4084d98c2b30d593af528c",
+    "lastSeenBlock": 51999462,
+    "estimatedHF": 3.3104488970862755,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xc7ff2516160d450a09d4d6657e55f59bd353048b",
+    "lastSeenBlock": 51999464,
+    "estimatedHF": 1.7494431442175773,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x700c84e20af4460c0ea554ba8897064d20d2a960",
+    "lastSeenBlock": 52038297,
+    "estimatedHF": 1.2695735082086912,
+    "tier": "Watch"
+  },
+  {
+    "address": "0x4215dd670effbef5e5988ed764f0415a8baba9f1",
+    "lastSeenBlock": 51999556,
+    "estimatedHF": 1.4663338706769147,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xfe322ba60414cfe4d0e46b07f246fc2660b7d41f",
+    "lastSeenBlock": 52041518,
+    "estimatedHF": 2.3179949253909786,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xafbb3d98dd8ebf8b306e5f1176b4c20399a39d4f",
+    "lastSeenBlock": 51999709,
+    "estimatedHF": 3.689220356284212,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x9872358508f3650dbfa3940411dcd10f0488c4cf",
+    "lastSeenBlock": 51999717,
+    "estimatedHF": 2.5569529730728915,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x2d7f5212e93740a74b99d8a0799b4514061dbda5",
+    "lastSeenBlock": 52080347,
+    "estimatedHF": 3.1842152638719528,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xcfc14ac70718843ed6f4a6a0515492e34a1443bc",
+    "lastSeenBlock": 52048902,
+    "estimatedHF": 1.7477252945059016,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x3164ccba11fe365248d24b91d9e66b7766729267",
+    "lastSeenBlock": 51999844,
+    "estimatedHF": 1.5941810033897486,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x48c0267f8f0ca8a2f7199a9ee5c3437f2437b8a8",
+    "lastSeenBlock": 51999901,
+    "estimatedHF": 1.8096458024475135,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x438b7773c46821810aa039ca036da13488d439ee",
+    "lastSeenBlock": 51999936,
+    "estimatedHF": 5.026644575426112,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xd344135855c09842724dd87887b59c19056ca941",
+    "lastSeenBlock": 52000122,
+    "estimatedHF": 2.826209274857645,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xa51f5119f9b12b278dc1216b60f50559b59725cd",
+    "lastSeenBlock": 52000217,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xccf24f60ced4a4eb47ee4aeb46c43370749d7d29",
+    "lastSeenBlock": 52000244,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x8cd7fb6d4af11417cdddabb610cb527d83a9b947",
+    "lastSeenBlock": 52000264,
+    "estimatedHF": 1.7126297772146883,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x7393f87183d2d701901c1b66162a685f62576a05",
+    "lastSeenBlock": 52000777,
+    "estimatedHF": 1.5767318064125602,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x5bd6735eba0e33ecbe42a362ae51565977a91cc2",
+    "lastSeenBlock": 52000511,
+    "estimatedHF": 1.8775875537092728,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xe2031ff0cb1a06eaf5119fc7e62f40f147eff272",
+    "lastSeenBlock": 52053810,
+    "estimatedHF": 1.051270028220315,
+    "tier": "Warning"
+  },
+  {
+    "address": "0xe75769ead65595ba1d95045a6bc3a261ea37e619",
+    "lastSeenBlock": 52000520,
+    "estimatedHF": 2.0828760211067796,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x75fc796678fb800eb559e1e5524c6ca8c6773836",
+    "lastSeenBlock": 52051136,
+    "estimatedHF": 1.1313994075698044,
+    "tier": "Warning"
+  },
+  {
+    "address": "0xa2afdf330b8272acd92e3b03cf50c77ef832743f",
+    "lastSeenBlock": 52000871,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xaced655a0bf98551485dd330d86087bba4e6228e",
+    "lastSeenBlock": 52000718,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x378dc7e6612f41413b98f6c13067eefac5a9199b",
+    "lastSeenBlock": 52000859,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x97d8a441ad00bef67fa8e74a09bccf51cb4f9ef0",
+    "lastSeenBlock": 52000916,
+    "estimatedHF": 2.290459735733042,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x43116f95774e6f1a6f0f012ea9d2b2944d0fdbcc",
+    "lastSeenBlock": 52000957,
+    "estimatedHF": 2.0518063526523562,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x871183470748ba1273ad4c916ebd11d4cb59f7e5",
+    "lastSeenBlock": 52001008,
+    "estimatedHF": 1.3059852009984334,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xc2ec72b4eb2bc54ce2ce74356547b3650ed9afbb",
+    "lastSeenBlock": 52001018,
+    "estimatedHF": 1.0776055237534625,
+    "tier": "Warning"
+  },
+  {
+    "address": "0x6b2fc97b321976d89d201bb784f2974ba93edabb",
+    "lastSeenBlock": 52001042,
+    "estimatedHF": 3.1570295415028573,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x8192f0e66b5070f1ab2d84afeccfbf4224427690",
+    "lastSeenBlock": 52001057,
+    "estimatedHF": 1.7826080291939566,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x8bac38522673449ca03c16de81a8ff3736fec904",
+    "lastSeenBlock": 52001083,
+    "estimatedHF": 1.9304143645089327,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x2388abf231b7a6601035c0b037048090aa5e2908",
+    "lastSeenBlock": 52055004,
+    "estimatedHF": 1.6292352171388766,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xf36a808e7fe72a5b3400ce8d07a0f61fd7028cb2",
+    "lastSeenBlock": 52001171,
+    "estimatedHF": 1.9589300868477861,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xbd28741aeb5b071d0998fef0f720d07cb4a5913a",
+    "lastSeenBlock": 52001470,
+    "estimatedHF": 2.5263729998739506,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x05a373ea02459c62443f312595f7a91a49c5c493",
+    "lastSeenBlock": 52001486,
+    "estimatedHF": 1.6234995850662282,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x47172aef4327b9e7ea9c93330d78b09f5bb13e5e",
+    "lastSeenBlock": 52001487,
+    "estimatedHF": 4.210073101350655,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x9bc0b1f39276404df79a42a8af9437f288506396",
+    "lastSeenBlock": 52001717,
+    "estimatedHF": 1.7869958899809928,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xfbfbba30d1377a3a8b094a1df92a9e72442ff5e1",
+    "lastSeenBlock": 52001658,
+    "estimatedHF": 1.3727673060176881,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x452c69b2cf3e14f79e0aec805e97c2935ba3bb77",
+    "lastSeenBlock": 52001668,
+    "estimatedHF": 3.3998693003269893,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xa6faa8187107d0268c36b4bd47902bb15bedf646",
+    "lastSeenBlock": 52001788,
+    "estimatedHF": 1.7370518068117067,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x7bdba70b63bc13659beadcb2ce7466f511404678",
+    "lastSeenBlock": 52001794,
+    "estimatedHF": 1.4497831146933968,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xcb6243c5ecbf531f5a54a5b2778b93d65dfc47b2",
+    "lastSeenBlock": 52001934,
+    "estimatedHF": 6.69558772189023,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x185cfafca1f2d364c1acb7d568b0f221623d40ed",
+    "lastSeenBlock": 52075105,
+    "estimatedHF": 1.4189670807277555,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x4a507cb7ac94f9269775c484d6fbb99ba8808d4a",
+    "lastSeenBlock": 52002015,
+    "estimatedHF": 1.7087449053445596,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xcc94b225e76b600cce7502758c1a0165ed494b57",
+    "lastSeenBlock": 52035345,
+    "estimatedHF": 1.447653739130028,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xbcd2801080208698845ff02e133b8783773a85c1",
+    "lastSeenBlock": 52002233,
+    "estimatedHF": 4.890566761392576,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xa7667bba254169a9cb3de28bca658feb970d36a9",
+    "lastSeenBlock": 52002316,
+    "estimatedHF": 3.2741298132289804,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x4ded737c5d17ccb1b25607218c88fcb0b787c1c1",
+    "lastSeenBlock": 52002352,
+    "estimatedHF": 22.149040492957745,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xeb53d37f64d6e4f802499e92424adb36b8ad6125",
+    "lastSeenBlock": 52002407,
+    "estimatedHF": 1.5100273061133067,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xcfd2f32e6d533653ced5ba7e5fe1a76c3c626757",
+    "lastSeenBlock": 52052924,
+    "estimatedHF": 1.0326276307788662,
+    "tier": "Critical"
+  },
+  {
+    "address": "0x4f67134ffbcd9adbfb26ecc32649c0b4aec99a83",
+    "lastSeenBlock": 52041678,
+    "estimatedHF": 1.2271300603951825,
+    "tier": "Watch"
+  },
+  {
+    "address": "0xc8a41de2503252da4d1fc7398ebb9c2d18c8eff9",
+    "lastSeenBlock": 52067115,
+    "estimatedHF": 1.6028178471267518,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x92fc9066aa56e838f54f34308d94bd95789a1dc5",
+    "lastSeenBlock": 52002449,
+    "estimatedHF": 2.0874509615838037,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x2c979cf96fd577712c6d638e2ada90c562a10de5",
+    "lastSeenBlock": 52071777,
+    "estimatedHF": 1.0912835658266669,
+    "tier": "Warning"
+  },
+  {
+    "address": "0xc72725779cb447d5dd121d8ee1d948f42832aab8",
+    "lastSeenBlock": 52002787,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xdcac0ee047da0ab449f6beb08c8f79c00eabc67d",
+    "lastSeenBlock": 52002792,
+    "estimatedHF": 35.8243876806038,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x4333a63f92def4d3d4dff67e30c45ebf8994f73c",
+    "lastSeenBlock": 52002822,
+    "estimatedHF": 2.4894266629593687,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xc5d8c9987acaf2b42719fec9ab168dbb3376511e",
+    "lastSeenBlock": 52002916,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x634025c7aeaf2389b432fdd1f3c0ca5000f06df9",
+    "lastSeenBlock": 52002954,
+    "estimatedHF": 3.54284642303328,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x81b841a55e3d7a27c85b633d67b740e265a05f64",
+    "lastSeenBlock": 52003078,
+    "estimatedHF": 5.011349290570205,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x6108e2f0d60770809d965389294b64a106d9fcde",
+    "lastSeenBlock": 52027828,
+    "estimatedHF": 1.3954702789526228,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xf2b0e390ad881bb8a86777591936c2b56dd1f025",
+    "lastSeenBlock": 52003237,
+    "estimatedHF": 1.2897475342949174,
+    "tier": "Watch"
+  },
+  {
+    "address": "0x362816ccad08488bd78600aad45bb8ad86450b1d",
+    "lastSeenBlock": 52003384,
+    "estimatedHF": 1.7929575190595852,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x9a4cf4bbc474fe845e3be9845722379154c0c0cf",
+    "lastSeenBlock": 52004402,
+    "estimatedHF": 1.9950925195071973,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x234568df6f43c44dd4e6a7c20b3492d45d82deff",
+    "lastSeenBlock": 52003493,
+    "estimatedHF": 3.3795150789550013,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xb0c4d33b2984efb30632d7099e18fc01d02b5eaf",
+    "lastSeenBlock": 52003502,
+    "estimatedHF": 1.6220079366000255,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x6ca86a32c765d2570fe1610b77aa20a1f8b9dda0",
+    "lastSeenBlock": 52003507,
+    "estimatedHF": 1.8112161961439102,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x5496c7731ecd9d894ac164e3a53a31e34440d544",
+    "lastSeenBlock": 52003827,
+    "estimatedHF": 1.7771768293866208,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xd1735aa5ffce9646e3cfec4cf4bd75c478c12fc1",
+    "lastSeenBlock": 52046688,
+    "estimatedHF": 1.0789936769764525,
+    "tier": "Warning"
+  },
+  {
+    "address": "0xe30899979f1ff5e5263840672e472ff6f37ae879",
+    "lastSeenBlock": 52007204,
+    "estimatedHF": 1.482308543742959,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x9a30193bbf772f451745ffe12f9a2d8c6d11a9fd",
+    "lastSeenBlock": 52004057,
+    "estimatedHF": 7.400334374893595,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x824034a376928650a3d5e4842a5e4b45409ae90d",
+    "lastSeenBlock": 52004092,
+    "estimatedHF": 6.319922871887937,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xa8fe9cb897304befbc588d6fd6df1bdba92568d5",
+    "lastSeenBlock": 52004255,
+    "estimatedHF": 1.4644257320979714,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x0853a4de751857bfbae4c017bc2968dacd603276",
+    "lastSeenBlock": 52004287,
+    "estimatedHF": 8.029108559564937,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xd8331d6c90e76fd99931dfaa81c8dc8fa6bd065a",
+    "lastSeenBlock": 52004294,
+    "estimatedHF": 2.4086608566511054,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x5f0156513f937a889f8dced02f11a1e57bce2ee6",
+    "lastSeenBlock": 52004369,
+    "estimatedHF": 1.3879091812563744,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x93f1e5b8cec5f1684179be8f4077bf8670a1f4ae",
+    "lastSeenBlock": 52004508,
+    "estimatedHF": 1.8007203439109873,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xf2a51d441e6ba96c37fd0024115dccf03764478f",
+    "lastSeenBlock": 52021731,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xaa0282fe5e0132b25c7bf85c67177ecf7978d508",
+    "lastSeenBlock": 52004657,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x334b0e21f98a1610acb4aa483a3464ee7525db83",
+    "lastSeenBlock": 52004684,
+    "estimatedHF": 2.7226678811698184,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x36ff32b3d457fb940fc427d2fe5f64d84ed45ebe",
+    "lastSeenBlock": 52005114,
+    "estimatedHF": 2.831768832062034,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x9b6fd7d5338bdacf1c6cba4143d51412a4e4f5fa",
+    "lastSeenBlock": 52004929,
+    "estimatedHF": 2.225282938086928,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x00ba160b07592092b10c66fa99740a253c245d14",
+    "lastSeenBlock": 52005036,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xabbea473fdde4409c6a1f0c7c527c1bda68e6c24",
+    "lastSeenBlock": 52005045,
+    "estimatedHF": 1.4759921589735303,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x96f439bc1eadf01d3c73c135efdd71fcafc2ab2b",
+    "lastSeenBlock": 52054623,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x1c265cb27e90956a911f92c8055f09ba4845b89d",
+    "lastSeenBlock": 52005241,
+    "estimatedHF": 2.1376421435750426,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xe7cd957cf5ef70e5b4ba7ec8a699b6faa6369b83",
+    "lastSeenBlock": 52005319,
+    "estimatedHF": 11.509057487413651,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xd8ae087eb4f09e65a1e79e59a912cd2615caf547",
+    "lastSeenBlock": 52005437,
+    "estimatedHF": 3.582614712308813,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xaa0999b9a73a53e444170c850bbc29fc18c2eed8",
+    "lastSeenBlock": 52005444,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x083d055c1fb2d464d11cdcdebe2c0ef4e372819e",
+    "lastSeenBlock": 52005449,
+    "estimatedHF": 2.080094846428034,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xacae03cdbc0af96a43f97dfd40e5eaeb0ebf2e2f",
+    "lastSeenBlock": 52005455,
+    "estimatedHF": 1.3397967145543406,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x2d1c3b2f292979191fa29d0c0e4a246f1ffe76c5",
+    "lastSeenBlock": 52005479,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xe99e546fd999aac8e2e00f3dbdf263e3543cfbcf",
+    "lastSeenBlock": 52005549,
+    "estimatedHF": 9.83352026038397,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x292e8d8cf3122d5e48a8fc116ff591d7cef80da4",
+    "lastSeenBlock": 52005637,
+    "estimatedHF": 2.9277835367360594,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xed424de85bc1e6487295b6cba3465e801b332482",
+    "lastSeenBlock": 52017895,
+    "estimatedHF": 1.2508581787475355,
+    "tier": "Watch"
+  },
+  {
+    "address": "0x0e6df9740e72537c34389e33702e8d28a7aa8122",
+    "lastSeenBlock": 52005739,
+    "estimatedHF": 15.822220622638113,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x543f6fbf481fe8efd6626f787da36cefe05e6331",
+    "lastSeenBlock": 52005810,
+    "estimatedHF": 2.0823523070121097,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x8ccd2fcaf6c4bac93066ca93ee8fa7163eecbba8",
+    "lastSeenBlock": 52005817,
+    "estimatedHF": 3.581266563032053,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x23db293cb4b452b8d618fcba978b8ab4daff9aaa",
+    "lastSeenBlock": 52005845,
+    "estimatedHF": 1.2826142903403486,
+    "tier": "Watch"
+  },
+  {
+    "address": "0xc8bdb57afa96e05dbe9d00a93bf6863dff634d59",
+    "lastSeenBlock": 52005914,
+    "estimatedHF": 2.634833569801733,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xf9ebfe2b0c205c437214a714a28903859349cede",
+    "lastSeenBlock": 52006125,
+    "estimatedHF": 1.2213580521703429,
+    "tier": "Watch"
+  },
+  {
+    "address": "0xdb3d41673d9808e136e15257baea9115b505de3e",
+    "lastSeenBlock": 52006135,
+    "estimatedHF": 1.6360864053779662,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x25f8fbedc5c93fb7baf492297ed4ddf74efe70ce",
+    "lastSeenBlock": 52039432,
+    "estimatedHF": 1.810317130085159,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xd52f6a4b660b82f1dcfe7cbbf37d0eab066a0ddb",
+    "lastSeenBlock": 52006298,
+    "estimatedHF": 2.0975512938533556,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xbf044d72284ee8056f13ca7f82b15e2c47e64323",
+    "lastSeenBlock": 52006424,
+    "estimatedHF": 1.6455730059658134,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xe9a5d67c547f40e9f7bcf15d1ac118b7d7f66872",
+    "lastSeenBlock": 52060666,
+    "estimatedHF": 1.5949439974347503,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x04c55f0332259b8f64b7d98b8320dfad404c8134",
+    "lastSeenBlock": 52006694,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x277dcc4377746ac3ccbbafcf818bf552ce24615d",
+    "lastSeenBlock": 52006696,
+    "estimatedHF": 2.840521423313979,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x78d160e2651f57ee4d8f6eb942f30c4bdacabaed",
+    "lastSeenBlock": 52006714,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x3757176c71c0e2d5bf385fbf53005b3f92c77f78",
+    "lastSeenBlock": 52058070,
+    "estimatedHF": 1.2313309675292357,
+    "tier": "Watch"
+  },
+  {
+    "address": "0xa02fe8355f64a521219abea75aea909d5194f522",
+    "lastSeenBlock": 52070627,
+    "estimatedHF": 2.3869620428032525,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xadda2a65b1373f1fd19d915e86cb67c9c1a773ec",
+    "lastSeenBlock": 52040058,
+    "estimatedHF": 1.141854629181338,
+    "tier": "Warning"
+  },
+  {
+    "address": "0x021b1dd20627d0fcde4d7cab564a3f93488f3b01",
+    "lastSeenBlock": 52006902,
+    "estimatedHF": 1.3025753708387708,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x1b85c1e0968d0e1041ee10fa31f07d37a2d25338",
+    "lastSeenBlock": 52007013,
+    "estimatedHF": 2.073345469468597,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xeb6635e7013ce440259c2643eea99a5f2e4db20a",
+    "lastSeenBlock": 52007048,
+    "estimatedHF": 2.572668205343676,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x5ef3709676163e00a8010dcd73fba55ad54dea73",
+    "lastSeenBlock": 52007112,
+    "estimatedHF": 2.0674726055429193,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x1802001109670b046bb7f82dc886a4a04dd5b2db",
+    "lastSeenBlock": 52007326,
+    "estimatedHF": 2.044340310196279,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x18d52f2fa4354ae4ddc269133ce2f7bb813cb912",
+    "lastSeenBlock": 52007350,
+    "estimatedHF": 2.0772898892751255,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x359bd4c479afb0482a72efbbf24cb21a1ad2f706",
+    "lastSeenBlock": 52007700,
+    "estimatedHF": 1.9755769035577702,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x75eab653676daf4d479d080d9a6ec6f448b278ca",
+    "lastSeenBlock": 52007742,
+    "estimatedHF": 1.0833468620323736,
+    "tier": "Warning"
+  },
+  {
+    "address": "0xf02407e5fdc8002f4211bba372bbfec73d7b43a8",
+    "lastSeenBlock": 52007807,
+    "estimatedHF": 1.228408101842437,
+    "tier": "Watch"
+  },
+  {
+    "address": "0xf6fe7ab283f1599dfdeff53adb91090ff0bc6b0a",
+    "lastSeenBlock": 52007869,
+    "estimatedHF": 3.942541176206932,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x349d065a6c22292196b8153c99f8c8fe97da6249",
+    "lastSeenBlock": 52007973,
+    "estimatedHF": 1.7523415730240903,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xacb11f6eb682d36e07b20cf2f3359dcf740a9cff",
+    "lastSeenBlock": 52008018,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x4d59045167df0b5838fe96a21939a234f829b7c8",
+    "lastSeenBlock": 52008087,
+    "estimatedHF": 1.0366183655749914,
+    "tier": "Critical"
+  },
+  {
+    "address": "0x0503fdf0cda4e788acefa6bf2a43da89f202fd04",
+    "lastSeenBlock": 52008138,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x87ea46c6888ee264f34edd0869b1628e51b5e7fe",
+    "lastSeenBlock": 52054139,
+    "estimatedHF": 1.3365224958992938,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xff9990e9fa04d4c522af5511c3f9ef259da78e91",
+    "lastSeenBlock": 52008352,
+    "estimatedHF": 1.2281130913415168,
+    "tier": "Watch"
+  },
+  {
+    "address": "0x93340b3761c80829cdcfb22da6f019d09debaf50",
+    "lastSeenBlock": 52008383,
+    "estimatedHF": 1.5089406755602603,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x1409f39ed72a378404814f17fbc3aba221d94588",
+    "lastSeenBlock": 52008512,
+    "estimatedHF": 2.6467251635009093,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x324add6431a52d217a981825da6940d423ebf9c7",
+    "lastSeenBlock": 52008552,
+    "estimatedHF": 2.1597555069664356,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x9c68a6315c76746de52c39147883b8406b514eec",
+    "lastSeenBlock": 52052876,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xc9cc05d3d9ab2f84a9b733c11e65c42fe5658717",
+    "lastSeenBlock": 52056385,
+    "estimatedHF": 1.9433793562177466,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x3ba872d2527646f1f7450ceb70b55a300f3c4e85",
+    "lastSeenBlock": 52009016,
+    "estimatedHF": 1.9011664574355733,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x6dce6ac97075b5a5e07d268c3781db96b5c97894",
+    "lastSeenBlock": 52009033,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x946f823bfaab18ba56f8d3c3149b5e786c21eb6b",
+    "lastSeenBlock": 52009060,
+    "estimatedHF": 5.6711800471520135,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xfe52552d9d95de32132d0d4616cfe85fb7549eba",
+    "lastSeenBlock": 52009159,
+    "estimatedHF": 2.668478142005542,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x0a5b637abb57fd4c41f0f3ec3d24751399fa0d55",
+    "lastSeenBlock": 52009233,
+    "estimatedHF": 1.7056319277201863,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x4f71bb205df9a1eb5183d3f3709ec7598f303d8d",
+    "lastSeenBlock": 52009562,
+    "estimatedHF": 2.3277820140978873,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x2deab4cb8b80496431ce21f26de8cf7b50dde207",
+    "lastSeenBlock": 52009665,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x0864a192eebde4e556b7fc5794848c16c3468d16",
+    "lastSeenBlock": 52009679,
+    "estimatedHF": 1.13923412327556,
+    "tier": "Warning"
+  },
+  {
+    "address": "0xb71b934e4a6369ab676ee4438bccf626bf28eee8",
+    "lastSeenBlock": 52009784,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x6ae8a9807271624890ca1241b0877ce5731849cc",
+    "lastSeenBlock": 52010058,
+    "estimatedHF": 1.1349129941535556,
+    "tier": "Warning"
+  },
+  {
+    "address": "0xec3dfde2e17ae44d184b0d9055c99390a808124b",
+    "lastSeenBlock": 52010372,
+    "estimatedHF": 1.2265176719404562,
+    "tier": "Watch"
+  },
+  {
+    "address": "0xc25fba7b77b66a0859ff7f6a78848051ed5d367c",
+    "lastSeenBlock": 52010578,
+    "estimatedHF": 1.9991725687217077,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x2a2cac3886d7890c5a538d1cf86b517ab4f20a93",
+    "lastSeenBlock": 52056586,
+    "estimatedHF": 1.4548346049248706,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x23db246031fd6f4e81b0814e9c1dc0901a18da2d",
+    "lastSeenBlock": 52015648,
+    "estimatedHF": 1.120882015482326,
+    "tier": "Warning"
+  },
+  {
+    "address": "0x258f934708a9224b22d01e1f188b95747485daf2",
+    "lastSeenBlock": 52035024,
+    "estimatedHF": 1.7270126121255822,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x7f8f65173ec686334935947579d30c93eebbdbf0",
+    "lastSeenBlock": 52011023,
+    "estimatedHF": 1.8268328690030193,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xdfd0d383c7814c465efc3dff095ea733ec3aa905",
+    "lastSeenBlock": 52011376,
+    "estimatedHF": 1.2474409805555764,
+    "tier": "Watch"
+  },
+  {
+    "address": "0xa2b16c27c0766a1df18892f7b0413b4f5806ee4d",
+    "lastSeenBlock": 52011505,
+    "estimatedHF": 1.8327227617997166,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x6fc3541b7a3f0bc6272dea399733cb969b0209c7",
+    "lastSeenBlock": 52011601,
+    "estimatedHF": 1.1028240278458976,
+    "tier": "Warning"
+  },
+  {
+    "address": "0x7d6d4dc18a47787a92a36fc08ba913bcb3a80823",
+    "lastSeenBlock": 52011739,
+    "estimatedHF": 1.4852375036118235,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x09b17dbcd8ac17ed5d2d6bd22ecb8eb68759cb4b",
+    "lastSeenBlock": 52037455,
+    "estimatedHF": 1.8343895355940214,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xb8744e2ff6cfcd6e0bda72320f8cddd27577c4fb",
+    "lastSeenBlock": 52011790,
+    "estimatedHF": 1.4842855572390554,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x603e570a9c71e6a6dbe4147e0ecc97921979e496",
+    "lastSeenBlock": 52012024,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xd5305fc2b77c0b2aa2865f1516c48a8515dcbd34",
+    "lastSeenBlock": 52012136,
+    "estimatedHF": 1.0942797870287628,
+    "tier": "Warning"
+  },
+  {
+    "address": "0xa58d4664740c9fd67b1a848eedc0c3c2b137502e",
+    "lastSeenBlock": 52014900,
+    "estimatedHF": 1.2638670162599335,
+    "tier": "Watch"
+  },
+  {
+    "address": "0x7c58e8a85a9d1f0a8c2e3a11f294c92a965fbf88",
+    "lastSeenBlock": 52012376,
+    "estimatedHF": 4.089961207716234,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x298dd31d7660c3149d4e2948bd9386315adddfb9",
+    "lastSeenBlock": 52012516,
+    "estimatedHF": 1.1612834137273988,
+    "tier": "Watch"
+  },
+  {
+    "address": "0x20ff81b64ad906d1a19f8162a81a0d65ae155a72",
+    "lastSeenBlock": 52012520,
+    "estimatedHF": 1.5704333812985707,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xe84e213becc8c50faa5400b6da1e520214692f86",
+    "lastSeenBlock": 52012582,
+    "estimatedHF": 1.5525975870240252,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x0be83e72fa10fdbd317cfa41fe62dc777e012a2f",
+    "lastSeenBlock": 52045169,
+    "estimatedHF": 1.6803403746741572,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x07e05d5f1df1136149953f7df8cf3d577aaf097e",
+    "lastSeenBlock": 52013150,
+    "estimatedHF": 1.1454533015558055,
+    "tier": "Warning"
+  },
+  {
+    "address": "0x09808f01210b9f91061e533c86df41c75edde03a",
+    "lastSeenBlock": 52038599,
+    "estimatedHF": 1.3051504372138467,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x059f966136283ef6ceb7791a38648cd780e64738",
+    "lastSeenBlock": 52013178,
+    "estimatedHF": 18.13858220627351,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xabe2ac9ac2b0e414d8c07951b0e8973fdecb08c9",
+    "lastSeenBlock": 52079958,
+    "estimatedHF": 1.1037450312258454,
+    "tier": "Warning"
+  },
+  {
+    "address": "0x3e3391830588a78f6433b70e515473047bac4c32",
+    "lastSeenBlock": 52013249,
+    "estimatedHF": 4.959929944912097,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xdd80079a547b1976f04b61b0c170b711b7137434",
+    "lastSeenBlock": 52013525,
+    "estimatedHF": 3.203781641558454,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x510b0068c0756bbefcbaffb6567e467d661291fe",
+    "lastSeenBlock": 52013652,
+    "estimatedHF": 2.2394707505857547,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xff6d15cdab11653c9fe235239225a7a6853fe9be",
+    "lastSeenBlock": 52013862,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xd34f0264e42b749249ef3a832308d089776b1cb1",
+    "lastSeenBlock": 52013899,
+    "estimatedHF": 1.9011921168851298,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x6cdcc6fc641ad40e9a226c6eca1451dcdec085e4",
+    "lastSeenBlock": 52014119,
+    "estimatedHF": 1.8319828096774728,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x1f7c2f8f02f56bdc79bbed5ebc054df2a2cda46d",
+    "lastSeenBlock": 52014250,
+    "estimatedHF": 2.130356068141903,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xdc12ea64fbe3a96a4ac47113f63e42d6de162a77",
+    "lastSeenBlock": 52073385,
+    "estimatedHF": 1.379847492034717,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xc32b910bfd7a1ba349c824f403f8047d45ab4090",
+    "lastSeenBlock": 52014336,
+    "estimatedHF": 8.759614945667966,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x4e30b933c0cd88736aec5b32aaa054897c276061",
+    "lastSeenBlock": 52067496,
+    "estimatedHF": 1.558012660192224,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xcdc03a3acc617e37c01213d18107983cac5c8a59",
+    "lastSeenBlock": 52014514,
+    "estimatedHF": 1.8639058548599192,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x1faf923d31954ea1c9f166dc2492b40b6745b79d",
+    "lastSeenBlock": 52014618,
+    "estimatedHF": 1.8020060870353154,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xc676b74ea192590cf5225e64e2c3d29f6ddb5be2",
+    "lastSeenBlock": 52014632,
+    "estimatedHF": 1.6225261994456308,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xd147270a673740e496a447447dc43dd9fe7cb6f1",
+    "lastSeenBlock": 52045391,
+    "estimatedHF": 2.360931185565572,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x42f6368d301a5710f94567edb2f32b2d64370143",
+    "lastSeenBlock": 52014970,
+    "estimatedHF": 2.3703548253909723,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xc7f5c25bfbfd25cf10474ea361328cf1612cf676",
+    "lastSeenBlock": 52015113,
+    "estimatedHF": 3.2243415605255707,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x53e8fcf206e8ba06546bdd3185bfffa03cbeb97a",
+    "lastSeenBlock": 52015197,
+    "estimatedHF": 2.0672639269170974,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x83d067d119601b7a93f4f06aac685fb3b286e2be",
+    "lastSeenBlock": 52015264,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x4d28d888d82fd17b54ed6b03c0b56aee0588b904",
+    "lastSeenBlock": 52038370,
+    "estimatedHF": 1.086455672551486,
+    "tier": "Warning"
+  },
+  {
+    "address": "0xe487790a2932c9c2f7561a83d8c5bd3193a79693",
+    "lastSeenBlock": 52015429,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xfaf529343b99db2f8b640fc2e6b7e67b9a01c131",
+    "lastSeenBlock": 52015960,
+    "estimatedHF": 1.2449017507612,
+    "tier": "Watch"
+  },
+  {
+    "address": "0xc4802d49a7119b043bc01d7fcdca8f33ff72bceb",
+    "lastSeenBlock": 52015654,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xd6a76f5da5bbfaf578ffa3404b1e7ff388c616cf",
+    "lastSeenBlock": 52015654,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x8cd1a8748374abee44ab62ce178799f72b042f34",
+    "lastSeenBlock": 52015654,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x1dfc6542b5f2e1afb04b8e272350ea957f74b437",
+    "lastSeenBlock": 52015655,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xcba8897ad453124c1842661ac40f3b34ac94b872",
+    "lastSeenBlock": 52015676,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x0a1e679f3b69ebbef717526f990fb53bd8305541",
+    "lastSeenBlock": 52015676,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xca97ae9854f477f4f486be084740e2b382e41f16",
+    "lastSeenBlock": 52015676,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x384d6faa6577f39cd0735dc3606d55362e9399db",
+    "lastSeenBlock": 52015677,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xe5b34ca4751e53da7de1db1daa435a390f408229",
+    "lastSeenBlock": 52015759,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x348e7ffc4f6fb78ffc3f0c8257b2d542c88a16c0",
+    "lastSeenBlock": 52015759,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xb4cea86a55004df89e620515e45740adec786044",
+    "lastSeenBlock": 52015760,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x1e65fde18cd9f419d0ae089d44fc6a4aac763e20",
+    "lastSeenBlock": 52015760,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x7ac744e7ac43cf8033300f455246d147c8d9aacf",
+    "lastSeenBlock": 52015777,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x12cc60b373f77e692029c5d201037a29994e5816",
+    "lastSeenBlock": 52015778,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xed11858c1e2c16c5c1ba6f39fdb3eb990028a628",
+    "lastSeenBlock": 52015778,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x986caae64c5979462dbe0393d9ae3fc670ac0a4f",
+    "lastSeenBlock": 52015778,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xc8cf3032ab84ccb06e3b52ece935f98b3de07d58",
+    "lastSeenBlock": 52015797,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xde17d51e4f5c60807980f581e50ca3ca815fdba5",
+    "lastSeenBlock": 52015797,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x1dea3cff486aec9de73c1e0708d4bae091367ef5",
+    "lastSeenBlock": 52015798,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x3e3a0aa3414177650dec4041f42a90b7d5e09526",
+    "lastSeenBlock": 52015798,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x644240f4e6c0202f495832af429a676969622c2b",
+    "lastSeenBlock": 52015867,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x4fff32df01dff69dab861365876e4da73d705cb3",
+    "lastSeenBlock": 52015868,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xb1112ba322e157f88d33923bd0e024456e63f266",
+    "lastSeenBlock": 52015869,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xc080de86d4c69984826fb187e10409bb8b8228c3",
+    "lastSeenBlock": 52015869,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xfef5ddfb43c9737eb21188e6dc77bf38ea6aca6f",
+    "lastSeenBlock": 52015884,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x0edda7696e0a853f1385209e6f29364f18ac6b63",
+    "lastSeenBlock": 52015884,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x5ecabf69749bf056d199aee1673c4dede12278bc",
+    "lastSeenBlock": 52015885,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x5f6dbb209ce95dece83614c9377931715a024eb9",
+    "lastSeenBlock": 52015885,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x77630ccd463f2c6cfd63a814af0db7f8e4ad9466",
+    "lastSeenBlock": 52015903,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x1e3119a5050bfe63f9713e6563923da135ec6fe0",
+    "lastSeenBlock": 52015905,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x09626292a61246de5aade7c998252d6d31d3fb4b",
+    "lastSeenBlock": 52015905,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x907809f773534b920bb07f469656b88083fafef1",
+    "lastSeenBlock": 52015906,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xf49a928e962e301dedfa0392ad8cd2fc1a3883b7",
+    "lastSeenBlock": 52015957,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xc4609ce982e7b83313df6da4212f4e68790e22c2",
+    "lastSeenBlock": 52015957,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x24bddea26f137cb433f0b34de8564ff91fbb3dec",
+    "lastSeenBlock": 52015957,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x16af6758203d87df80cdc0b4553c76386361f945",
+    "lastSeenBlock": 52015958,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x681877b8616e1dc3601c73f6dc07bae24aa1c169",
+    "lastSeenBlock": 52015974,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x7aaf8d9620a2b943affe942bb779196c2fb3cbec",
+    "lastSeenBlock": 52015975,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x0733ef4187b6be0caa33e8183ca27b3e5a45c6f2",
+    "lastSeenBlock": 52015975,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x92930747ab62b60c1fdd9e4d5dfcf731e4b64eba",
+    "lastSeenBlock": 52015975,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x19a8dd447210448a6ea281c035bfd62f2d3d5ad9",
+    "lastSeenBlock": 52015993,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xcbb1c5b22c584a22e039902af0d83318d53c11a1",
+    "lastSeenBlock": 52015994,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x8d5f283b88e00e440b86ce56d97893286a4b3f0d",
+    "lastSeenBlock": 52015994,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x3a15de0fffb43c2a0b2226c01ebb579be6b8a48c",
+    "lastSeenBlock": 52015994,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xae50aa693df2e5cb3d275a541f8a08c55f345a86",
+    "lastSeenBlock": 52016054,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x6c8032642d40989568a7debfa59aa94a268a9e21",
+    "lastSeenBlock": 52016054,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xeb17739b93bb64ac5987747d1d05a215a2ca4292",
+    "lastSeenBlock": 52016054,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x46ee1bd338fe19fe7b4d5796708031f0011ccc62",
+    "lastSeenBlock": 52016054,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xbfd96970392ba6f5c5ac40af328aa4aefebd45a5",
+    "lastSeenBlock": 52016071,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x04293c0cf35546347de999c8406bdae67b044acc",
+    "lastSeenBlock": 52016071,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x3a926326e4bad6a6e01f7bd73b2395a029a945a5",
+    "lastSeenBlock": 52016071,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xb54de1f5811769e24b7c9679cc25adcb0eb16910",
+    "lastSeenBlock": 52016073,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x9611951f975445e4abaf673bde7db9e1c4116a33",
+    "lastSeenBlock": 52016089,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xf2306991b5e94fda39269c5062fadb655d7b323f",
+    "lastSeenBlock": 52016089,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xe5175fdc30e5815e114a0e23c04f98bf57397dc5",
+    "lastSeenBlock": 52016089,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x8cce29537c2bef25096818c76bc15ecaa19ccc30",
+    "lastSeenBlock": 52016089,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x850aee248da15c04d4e66327610fd2c4d7901126",
+    "lastSeenBlock": 52016098,
+    "estimatedHF": 2.0207771227296467,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x14279f3b3a547a8e927635f4bfeb8fbdf3488a1c",
+    "lastSeenBlock": 52016120,
+    "estimatedHF": 1.2063819053513631,
+    "tier": "Watch"
+  },
+  {
+    "address": "0x12b3631c2f067064b0f26d57fc7d841f9af95982",
+    "lastSeenBlock": 52016168,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xd57a2fdaf8ca7d1935f271c66801ceb1fee5daa1",
+    "lastSeenBlock": 52016168,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x632e8f95ea79e590079e1a0912f52aa6e1dc4883",
+    "lastSeenBlock": 52016168,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x9260ade05212ec59ff6edc62e93eb098e0ad93eb",
+    "lastSeenBlock": 52016168,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xc120f49c9d52ca63ab0448f2458a8895d255fe64",
+    "lastSeenBlock": 52016207,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xd17871f5953258139b304d7f5c49dd92b35e1ce9",
+    "lastSeenBlock": 52016207,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xa2b610020a5192769e168cbcd704eec6467ddd81",
+    "lastSeenBlock": 52016208,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x48a08dda3769161a6ba3a41f2ce3e16404cb8a74",
+    "lastSeenBlock": 52016208,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x83d31817415c64e102029fb7df860272df635611",
+    "lastSeenBlock": 52016229,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x6e3def1de6c957bc0c933d157958dfcd7e042087",
+    "lastSeenBlock": 52016230,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xb356245eedcb97c5cfb6c6c0f1f87879b69affde",
+    "lastSeenBlock": 52016231,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xb1059e332fa0448596dab57876bbdadf2cdee170",
+    "lastSeenBlock": 52016231,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x5a9cbd01ff4adccfbd91fd4a80543609f67665f7",
+    "lastSeenBlock": 52016315,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x0c8b42a20d5788ca77150df3de9758ec84391fd0",
+    "lastSeenBlock": 52016315,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x054ab430350f8a41bdaa6567d6619f9ddfae7912",
+    "lastSeenBlock": 52016316,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xef92371bf64b00cda77bff14d0f979f591b0972b",
+    "lastSeenBlock": 52016316,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x892ee2465f3c1a6687ce3eb8edbee2c0f3a06d56",
+    "lastSeenBlock": 52016319,
+    "estimatedHF": 2.332644494653509,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x36c6fb6dd8ae66a9cc8d906e5c37a1f5771465f8",
+    "lastSeenBlock": 52016335,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x6f1b7d46f0fba6b1a010d64b994e87d80ab2ac9e",
+    "lastSeenBlock": 52016335,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xf87da76e163213d2b8cd97d116aeea1008b1abc1",
+    "lastSeenBlock": 52016335,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x9d93fc43d9287ae684878944e79092bcc0ccf003",
+    "lastSeenBlock": 52016335,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x93f9d8fa21c38c45dbcbbcffa697667a45c31298",
+    "lastSeenBlock": 52016364,
+    "estimatedHF": 3.3068248989058038,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x5c884d280e4aad2f66db54e59b5a3c7581e3171b",
+    "lastSeenBlock": 52016652,
+    "estimatedHF": 1.859678619918186,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x20e4bef8137145e3923d002640b51ff5bd955b55",
+    "lastSeenBlock": 52017072,
+    "estimatedHF": 1.7967952708993502,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x8ca3f5e2bedce11b61433107f50a90a3f01a05fa",
+    "lastSeenBlock": 52017059,
+    "estimatedHF": 2.122692897675217,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x4f45f8c3b92b69a17eaa77b2c69975373ade2897",
+    "lastSeenBlock": 52017170,
+    "estimatedHF": 2.0401148808676663,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xd05c259ed797b344a0ceac33df445d0a9eb5b77c",
+    "lastSeenBlock": 52018108,
+    "estimatedHF": 2.0596002282782373,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xafa9284d28d4b83ccf7ffe2c24aac2fa033ee34a",
+    "lastSeenBlock": 52017596,
+    "estimatedHF": 4.507175261784741,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xb6ff462c42ec97434530ba4b8adc10776ff8ca6d",
+    "lastSeenBlock": 52017264,
+    "estimatedHF": 1.859241081621723,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x03cbce4fc399a4531b9f4dd29cba396f114358bc",
+    "lastSeenBlock": 52017267,
+    "estimatedHF": 2.97338637165948,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x01b37edd07ea71eaf552b6ef1b8dcfbb328e1f39",
+    "lastSeenBlock": 52017434,
+    "estimatedHF": 1.6360629872829933,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xc704e3c30511b07fd4da37584fd34d9cb48437b6",
+    "lastSeenBlock": 52017538,
+    "estimatedHF": 2.040867378846172,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xf1b62728506b5146847a63f876efd60b042769b2",
+    "lastSeenBlock": 52017599,
+    "estimatedHF": 3.246004682559177,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x58e70cd1424252c83d5d9c19dbf746c1815d4999",
+    "lastSeenBlock": 52017653,
+    "estimatedHF": 2.9326661377431176,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x52e7d9509c7c491104b2690816833dccb18070fb",
+    "lastSeenBlock": 52017746,
+    "estimatedHF": 1.3785052038198624,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xc2e2d434eeba07c81f06d0e33f1282b4e42a64ab",
+    "lastSeenBlock": 52017799,
+    "estimatedHF": 1.580859291268235,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xe8a8d84fcf8faf564176ba5dbe5e24dbeec9bda2",
+    "lastSeenBlock": 52018002,
+    "estimatedHF": 2.641064967183487,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x98f4850f5428d647fc9024d42c7f729ed1293a67",
+    "lastSeenBlock": 52018174,
+    "estimatedHF": 2.0314103019336933,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xce5a88cbd0ac3c8560c213956c55ad66c46584f6",
+    "lastSeenBlock": 52058639,
+    "estimatedHF": 1.3292858171818052,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xc765850a760d6a501c74a2ad748c1471a00cbdfb",
+    "lastSeenBlock": 52018402,
+    "estimatedHF": 1.7123691055543877,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x92ce7b68f1557ce2b3349e96037edb3544a4534c",
+    "lastSeenBlock": 52018541,
+    "estimatedHF": 2.4286795474901695,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x0090d245551d647546b4782bc170e5cb01674de6",
+    "lastSeenBlock": 52018600,
+    "estimatedHF": 2.0240913298962284,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x666b072ded83a63796b5376ce8e79060d34e64e8",
+    "lastSeenBlock": 52018917,
+    "estimatedHF": 1.776608664414388,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x6be34d7dfce417cdecaaf70b0e1b3c4b080317ca",
+    "lastSeenBlock": 52018940,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x83b16255e7d3abb501042d87208e5c4bcdbc1472",
+    "lastSeenBlock": 52076030,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x78613099ca1eb2cb3981506800b1d943f78dbd16",
+    "lastSeenBlock": 52019230,
+    "estimatedHF": 1.6501314046378937,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x2a54702978d3edcc8e94b24c9c26e2637fe28cf4",
+    "lastSeenBlock": 52019233,
+    "estimatedHF": 1.8539287689852841,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xc930d8a8a4d451b6f5602ddddf3def09c2430e03",
+    "lastSeenBlock": 52019469,
+    "estimatedHF": 2.0274412451843005,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x4b830d796cdee8c09159631ff461b31c9bd3cac5",
+    "lastSeenBlock": 52019663,
+    "estimatedHF": 1.2905408820458886,
+    "tier": "Watch"
+  },
+  {
+    "address": "0x5f958dca51ab1962242462d4715e792b8094d8e1",
+    "lastSeenBlock": 52019722,
+    "estimatedHF": 1.2189658313509664,
+    "tier": "Watch"
+  },
+  {
+    "address": "0xc9bc5cab29dc93a9d2ea16ef38620598fad5ca66",
+    "lastSeenBlock": 52065786,
+    "estimatedHF": 1.1967999473761592,
+    "tier": "Watch"
+  },
+  {
+    "address": "0x75c1adea732c397057dfc182aa72695fda85b275",
+    "lastSeenBlock": 52020037,
+    "estimatedHF": 1.2400665471039614,
+    "tier": "Watch"
+  },
+  {
+    "address": "0x82ae9d1db1393acafabdbe6189f6058844c527eb",
+    "lastSeenBlock": 52060782,
+    "estimatedHF": 3.025825387990947,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x4cccd752fa03c796156e8949aa1eaf06105b3f4b",
+    "lastSeenBlock": 52020156,
+    "estimatedHF": 2.9493949898010663,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x676f1b983ae6a67349ea5e00d7d432e4f703896f",
+    "lastSeenBlock": 52020278,
+    "estimatedHF": 1.1594935900224452,
+    "tier": "Watch"
+  },
+  {
+    "address": "0x248759999ab7d50f43d6856222586ee9dc4ebe9f",
+    "lastSeenBlock": 52020317,
+    "estimatedHF": 3.6623835955628907,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x7ae11238718d07564fa2b97bbfe799839e345483",
+    "lastSeenBlock": 52020336,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x74db89207320d282e3b418e461097e3ad264acbe",
+    "lastSeenBlock": 52020570,
+    "estimatedHF": 1.3137039225084437,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x38d46e8c4364b2fc77f7a65a5369ab0ee70287ea",
+    "lastSeenBlock": 52020607,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xa5dc8f68e4a89bf1dca3804071485def7f673125",
+    "lastSeenBlock": 52064655,
+    "estimatedHF": 4.726474927668653,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x7fb0e8bfa3cdd6107caf8b764aec0a73379259d7",
+    "lastSeenBlock": 52071782,
+    "estimatedHF": 1.0627729034003626,
+    "tier": "Warning"
+  },
+  {
+    "address": "0xeccc50467519a74cea04a03dac5642b9dad8cfde",
+    "lastSeenBlock": 52020786,
+    "estimatedHF": 1.5954587301142775,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x88986f3d0180e1d0b3f15650e99a667bf3087c2f",
+    "lastSeenBlock": 52020811,
+    "estimatedHF": 2.0367244438720715,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xe1b0d45397a2dc8d184e3e7ae7f8200468e4cd80",
+    "lastSeenBlock": 52020817,
+    "estimatedHF": 1.6204473267807025,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xc767ecd98c87182f272386e75086a1cfacc5c724",
+    "lastSeenBlock": 52033692,
+    "estimatedHF": 1.081717964118245,
+    "tier": "Warning"
+  },
+  {
+    "address": "0x587ad2c227a728fb4966f0e9a0b1a70e3beaf1cf",
+    "lastSeenBlock": 52020957,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x05768e68578b5e5b5eb8b8da8621410153c16c04",
+    "lastSeenBlock": 52062797,
+    "estimatedHF": 8.47931270865585,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xafdf87fca85d374ddfe1f66e9802a8cd23894150",
+    "lastSeenBlock": 52021424,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x73753c0d532db7bd062fceba35409473431dbabd",
+    "lastSeenBlock": 52031400,
+    "estimatedHF": 8.484631628565973,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xf1ec8d9573cd7d9944cb51aeec12d8c48a64d40d",
+    "lastSeenBlock": 52021710,
+    "estimatedHF": 1.8208265063702624,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x119f8a224e41cbdd5961ec8811dda02c1ffa34ab",
+    "lastSeenBlock": 52021788,
+    "estimatedHF": 6.313562340651584,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xc7408683f7549cfd89be027637e7e4b06d703913",
+    "lastSeenBlock": 52021878,
+    "estimatedHF": 1.8618563507236623,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x609470c2f08ff626078ba64ceb905d73b155089d",
+    "lastSeenBlock": 52022039,
+    "estimatedHF": 1.7019398870817137,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xc5f35ebce3ea365dbffc6a5a27819b660d24716d",
+    "lastSeenBlock": 52022221,
+    "estimatedHF": 2.722918699759925,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x25eeb36902c74ca93a3b5cb054a75b2f81f954ff",
+    "lastSeenBlock": 52022514,
+    "estimatedHF": 2.4538726087161087,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x653a26e6fc5c2e7636758447063a9acf78536781",
+    "lastSeenBlock": 52022636,
+    "estimatedHF": 1.9291974296842582,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xd5eea3ee272b54dac6fe273eecbf9ccdf037a8ab",
+    "lastSeenBlock": 52022637,
+    "estimatedHF": 2.2668068431375894,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x6d242cecf8dcad5fb8364780042e6fd0be903726",
+    "lastSeenBlock": 52022666,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x16dcde65b1f225914a9cfb79f4e5443fe1de05b6",
+    "lastSeenBlock": 52022691,
+    "estimatedHF": 1.5847197774834811,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x601f1bca6ce51f767d0f8fe80e25cb96dacace61",
+    "lastSeenBlock": 52064675,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x9b7cb24f7ee022fe1c67199fcd99eae415dde47f",
+    "lastSeenBlock": 52022905,
+    "estimatedHF": 2.2555539079019704,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x375c4b1d343eb08d8ae9fed8f55888af8db240b4",
+    "lastSeenBlock": 52081017,
+    "estimatedHF": 1.7098655565821075,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xaba7ecbb74cd5f2135d74a1124653a174854cf30",
+    "lastSeenBlock": 52023084,
+    "estimatedHF": 1.4392212554111823,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xbd33cbcacd8463b37db9f89fec0dd59900db9fbd",
+    "lastSeenBlock": 52023088,
+    "estimatedHF": 1.7043060270813315,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xd8b532a9107fe60b493b278b412441e94877574d",
+    "lastSeenBlock": 52023110,
+    "estimatedHF": 1.4929277441431956,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xfced7ac9f7af96b4422df908838246ee8eff3169",
+    "lastSeenBlock": 52023237,
+    "estimatedHF": 1.8459980578262585,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xb0c500e88ed01e14baaa96a4e4252f41f0bce22a",
+    "lastSeenBlock": 52023397,
+    "estimatedHF": 1.2721636363636364,
+    "tier": "Watch"
+  },
+  {
+    "address": "0xfb345d84b326e0623dac2d172163a541e23d8688",
+    "lastSeenBlock": 52023453,
+    "estimatedHF": 6.76281285818485,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x48d4209423ca2cdcc96f56cfd5a6fe6c53736b7e",
+    "lastSeenBlock": 52023545,
+    "estimatedHF": 1.9299934244447263,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x528a3d9aba48121dc7f911767b3cf38134314234",
+    "lastSeenBlock": 52023824,
+    "estimatedHF": 1.970020452308346,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x57325ffb486cfd1b943c77507ba339b0d5d1b546",
+    "lastSeenBlock": 52024052,
+    "estimatedHF": 1.630127338069589,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xc7093a0577365205a8590fdc472dfff23f0ef312",
+    "lastSeenBlock": 52026672,
+    "estimatedHF": 5.020863401995415,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x2f828255f5755a8ddb2c70643083f32635e64a0f",
+    "lastSeenBlock": 52024007,
+    "estimatedHF": 6.817972135806073,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x2da892095b107381c2d68b70cd6ef045bc16815d",
+    "lastSeenBlock": 52024009,
+    "estimatedHF": 1.7272194432388122,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xae77664e560e45418cb787f53eecae1d74a107cf",
+    "lastSeenBlock": 52024099,
+    "estimatedHF": 2.3670371941685455,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xe3442b40adefaece4679551654952a2285e9b5bb",
+    "lastSeenBlock": 52072600,
+    "estimatedHF": 1.3115919097688828,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x9c78e36499721305500c5c8f144e120144d30ee8",
+    "lastSeenBlock": 52024327,
+    "estimatedHF": 1.2343253403366472,
+    "tier": "Watch"
+  },
+  {
+    "address": "0x076a1a81997626c429e7944d8586b12f290677f3",
+    "lastSeenBlock": 52024403,
+    "estimatedHF": 1.2260257743639205,
+    "tier": "Watch"
+  },
+  {
+    "address": "0x12ef58947285f01ce8d8ecd90b3ea384b022cd1c",
+    "lastSeenBlock": 52024452,
+    "estimatedHF": 5.963223439271239,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x55734df99a3e5e1aeba1a5d21aeea8696ce7afec",
+    "lastSeenBlock": 52024456,
+    "estimatedHF": 1.9944703390316734,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x12a0847d82e97d5ae49f14072d26ccb07d9de9fa",
+    "lastSeenBlock": 52024712,
+    "estimatedHF": 1.1692334535020747,
+    "tier": "Watch"
+  },
+  {
+    "address": "0x3e212f136244465d8e524fb658e6daa1fb0593bf",
+    "lastSeenBlock": 52042758,
+    "estimatedHF": 1.0936324230681134,
+    "tier": "Warning"
+  },
+  {
+    "address": "0x47c63322a0b6b757fb6d9a4e633c6b1d87e0f99d",
+    "lastSeenBlock": 52024754,
+    "estimatedHF": 3.5994583647292524,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xf672ad5e5b27fc8d761f65bf0190994a7f5d61c1",
+    "lastSeenBlock": 52024959,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xbbfc10a63f6ae247311e77ae2d47ad15e8e8880d",
+    "lastSeenBlock": 52024985,
+    "estimatedHF": 2.076943178786422,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x7842f8a674d287ca98aa23424839bf8df7d68ca2",
+    "lastSeenBlock": 52024999,
+    "estimatedHF": 1.7122377696565967,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x98e459341f8021d09b8fa25ac3dd22b955736084",
+    "lastSeenBlock": 52047464,
+    "estimatedHF": 1.3939361065847662,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x36c946f90b94eb2ced9562f4ec6e269309a7edb6",
+    "lastSeenBlock": 52025165,
+    "estimatedHF": 2.02974628270167,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xdb49050beb9a2dd6d05dfca9b2952f48eb342580",
+    "lastSeenBlock": 52025207,
+    "estimatedHF": 1.230428739926442,
+    "tier": "Watch"
+  },
+  {
+    "address": "0xbfaf4769ddef3249331b08d66fa83d0329151756",
+    "lastSeenBlock": 52025621,
+    "estimatedHF": 2.3722880616391784,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xc56456105bfcb31783d7855fdce37412939b8c5f",
+    "lastSeenBlock": 52059560,
+    "estimatedHF": 1.5097110632292388,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xcd6534fc93407fc2c27c9ae18b7eba2ed8adb04d",
+    "lastSeenBlock": 52026094,
+    "estimatedHF": 1.5563194425262086,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x79696a71d9d2d6e1708ccc6c8bfb8557f643d453",
+    "lastSeenBlock": 52026109,
+    "estimatedHF": 2.050892977632627,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x24f58755b205bf07d20afafc563627a38d55d8ef",
+    "lastSeenBlock": 52026243,
+    "estimatedHF": 1.6733015664077655,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xb3cc41d21f287fc664bd11891010a7bf3d4487a3",
+    "lastSeenBlock": 52026282,
+    "estimatedHF": 17.00547744196233,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x586e6b7fc3a95c82dd7d92fe93ad60e91c57e8f9",
+    "lastSeenBlock": 52026286,
+    "estimatedHF": 2.3198794479590505,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x0d85234238a6436f413de61f88d31c9175cd7854",
+    "lastSeenBlock": 52026425,
+    "estimatedHF": 2.0465050032061454,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x057610352c8505e969ae3e837191412e1033063e",
+    "lastSeenBlock": 52026480,
+    "estimatedHF": 1.2374744493315282,
+    "tier": "Watch"
+  },
+  {
+    "address": "0x8b256d8a44f97244b7d28101a1bbb1cfdfcea96d",
+    "lastSeenBlock": 52026649,
+    "estimatedHF": 3.2625616718593116,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x8cd6979bd3f49774995d8270b178e1bb69e77be2",
+    "lastSeenBlock": 52026672,
+    "estimatedHF": 3.753184125577587,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x8f82afaf16a927114558e032184bf2ae5ec777ce",
+    "lastSeenBlock": 52026915,
+    "estimatedHF": 1.5603467622831075,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xc5d972705407ae2bb195b5dccdfb9cff77b3301b",
+    "lastSeenBlock": 52026948,
+    "estimatedHF": 1.4773860594164052,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xcf0ae20f4e78fc75fc2547399387c476ffcc656d",
+    "lastSeenBlock": 52027004,
+    "estimatedHF": 1.7225670336773362,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x033ad535b6e0a721ae6d9e63e1af48e2b137945c",
+    "lastSeenBlock": 52027022,
+    "estimatedHF": 2.3164337920692164,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xde4a5fd3b75c6478bcd9206c96a3f72fcffc46cc",
+    "lastSeenBlock": 52027036,
+    "estimatedHF": 4.0078058108375325,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x86fd20ec8671b3c2a885072315282953048c0a3a",
+    "lastSeenBlock": 52027115,
+    "estimatedHF": 1.0949383265345816,
+    "tier": "Warning"
+  },
+  {
+    "address": "0x27c8a4f65e9219a326bbc306a497a20b9f1531ce",
+    "lastSeenBlock": 52052660,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xf6b3cb36ff07b23af4e95ef971ecb3c2f99e4466",
+    "lastSeenBlock": 52027439,
+    "estimatedHF": 2.9589591919108638,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x415c20af91ebc1bd0aaba57a391a07a906969600",
+    "lastSeenBlock": 52027481,
+    "estimatedHF": 2.7972122505801438,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x120fc41991206eb4981f53bb98fcd76d99bb2356",
+    "lastSeenBlock": 52048265,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x4b4996682ac567cecb58df240c485f8348b0b3de",
+    "lastSeenBlock": 52069412,
+    "estimatedHF": 1.235325102345344,
+    "tier": "Watch"
+  },
+  {
+    "address": "0x59f84af036712afe2fd0ec77f4d9a6f0a612f1fe",
+    "lastSeenBlock": 52027881,
+    "estimatedHF": 10.75536007313482,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x6cf3b20d1a188993b850958040a057c90e8c30fa",
+    "lastSeenBlock": 52027885,
+    "estimatedHF": 2.6024209620821828,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xf479e838a3c94fbd5f3a4cfa67bc0bd59279c033",
+    "lastSeenBlock": 52027906,
+    "estimatedHF": 1.9297542654169473,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xab72d1aac8f65fe9e9342d78b0b9fe4dac2357c5",
+    "lastSeenBlock": 52028095,
+    "estimatedHF": 7.18401244592586,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x267b233b9d97be8d3ba4da872489ccc913a42d7f",
+    "lastSeenBlock": 52028197,
+    "estimatedHF": 2.9626281070486478,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x6c6cf0c46722c92002ce39ee510ab1815a2b2c31",
+    "lastSeenBlock": 52028228,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x204e21e399510d617d84922fce91f48f9d0fb70d",
+    "lastSeenBlock": 52028230,
+    "estimatedHF": 2.070743249807467,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xb1a088aaddd36b623bf7bb624b61c76d346a96de",
+    "lastSeenBlock": 52028237,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xad036a7e58dfa18a6511e85d29b0341e16bcbd9b",
+    "lastSeenBlock": 52028247,
+    "estimatedHF": 1.735728825764528,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x8fb20c72139b2a971ab814503d61111349f8cc78",
+    "lastSeenBlock": 52068036,
+    "estimatedHF": 3.8616913274164433,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x8179b6e21bd509f881b893e051966987d88bf930",
+    "lastSeenBlock": 52028442,
+    "estimatedHF": 1.2283566842476203,
+    "tier": "Watch"
+  },
+  {
+    "address": "0x95f615c88f791351b414322a0a7f9cc7354ae19f",
+    "lastSeenBlock": 52028595,
+    "estimatedHF": 1.389172233273851,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x29614a31977303b28dee82da6091dd1207685c4a",
+    "lastSeenBlock": 52028818,
+    "estimatedHF": 1.0869239500734675,
+    "tier": "Warning"
+  },
+  {
+    "address": "0x80fae1ae33bdd09738df749ec791e586bea346ea",
+    "lastSeenBlock": 52028852,
+    "estimatedHF": 1.6235672616783472,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xe6b99098ca85dec7bb7522d256520315d6e102e9",
+    "lastSeenBlock": 52028880,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xd67f26d54132e9826746acd1b0c9d6b8a679a87c",
+    "lastSeenBlock": 52029134,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xeb0e0f49ebc23a4b8b87fb80a31c52f8f67ac6c0",
+    "lastSeenBlock": 52029322,
+    "estimatedHF": 1.959338785547206,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xc3d344b70069429368891d77da73cff58d86bd3c",
+    "lastSeenBlock": 52029337,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x15a914aa5164a39c697a7b77623062e588bd8983",
+    "lastSeenBlock": 52029355,
+    "estimatedHF": 1.7155760434612697,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x66f8b41e3dc790cc7ac2613ce138019e68b9434d",
+    "lastSeenBlock": 52029382,
+    "estimatedHF": 1.695887025446597,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x539f872dbc75f0eddcf8d6f0f6ac4bed0e58bd93",
+    "lastSeenBlock": 52029553,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xd58cd8d82bbb41de859cd6ab88ee4b68abca969f",
+    "lastSeenBlock": 52029932,
+    "estimatedHF": 1.3389266813136567,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xd2c5b4e659a0e2ee1c4d668df21132a01763033d",
+    "lastSeenBlock": 52029949,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x4c5697c06ef0ddf9819f887f4003cb6608ee2226",
+    "lastSeenBlock": 52030004,
+    "estimatedHF": 2.6469672804412028,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x619f386806b5dec93acd4b53a9039f50d6d793df",
+    "lastSeenBlock": 52030043,
+    "estimatedHF": 1.6010670008826304,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x6273957eb6707f6e935d8b190bd239ccae0eb7cb",
+    "lastSeenBlock": 52030073,
+    "estimatedHF": 2.0307919505891103,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xae699e2c6e4ac9e4d486a5777f4f4ad0b69c9602",
+    "lastSeenBlock": 52030092,
+    "estimatedHF": 1.6379758020099853,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x901d853aea657a17b1e577d0483e6d031245a8a9",
+    "lastSeenBlock": 52030103,
+    "estimatedHF": 2.758971213991486,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x93068dc30d68c63ac09562341af041e651d17fb4",
+    "lastSeenBlock": 52030367,
+    "estimatedHF": 1.2259127169256987,
+    "tier": "Watch"
+  },
+  {
+    "address": "0x1e47fb4a7f8bd346d242c764ef21598ba3998011",
+    "lastSeenBlock": 52030511,
+    "estimatedHF": 17.413011630279534,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x8bcd71e20340ba4fee9ae4329170dfa5c5a67828",
+    "lastSeenBlock": 52075347,
+    "estimatedHF": 2.0919494581249443,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xb15858b5a83caddbb01138bbf020c42c543efefd",
+    "lastSeenBlock": 52030534,
+    "estimatedHF": 3.5411193433694432,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x85a31cddd7f04c59ac21d330dac9c64656655204",
+    "lastSeenBlock": 52030575,
+    "estimatedHF": 1.618474981849862,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xfa68ac3fd61396f478135d0018eb19c9b9ccd1dc",
+    "lastSeenBlock": 52030681,
+    "estimatedHF": 2.266851381388283,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xb52dcd9183930d79d7396be116476fa9e9e004f7",
+    "lastSeenBlock": 52030747,
+    "estimatedHF": 2.230720446119712,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x5b1a9e4ff69e1f130d336543d78da0a6630093b4",
+    "lastSeenBlock": 52030762,
+    "estimatedHF": 2.5678242701416547,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xa4deb4cfe4562a3546874c96d62db7391575cd7f",
+    "lastSeenBlock": 52030773,
+    "estimatedHF": 1.6281494302984227,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xcb090e1b99a5d1e57f874e7b10bca5be64b79b2c",
+    "lastSeenBlock": 52030897,
+    "estimatedHF": 1.2667273854640628,
+    "tier": "Watch"
+  },
+  {
+    "address": "0x35cc6e8c37e2ea77fa10bf1206ca8e244a183f43",
+    "lastSeenBlock": 52030933,
+    "estimatedHF": 2.1268261072976187,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xa391a90cdc4a5f47f25a271c61c8cf09a55db7ef",
+    "lastSeenBlock": 52030969,
+    "estimatedHF": 3.6990703462495245,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xfe422a283a1c91387422228115b9bdf11fab3458",
+    "lastSeenBlock": 52031074,
+    "estimatedHF": 2.0359057483894882,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x44c1dbab6ecf1ff5025a947b831a2cdd1c0d01fb",
+    "lastSeenBlock": 52031264,
+    "estimatedHF": 6.662443285125194,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x4fe6519eed2e70db0c2a5d6c82d15e19ca5ccef7",
+    "lastSeenBlock": 52031709,
+    "estimatedHF": 37.6478008305081,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x1175ee4311fca015a22bec6fb4645b280e986c1f",
+    "lastSeenBlock": 52031762,
+    "estimatedHF": 2.4504540540540543,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x59a9f768d7aa7d3245fe2096290d7beebaa8ac02",
+    "lastSeenBlock": 52031775,
+    "estimatedHF": 1.5252863944100596,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x927d9529de9740989514de3e44ba2d3b6009f4c8",
+    "lastSeenBlock": 52031820,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xfc74b8641f4ec73527caec600b628155e3741273",
+    "lastSeenBlock": 52031930,
+    "estimatedHF": 15.856429097605893,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xf28a0e22822eaf3f2366db827898d4c3abe37c47",
+    "lastSeenBlock": 52072041,
+    "estimatedHF": 1.0500468732503083,
+    "tier": "Warning"
+  },
+  {
+    "address": "0x53728d4be659d46b92b9c0fbe72805e30c3bf458",
+    "lastSeenBlock": 52032029,
+    "estimatedHF": 1.8873316349325953,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xb73463511ffcaf65641859a207b2926d0b5edaf2",
+    "lastSeenBlock": 52032114,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xfadc0ad467df4da3012b5e49a559e43344e839f6",
+    "lastSeenBlock": 52079279,
+    "estimatedHF": 1.4250670125772893,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xc661afad6b4c6c05ef0b7f549e5fa6a7a9766a87",
+    "lastSeenBlock": 52032298,
+    "estimatedHF": 2.633005406915287,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x6dd3c36ac15457e7317eba854dc845153d64d5d0",
+    "lastSeenBlock": 52032359,
+    "estimatedHF": 1.9888961783478938,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xd307f814aa3153d5d61e35197ef39dfcdbe4269d",
+    "lastSeenBlock": 52032374,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x8a956da92fd65e8e95864a0c38fc8ed76a7c3490",
+    "lastSeenBlock": 52032392,
+    "estimatedHF": 1.636460699054383,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x9444eaeb72cfe6a8c77f74c5afcbd0566bc8aa0c",
+    "lastSeenBlock": 52032400,
+    "estimatedHF": 80.29556976744186,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x0321e89a7b9484f47e8ccd4daf97ee8066783c04",
+    "lastSeenBlock": 52032632,
+    "estimatedHF": 3.4461681425875343,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x400cf21abd5fbfa9a5727ee79c60f21d97620cbc",
+    "lastSeenBlock": 52032916,
+    "estimatedHF": 1.628699394006077,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x113b4963776ca74476daa0a8ca942508f10b0fac",
+    "lastSeenBlock": 52032992,
+    "estimatedHF": 5.614920471226178,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x3a7eddd5c6a0a0ebc6d3d4f9e44139a4c087c1e2",
+    "lastSeenBlock": 52033089,
+    "estimatedHF": 1.1860024692450906,
+    "tier": "Watch"
+  },
+  {
+    "address": "0x8b1c8fc76f6bd4f74204cbe6f0974303c8e3057b",
+    "lastSeenBlock": 52033245,
+    "estimatedHF": 1.7595210696906596,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x375805e5e097144d013d45bde5c4fc4a97d6a29e",
+    "lastSeenBlock": 52033636,
+    "estimatedHF": 1.1852522899995817,
+    "tier": "Watch"
+  },
+  {
+    "address": "0x4631c54ee8eb138f7017d237bad209c28e63cf81",
+    "lastSeenBlock": 52033344,
+    "estimatedHF": 1.4881840190230837,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xfb349d72d4da0e55eecb8744ce7e19b53c1c8f12",
+    "lastSeenBlock": 52033401,
+    "estimatedHF": 2.2280220024112434,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x41cd3ff26133a0deafb38748b5d31ee2dac80ccb",
+    "lastSeenBlock": 52033415,
+    "estimatedHF": 49.63182303322431,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xbb1599a5cf4e8f99ac981278f6fe87eb30c8e4a6",
+    "lastSeenBlock": 52060059,
+    "estimatedHF": 1.2583088004564393,
+    "tier": "Watch"
+  },
+  {
+    "address": "0x299c290f3f3ae6fc0d4bd88b88445bc37932afe5",
+    "lastSeenBlock": 52033647,
+    "estimatedHF": 1.6400084598074547,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x73b1d62f8e1767990885a850d49548077f5bb501",
+    "lastSeenBlock": 52033797,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x56d70d96184888bcc087e23a874512aa09690587",
+    "lastSeenBlock": 52033980,
+    "estimatedHF": 2.0704837647583734,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xe89a295061ee1b1bc0b1babc9950bfe30893066e",
+    "lastSeenBlock": 52034170,
+    "estimatedHF": 1.2261463374954245,
+    "tier": "Watch"
+  },
+  {
+    "address": "0xece951f130e6868ba5ed3d25926d7b31e4af6965",
+    "lastSeenBlock": 52034183,
+    "estimatedHF": 1.5863790128608148,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xc1966e11f94e1c3dcfc273fd29c89a0a1971fe27",
+    "lastSeenBlock": 52034376,
+    "estimatedHF": 2.4608301407002084,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x2bc348ecf6c2aaa2d015b9d59c2fa0f7d2cd064f",
+    "lastSeenBlock": 52034396,
+    "estimatedHF": 1.3606841854551426,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xbdf64913e9ed1e4b5d997380675cf9fa5ad1e618",
+    "lastSeenBlock": 52034400,
+    "estimatedHF": 26.384542857142858,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x635d193ab1d0604bde9a83c2179ad81bb5efc967",
+    "lastSeenBlock": 52034419,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xfce6779646e33752aca5942c8cf95cba36d0416f",
+    "lastSeenBlock": 52034530,
+    "estimatedHF": 1.2276123851745115,
+    "tier": "Watch"
+  },
+  {
+    "address": "0xd9be0bd242702c28f760b5832c65c4f9783dcda9",
+    "lastSeenBlock": 52035007,
+    "estimatedHF": 1.230274419118117,
+    "tier": "Watch"
+  },
+  {
+    "address": "0x01004bea6919b67c1475756ea75019f3bdc40679",
+    "lastSeenBlock": 52035039,
+    "estimatedHF": 1.9005155006929653,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x57948ac4900064f23ef5a41ae73d92889ae5e434",
+    "lastSeenBlock": 52035047,
+    "estimatedHF": 1.772021394772316,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x6df7fffb9df7575421e0d5ac8c82d3f25f8abba9",
+    "lastSeenBlock": 52035480,
+    "estimatedHF": 2.8191130394643964,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xb2f2adc206b53283673a7b978905abe98e1cd9ee",
+    "lastSeenBlock": 52035403,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x2302260780019b97882002b242b4f62e35751eab",
+    "lastSeenBlock": 52035421,
+    "estimatedHF": 2.839032777695729,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x5b53534f022be3552014de7d5ab63dfe3b46832e",
+    "lastSeenBlock": 52035535,
+    "estimatedHF": 1.6126720216530814,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x5cf86e2d254998f823915700daa87646f0c22aa8",
+    "lastSeenBlock": 52035540,
+    "estimatedHF": 1.4962405190835706,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x54ae2bd7787a89aaaeee03ebb1a4f189c0f82441",
+    "lastSeenBlock": 52035624,
+    "estimatedHF": 1.5917128381704795,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xfff74defa523026dd32c1c28060f1a4b1495d045",
+    "lastSeenBlock": 52035649,
+    "estimatedHF": 4.6191064320718205,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x57387d1215c1e0d6b12d019265193653f812f2b7",
+    "lastSeenBlock": 52035678,
+    "estimatedHF": 2.076284522079723,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xc56daf6d5a9a420739fc15912530c8c599a86b43",
+    "lastSeenBlock": 52035745,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xae5360b84bf1aa8a47f7761a747544e333cb7e74",
+    "lastSeenBlock": 52035812,
+    "estimatedHF": 2.367348276836924,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xbb1bc1e0611c0696cb0af5c65a45ef151e856ad1",
+    "lastSeenBlock": 52080502,
+    "estimatedHF": 1.3758468424058858,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x712dee84906df997924e18d6de0dd350768c33e0",
+    "lastSeenBlock": 52035842,
+    "estimatedHF": 1.0596878932440095,
+    "tier": "Warning"
+  },
+  {
+    "address": "0x7a720d5d93090c863e7f68c0d49e3e0c0f3c9e1c",
+    "lastSeenBlock": 52035881,
+    "estimatedHF": 1.7068807378279713,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x5fa56b536086317510f2ffcba5900d84bf390c87",
+    "lastSeenBlock": 52035890,
+    "estimatedHF": 3.265450759010017,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xa62c69f91d0a7229a8f925868d8eb0c6943810fb",
+    "lastSeenBlock": 52035958,
+    "estimatedHF": 2.168770926448281,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x83370a35f5609e8eaab2032e396a2e90064055df",
+    "lastSeenBlock": 52036069,
+    "estimatedHF": 3.870012485723299,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x276b2f3eb77e7816d1e57f21c1cfa6a5a0ecd1e9",
+    "lastSeenBlock": 52036082,
+    "estimatedHF": 1.813504411854357,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x23c7fd215874b032c9d3ad2784788e75aa96fa2b",
+    "lastSeenBlock": 52036131,
+    "estimatedHF": 2.0470118463195885,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xb3a1581b786d724d34377d2a90c6f239887d1908",
+    "lastSeenBlock": 52036162,
+    "estimatedHF": 1.5919740032935963,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x2efa7c96a998e13fe3ca92ff220a670b7b67c0c8",
+    "lastSeenBlock": 52036165,
+    "estimatedHF": 1.2281145579179737,
+    "tier": "Watch"
+  },
+  {
+    "address": "0x766af0e74bc8bccfaa8e178a748ee7fa0766aa57",
+    "lastSeenBlock": 52036203,
+    "estimatedHF": 1.2341083266999402,
+    "tier": "Watch"
+  },
+  {
+    "address": "0x07c0d25e056fcba77e900992b4a00f0b6b40a44a",
+    "lastSeenBlock": 52036264,
+    "estimatedHF": 2.910211715275726,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xe3e7d4c52ea92327b20119879c6fc1a7578299c6",
+    "lastSeenBlock": 52036347,
+    "estimatedHF": 1.9799897573986598,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x8b9b69f03e2ae482190004909d2c33d2126f5b4a",
+    "lastSeenBlock": 52036367,
+    "estimatedHF": 2.1523481307571073,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xf328daf517f1dad28bedd585397c6db9312848e7",
+    "lastSeenBlock": 52036568,
+    "estimatedHF": 4.977411239703101,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x79e9ceb23ed388efa35f2b3dcedc6c028c9f5f62",
+    "lastSeenBlock": 52036675,
+    "estimatedHF": 1.9978202496940782,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x30fc6a936ac210c43331cd2e52225432a0d7fd5a",
+    "lastSeenBlock": 52039545,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x83648f7454d968316629e8a517657b9394e39ac0",
+    "lastSeenBlock": 52036739,
+    "estimatedHF": 2.5593453007323035,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x4ad41b780af5a7bf7552cf8e090f825734e6074f",
+    "lastSeenBlock": 52036806,
+    "estimatedHF": 1.9360184030341991,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xbff770987c5c41509a91496ec978b257c7ff5516",
+    "lastSeenBlock": 52036838,
+    "estimatedHF": 1.373675632698552,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x64e5447036036c87599267053a3552de833a38d5",
+    "lastSeenBlock": 52037011,
+    "estimatedHF": 1.247132229273395,
+    "tier": "Watch"
+  },
+  {
+    "address": "0xeeb616d0005ee83bb8505070a30bacbae16a5c27",
+    "lastSeenBlock": 52044722,
+    "estimatedHF": 3.626719458011419,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x187e99fe3d442bec9064459779040b9671a6a105",
+    "lastSeenBlock": 52037112,
+    "estimatedHF": 1.28480465389629,
+    "tier": "Watch"
+  },
+  {
+    "address": "0x5d1124fb77c539ec92e3ef853053bbce1e98271b",
+    "lastSeenBlock": 52037387,
+    "estimatedHF": 1.4561403381468656,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x8de3c3891268502f77db7e876d727257dec0f852",
+    "lastSeenBlock": 52037282,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xfed34115e69e2534d8059e5e7907f5d1f0bcd29e",
+    "lastSeenBlock": 52077533,
+    "estimatedHF": 2.025677067244168,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xcde3be080e3b8642b6eb12888adf3b0243588441",
+    "lastSeenBlock": 52037594,
+    "estimatedHF": 2.698902942143801,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x5ab6358858753039ea0f4a18fa0f96235734b96a",
+    "lastSeenBlock": 52037622,
+    "estimatedHF": 1.6865036413743089,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x91cefdeba388303088567a452384a29464c1a3d2",
+    "lastSeenBlock": 52037645,
+    "estimatedHF": 3.09716619887123,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x9883943facc44cc848fb33cb99f6832d0d87d461",
+    "lastSeenBlock": 52043759,
+    "estimatedHF": 1.1949355856390491,
+    "tier": "Watch"
+  },
+  {
+    "address": "0x451b2a11a124e31b8268c61432d533a0048c7364",
+    "lastSeenBlock": 52037716,
+    "estimatedHF": 3.083405050909983,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x12f16a0aa0cefea43402ed11cf983cace2014dba",
+    "lastSeenBlock": 52037759,
+    "estimatedHF": 1.3456025054492413,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x03e351cbd15cf270ddef185c106644cf77a4262e",
+    "lastSeenBlock": 52071351,
+    "estimatedHF": 2.9632740010626537,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x90c7df2a016f9764d3315f17a1783654d27585d6",
+    "lastSeenBlock": 52037912,
+    "estimatedHF": 1.2376295596193103,
+    "tier": "Watch"
+  },
+  {
+    "address": "0x25792818c40c5630d93fd624f6daf922384eb37d",
+    "lastSeenBlock": 52038077,
+    "estimatedHF": 1.8007741233190226,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x9c28fee86e369b211d289e11662777cc83ae9235",
+    "lastSeenBlock": 52038084,
+    "estimatedHF": 2.7989555456135355,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xaf979ae6fa686a6992f1a468e7aeea08f284c977",
+    "lastSeenBlock": 52048715,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xaac33877f0014b02be2cc3757b42227c5313904f",
+    "lastSeenBlock": 52038401,
+    "estimatedHF": 2.074554836800021,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x042299523a282487e1f285e81542005ed5a77305",
+    "lastSeenBlock": 52038432,
+    "estimatedHF": 1.7300598362744863,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xc9261a93fa5ba7905fdb6009cd4fe7a10cef942f",
+    "lastSeenBlock": 52038487,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x22d84a5deda421ced90553188160beef19c7bc3f",
+    "lastSeenBlock": 52038514,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x6c69dc084de4f09a43c12d4ffba30e36a7a44632",
+    "lastSeenBlock": 52038539,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x4c3ffb314a0a0fd3eab27ec388371febab4d9b73",
+    "lastSeenBlock": 52038551,
+    "estimatedHF": 3.043329545307815,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x14a30cea8e9fb242d4918f52ce17a2b324d7c7e1",
+    "lastSeenBlock": 52038556,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x8e8e3fbe0a4a491855cf51342b02309bef793729",
+    "lastSeenBlock": 52038582,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x86b720a9b3cf3e5641d731b3bbe92c013876f82b",
+    "lastSeenBlock": 52038587,
+    "estimatedHF": 3.1084155240984344,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x9182132106961d76d099219cc7986c34eca721d4",
+    "lastSeenBlock": 52038602,
+    "estimatedHF": 2.8260250588274327,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x76e817d6f69927152995acd2ef8b0faa1255b4f6",
+    "lastSeenBlock": 52038855,
+    "estimatedHF": 1.2868771323750088,
+    "tier": "Watch"
+  },
+  {
+    "address": "0xcf86fa1982a0c83f6426ce58c8a49fc32ea79518",
+    "lastSeenBlock": 52038761,
+    "estimatedHF": 2.285551612719423,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x03d27b077e7bcab6205ea14174a97d9ed352a4ea",
+    "lastSeenBlock": 52038775,
+    "estimatedHF": 2.6775178494365806,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xab3b52d11b02e13f7d421d6d7ccb4d0fc7ff2515",
+    "lastSeenBlock": 52038779,
+    "estimatedHF": 2.695637002858349,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x3e1355ba7c1c9a5b4c6bfaab078462a961dace20",
+    "lastSeenBlock": 52038791,
+    "estimatedHF": 2.604851852572518,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xa89245cd79f31f2d1054d6709ece8201dc6d325b",
+    "lastSeenBlock": 52038888,
+    "estimatedHF": 2.2561878013848014,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xfc4e1bf775f829d664795b62b933962b5421326e",
+    "lastSeenBlock": 52038911,
+    "estimatedHF": 1.2979006619110394,
+    "tier": "Watch"
+  },
+  {
+    "address": "0x3b677e28b1b137e83c1cacc98bb7b1499d5ebf99",
+    "lastSeenBlock": 52039019,
+    "estimatedHF": 1.9595209834165557,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x9ea6ed02f93b64a55cb35e5eb3387c5fe18cd0cb",
+    "lastSeenBlock": 52039132,
+    "estimatedHF": 1.660494303098285,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x1d6ea46a2face5e243538898893344449ece8c82",
+    "lastSeenBlock": 52039221,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x1b7b74e2d6af62774dc05aa30f0d51fb9b2663a1",
+    "lastSeenBlock": 52039271,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x2ac8f8c5d3c38abddf5d79e65788830ab97d8c61",
+    "lastSeenBlock": 52039282,
+    "estimatedHF": 2.3844018532922924,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xfe9cbafb1e5a98ed203f27a02621fba8e464b638",
+    "lastSeenBlock": 52039377,
+    "estimatedHF": 1.181769096587778,
+    "tier": "Watch"
+  },
+  {
+    "address": "0xb2f9bbc5db84a95b598cab0c464cf92d584d8900",
+    "lastSeenBlock": 52039412,
+    "estimatedHF": 1.7225478308599693,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xe6416cf3f844aa4b09e12fd2172fdddf5f766766",
+    "lastSeenBlock": 52039655,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xdc9528e73f770c93ed7895a2928d52ea1d18e1a7",
+    "lastSeenBlock": 52039901,
+    "estimatedHF": 1.3841230448188941,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x7dc48c9922cb810d1aff55ae670368ac00a9c681",
+    "lastSeenBlock": 52039929,
+    "estimatedHF": 3.082591299836913,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x9ed8ea1f68fcf4f7b17531be1f174ead3a42832f",
+    "lastSeenBlock": 52040004,
+    "estimatedHF": 2.7875146395493373,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x78ffd2d17f37374c2c24967d0018d18ab7279b79",
+    "lastSeenBlock": 52040007,
+    "estimatedHF": 1.617371401309699,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x8ca8e849327647a6fe1a1ecb58b750accbcca6ab",
+    "lastSeenBlock": 52040225,
+    "estimatedHF": 2.565314431257402,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xbce3cdd4fd85faf820fe4dbefe09527f0f0fb076",
+    "lastSeenBlock": 52040342,
+    "estimatedHF": 2.5101236360464223,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xbfd4636c8b6848754dbbcfde65fd392490e41b45",
+    "lastSeenBlock": 52040367,
+    "estimatedHF": 2.798184902312149,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xf4b69a6c9179857fe6c6b43880a5bad6c2ee10ce",
+    "lastSeenBlock": 52040425,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xdbe7ea58a0d7ba697de49838b806bc5d34b9cb6a",
+    "lastSeenBlock": 52040518,
+    "estimatedHF": 5.318505256441285,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xb13262fcc948951dd51d6afddfc0929b060bb84a",
+    "lastSeenBlock": 52040535,
+    "estimatedHF": 1.380622247078795,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x3d8fde41bdaabaf72e804f5e4d75661702691b4f",
+    "lastSeenBlock": 52040598,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x89a7cf4b7c6c22f4a048be9a0f645e556e692e55",
+    "lastSeenBlock": 52040683,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xd0de31d841d7f2275466054d613dca78b37aeaae",
+    "lastSeenBlock": 52040721,
+    "estimatedHF": 1.210475747716705,
+    "tier": "Watch"
+  },
+  {
+    "address": "0x138f83fc082c0ea01fb9995d139d2e06cbc0bdb4",
+    "lastSeenBlock": 52040741,
+    "estimatedHF": 3.766342102350335,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x3c479a97cd071a06bd4661227a23ec553dd269a9",
+    "lastSeenBlock": 52040775,
+    "estimatedHF": 1.8794176338330704,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x9e15a027c2910d272ea8a1660e618e400f6843be",
+    "lastSeenBlock": 52040875,
+    "estimatedHF": 1.0684337563086337,
+    "tier": "Warning"
+  },
+  {
+    "address": "0x79fe41ca45fd5c44db8313b55060e1d2518f7608",
+    "lastSeenBlock": 52040906,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x3b72b3278204cb1fc904c747ce6913f184268919",
+    "lastSeenBlock": 52040995,
+    "estimatedHF": 1.2402956266087188,
+    "tier": "Watch"
+  },
+  {
+    "address": "0x7aaa863600b23339efa13e4fffef9b7effd67456",
+    "lastSeenBlock": 52041054,
+    "estimatedHF": 1.6721697600315768,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xfa4400264abd97fa6d61ab04471dacad081928de",
+    "lastSeenBlock": 52054097,
+    "estimatedHF": 1.3918931294128551,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xd0832a5ebc96084b0c3ca590a7babd27a88462a7",
+    "lastSeenBlock": 52041188,
+    "estimatedHF": 1.7217305421384683,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x03d0a5c9e1843986fb2f9335f7eb936754f7eaf0",
+    "lastSeenBlock": 52075104,
+    "estimatedHF": 1.0827039893124497,
+    "tier": "Warning"
+  },
+  {
+    "address": "0xa2c1b7322f53f5391fcc86d7f01ae5c6e44f3b0d",
+    "lastSeenBlock": 52041367,
+    "estimatedHF": 1.8893667472270157,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x399ccd4f975142ddeae0549898822c0940d96123",
+    "lastSeenBlock": 52041385,
+    "estimatedHF": 4.945048189419731,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xe26020308c242d52376e4d6fc1e73a06c6ff5cc1",
+    "lastSeenBlock": 52041537,
+    "estimatedHF": 1.7342934156090042,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x96bb3675d08d5c3f743d533157fc2f0df3e29e0a",
+    "lastSeenBlock": 52064045,
+    "estimatedHF": 13.448255885212655,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x4de6ad88c54664c320d6fd5e14869c62d67161ba",
+    "lastSeenBlock": 52079560,
+    "estimatedHF": 2.5323953590456623,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xe3401e95b575026b1f648096458d3e38d12d72a6",
+    "lastSeenBlock": 52041744,
+    "estimatedHF": 1.5627453455527132,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x83f0e56259e276d848354bf3c90c8c73857996ee",
+    "lastSeenBlock": 52041957,
+    "estimatedHF": 1.2365774643017668,
+    "tier": "Watch"
+  },
+  {
+    "address": "0xb129a2311f6a352ba0ca2db4cc92176799318cc4",
+    "lastSeenBlock": 52041973,
+    "estimatedHF": 2.533465821706128,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xa89363bfff61c9264bf15440ba423824d32b8da8",
+    "lastSeenBlock": 52042025,
+    "estimatedHF": 1.9675375268574375,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xbb414d24b756e0d765200776721be0ac25326cf3",
+    "lastSeenBlock": 52042049,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x82f44078774ac8f0f9e466a89b6c990321e23dbd",
+    "lastSeenBlock": 52042235,
+    "estimatedHF": 1.6330824006137126,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xf41ec62a74e0a661d0f0a4b9f016bcc6123ebccf",
+    "lastSeenBlock": 52042285,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x734d320abacead00b82a5c8160961d57e27a3554",
+    "lastSeenBlock": 52062285,
+    "estimatedHF": 2.119809430979213,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xcb0446130e13c6a112e62b8caaf17be4a1c83ca7",
+    "lastSeenBlock": 52042552,
+    "estimatedHF": 2.420734623935491,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xbf30baaf628e7a8ed3474a82e4bc45e87a253cd4",
+    "lastSeenBlock": 52042572,
+    "estimatedHF": 2.546783299822136,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x7246de3bb541ab5cae8681c02029f1fd590bbc92",
+    "lastSeenBlock": 52042718,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x916570eb2eca6be369b7f69c3c3efb6f965fb1a1",
+    "lastSeenBlock": 52042872,
+    "estimatedHF": 1.4435260438691953,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xa0fff2cf57e667426b316cc3d73076a54ff6fb0d",
+    "lastSeenBlock": 52042883,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x249025bd74e42faecb5f7c63b889f511581a8546",
+    "lastSeenBlock": 52042950,
+    "estimatedHF": 2.18732692886861,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x40c298a92096981312ac3cd59be487f072839b2f",
+    "lastSeenBlock": 52043195,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xcbbd8b776af9de201ee60296d7ee3ab7c49de71f",
+    "lastSeenBlock": 52043268,
+    "estimatedHF": 2.053173008690978,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x959b8a9b3fa36aca8fdab2d46cabf23c406120c6",
+    "lastSeenBlock": 52043355,
+    "estimatedHF": 1.5614833808717368,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x594f89d9cb726815ea3bf9b88e2be3c37ec8d686",
+    "lastSeenBlock": 52043384,
+    "estimatedHF": 2.6987981895686906,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x2a6326c55116f600ad8daf8eda0da40a30efe930",
+    "lastSeenBlock": 52043584,
+    "estimatedHF": 1.044278823404667,
+    "tier": "Critical"
+  },
+  {
+    "address": "0xde04b5592604fc1a7073dd9a2a3fee9a766184dd",
+    "lastSeenBlock": 52043606,
+    "estimatedHF": 6.860020110162042,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x44d6f57449ffc2b070c2cec3f45dd676852b35ed",
+    "lastSeenBlock": 52043970,
+    "estimatedHF": 5.102713880296971,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x2499bdf18e33eb830bcf0d1c1e47b7e0cca07071",
+    "lastSeenBlock": 52045164,
+    "estimatedHF": 2.5561174395943658,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x6e8132e4db18ba58ec5de5ea75fff321c71011e1",
+    "lastSeenBlock": 52044582,
+    "estimatedHF": 1.8932981097099906,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xf889612292dd94c4e6ec5d2aa52760ebf457d8ae",
+    "lastSeenBlock": 52044599,
+    "estimatedHF": 1.2375009586966375,
+    "tier": "Watch"
+  },
+  {
+    "address": "0x2cf171dbdd685a07fd1480505d03a24b57d6568b",
+    "lastSeenBlock": 52044841,
+    "estimatedHF": 1.5516509559165568,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xdf6913a919b94b4367778cfdb8e49115ff3b283b",
+    "lastSeenBlock": 52044884,
+    "estimatedHF": 1.083794845127789,
+    "tier": "Warning"
+  },
+  {
+    "address": "0x89ca4dff7f87a81c8f316bbfaa70e581a15d4a21",
+    "lastSeenBlock": 52044968,
+    "estimatedHF": 1.8525808307503102,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x3bf56a99e039526a6c5faac52c7e5d815cce68b7",
+    "lastSeenBlock": 52045273,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x9a02e697c6c81155c8dab192f1b2a2353c60e634",
+    "lastSeenBlock": 52045288,
+    "estimatedHF": 2.157439257754334,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x85c04246c77afddc054a97f3b0868b8d01adaf79",
+    "lastSeenBlock": 52045297,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x9a2b29091ad91fa75f5e59eab7963cf95307d6e9",
+    "lastSeenBlock": 52045381,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x54debebf7613a2cc2bc7fcbf8024ca798ef5636c",
+    "lastSeenBlock": 52045464,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x22a7d54004d6d570bed319a041f02b0f26c540a8",
+    "lastSeenBlock": 52045467,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x0bb11e32f8e60a6d1ecb45d7dd0468092634355c",
+    "lastSeenBlock": 52045689,
+    "estimatedHF": 3.8430763787416846,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x008b5f833eca29fefd598edf300982b8d588d317",
+    "lastSeenBlock": 52045775,
+    "estimatedHF": 1.7068073209109602,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x285dbedb2000fa967e46734134504feabf3896cf",
+    "lastSeenBlock": 52045801,
+    "estimatedHF": 43.072414670398096,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x4ca07775cd65df21a64351f334cef35cc428058d",
+    "lastSeenBlock": 52045846,
+    "estimatedHF": 1.2335870480455817,
+    "tier": "Watch"
+  },
+  {
+    "address": "0x55816f5dfb90dc747ef2aab3ad78ef4d008a2a59",
+    "lastSeenBlock": 52045944,
+    "estimatedHF": 2.0744438444798,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x9180fe8213800a0b49ffa734817fb57dfd197029",
+    "lastSeenBlock": 52046227,
+    "estimatedHF": 1.2386993707476077,
+    "tier": "Watch"
+  },
+  {
+    "address": "0x2391402a4c29cf332945f061fe0792ffc7fe07b2",
+    "lastSeenBlock": 52046312,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x16b00db74167b7469dda63b674ca9a3b1b70c439",
+    "lastSeenBlock": 52046343,
+    "estimatedHF": 1.1440149912521829,
+    "tier": "Warning"
+  },
+  {
+    "address": "0x8563b19b62565fa1153ea088162e5fe924dc4b6a",
+    "lastSeenBlock": 52046451,
+    "estimatedHF": 3.7956001878562655,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xf8977424081d4662058d4317f454acab82a79756",
+    "lastSeenBlock": 52046477,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x0de862b811cf43dfcd19be1d54628f326e54aa6d",
+    "lastSeenBlock": 52047172,
+    "estimatedHF": 1.4884491362381838,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x9236d6f21b09431a45f888e23f51c137c47bee7a",
+    "lastSeenBlock": 52046848,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x67a3110b31b5ed84270c84286aff3f2e46c01d88",
+    "lastSeenBlock": 52046866,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x7c9bcdbbbb49e61222383a89c1300d29da283a8f",
+    "lastSeenBlock": 52046887,
+    "estimatedHF": 1.550296889941179,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xc9b74f142653f77219d78eb73cbd8994813a3060",
+    "lastSeenBlock": 52046928,
+    "estimatedHF": 1.3458498594197421,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x63b3061c0b45c0aef2c483acc1f9d1027fe0c739",
+    "lastSeenBlock": 52046957,
+    "estimatedHF": 1.7621226878752045,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xe0c98a1d1901be1924276e12d41062670a71dbdc",
+    "lastSeenBlock": 52046986,
+    "estimatedHF": 1.5195819252345788,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xa1858f9159b096d69b5ae43c58d30465d58acc69",
+    "lastSeenBlock": 52047048,
+    "estimatedHF": 2.1123420344040302,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xa00f68e002d4631fe0e07854154384d37ede2171",
+    "lastSeenBlock": 52047118,
+    "estimatedHF": 2.461496212121212,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x2aab3c945808f3db1d727d16fb8ac9984a2da797",
+    "lastSeenBlock": 52047194,
+    "estimatedHF": 3.239038376518231,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x165894028e0c9b334fecc4534d0e913398dc259a",
+    "lastSeenBlock": 52047652,
+    "estimatedHF": 2.1826924244518024,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x76c2c72abc9077349a9cf345d6fcde2f761ea146",
+    "lastSeenBlock": 52051615,
+    "estimatedHF": 1.351308047123743,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x26a6dc267e276fded7b40251c8fc08b1b40df367",
+    "lastSeenBlock": 52047523,
+    "estimatedHF": 2.0947589787769894,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x8212effc40e328c82d55f3e7219a19a1109a4805",
+    "lastSeenBlock": 52047540,
+    "estimatedHF": 2.078360246454923,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xdd96cdf2c71a08a8a73fbcfb89b966b2d7fccc71",
+    "lastSeenBlock": 52047648,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x89d183065f88ad0030673cb3c244e307d70c8936",
+    "lastSeenBlock": 52047811,
+    "estimatedHF": 1.6897236901054056,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x25868a0c167fcff1181f24beb9e7a0ec1da80e08",
+    "lastSeenBlock": 52047812,
+    "estimatedHF": 2.497407902304493,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xcf141b8008fd4040c6d4ef721d5147eed3b96875",
+    "lastSeenBlock": 52047948,
+    "estimatedHF": 3.02569479511018,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x530990b511e979205b14595274acb5a16e06283e",
+    "lastSeenBlock": 52047959,
+    "estimatedHF": 1.2392057358999238,
+    "tier": "Watch"
+  },
+  {
+    "address": "0x7b7132eb1bb02ae7926e807886278ae5e6328eb7",
+    "lastSeenBlock": 52048016,
+    "estimatedHF": 1.622163100578235,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x53c32b8f2cf15d1dc2307e1a94ccda5157dfca2d",
+    "lastSeenBlock": 52048587,
+    "estimatedHF": 1.7662445938919735,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x1ee37d099aa30398ef6631811b22c3b563affe5e",
+    "lastSeenBlock": 52048079,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x49be8a2f993bd417dbc26ada3a662ef3baf1c31b",
+    "lastSeenBlock": 52048110,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x33ea9cd120bd15b91da747b199dc78e35f5cc0c4",
+    "lastSeenBlock": 52048149,
+    "estimatedHF": 2.193592397134982,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x1887a8e232fc5426bf8942bce79ec7af29b197a1",
+    "lastSeenBlock": 52048616,
+    "estimatedHF": 1.3630741036609417,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x9906bea21df19ba1cfac0f56247110eecdd62d7f",
+    "lastSeenBlock": 52048874,
+    "estimatedHF": 1.4283507813973855,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x89b8d2ab3cfe511c65e044f81cb8c08824f61bb0",
+    "lastSeenBlock": 52048920,
+    "estimatedHF": 2.5154964305053107,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xa46b1a112fde189206faf5a25601da5cf2eeeb74",
+    "lastSeenBlock": 52048939,
+    "estimatedHF": 3.075346017573989,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xe708f8f3263c479ff52336764f2e0d94fe062496",
+    "lastSeenBlock": 52049922,
+    "estimatedHF": 1.1983521330229137,
+    "tier": "Watch"
+  },
+  {
+    "address": "0x68b87e6569e6b60f00f403414451e044f2fd1bd8",
+    "lastSeenBlock": 52073828,
+    "estimatedHF": 1.2054696297292453,
+    "tier": "Watch"
+  },
+  {
+    "address": "0xff61c7225feba46859755073e4b154cbda8a80b4",
+    "lastSeenBlock": 52049307,
+    "estimatedHF": 2.224796252088804,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x81ab154bf0b6a718ee75417cca936846b6a4213b",
+    "lastSeenBlock": 52049372,
+    "estimatedHF": 1.3559276866015963,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x8922ca46f3f0216cef4de3c004257ede3599fdbb",
+    "lastSeenBlock": 52049418,
+    "estimatedHF": 1.314507836595984,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x881117d15b20cfe0f5977dc950084d2d0b29d626",
+    "lastSeenBlock": 52049525,
+    "estimatedHF": 1.23814960286795,
+    "tier": "Watch"
+  },
+  {
+    "address": "0x7c637a2ef4ebb8bb143c32843910965f16742ccd",
+    "lastSeenBlock": 52049527,
+    "estimatedHF": 1.8504986811652187,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x10d4fdeafd69176545249619e4c7bfb4362914e4",
+    "lastSeenBlock": 52049603,
+    "estimatedHF": 1.7317794022859585,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x26b123f434fba28e69c4c35fae60d6adbb8895e1",
+    "lastSeenBlock": 52051621,
+    "estimatedHF": 2.07619483792831,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xe17a5458b52ae6d403530562b0dfa3dc0ee153c3",
+    "lastSeenBlock": 52049637,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xdb9592a1e2a6dc850de1644382be93561ede6588",
+    "lastSeenBlock": 52049980,
+    "estimatedHF": 1.7184341847403635,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x97c225996ae4e8e4f05ca0598c08c1aaab4d2c97",
+    "lastSeenBlock": 52049875,
+    "estimatedHF": 2.195288501575941,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x61803678e5388423eeda86e1193ebf5ed1bf3466",
+    "lastSeenBlock": 52049924,
+    "estimatedHF": 1.5426771432234743,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xef0599a125a1e4252f071295154235cfcaeae1ad",
+    "lastSeenBlock": 52049952,
+    "estimatedHF": 2.1073128617233507,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x4d048134e1cca06e576d3cdf33c1fd2fe4624c3e",
+    "lastSeenBlock": 52050109,
+    "estimatedHF": 3.5476448552226603,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x108e842130b8420bc73473d57284ad23502dcb10",
+    "lastSeenBlock": 52050322,
+    "estimatedHF": 1.9812067663881254,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x63eef2e764df194e56104f525ea351c46ef4dcc5",
+    "lastSeenBlock": 52050332,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xe9b9847c5e3ce715b07aa1d58121af5afbc1f1cb",
+    "lastSeenBlock": 52050371,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x6e268e2cb2f54b1015d123d87066c59dc2a669c4",
+    "lastSeenBlock": 52050428,
+    "estimatedHF": 1.2325762169381285,
+    "tier": "Watch"
+  },
+  {
+    "address": "0x29054b4556c59263aa556cb7c3581bfb919e18fb",
+    "lastSeenBlock": 52050519,
+    "estimatedHF": 1.3344862415427796,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xcb3a69da3a8bae2f6e40807406c5b41a40f9df82",
+    "lastSeenBlock": 52050541,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x2cb6f575d966c726cc67237340c3e707bd06de18",
+    "lastSeenBlock": 52051122,
+    "estimatedHF": 1.4040345491551522,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x6c7d412ba90db8a2a2c3187440cc879c37ce51c8",
+    "lastSeenBlock": 52051176,
+    "estimatedHF": 1.2596804810563111,
+    "tier": "Watch"
+  },
+  {
+    "address": "0xe27283809b6e42bef831250b5ac79ea821a88556",
+    "lastSeenBlock": 52051262,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xffea775bc1bb50f4ddcda524d3dc0bc5ccfbfbf4",
+    "lastSeenBlock": 52051328,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xe0f164f246065424a74db12256c5aae0d337afdd",
+    "lastSeenBlock": 52051452,
+    "estimatedHF": 1.2418725923687894,
+    "tier": "Watch"
+  },
+  {
+    "address": "0x24a51542cf2262b1d0f5cc00183c50fb164f9b91",
+    "lastSeenBlock": 52051475,
+    "estimatedHF": 1.7477408458608075,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xd88e4f2260dccf2c65ce0b838d43c08b9b603ad5",
+    "lastSeenBlock": 52051537,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x495c55fa68e644d9070aabce4ea90c4990f04f8e",
+    "lastSeenBlock": 52059665,
+    "estimatedHF": 1.3015365699625623,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x4297626ec9ba63d7e0f17effb8bdae34eb9a21ab",
+    "lastSeenBlock": 52052156,
+    "estimatedHF": 1.3440174448948088,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xfb958e937463f4821037bf107f03f69f47e5e531",
+    "lastSeenBlock": 52052251,
+    "estimatedHF": 1.881861488691527,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xc58f17f63c5055f090c79783f29721e15b69ce4c",
+    "lastSeenBlock": 52052254,
+    "estimatedHF": 1.7563701288876252,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xc8d0c8e25adb24f97a6338c20acc6a57347213eb",
+    "lastSeenBlock": 52052524,
+    "estimatedHF": 1.7885704891985414,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xa29439d75c0b6c9e909a432917d74664bd8819ea",
+    "lastSeenBlock": 52052863,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x5e01017ce7e249cd3a01679a8a989a1ce893150b",
+    "lastSeenBlock": 52052877,
+    "estimatedHF": 1.700318522233288,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xdc4b424946a09885d2b0e315ded8145c4fda1a7b",
+    "lastSeenBlock": 52056309,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xadfa9c4bf1047ddd0ab8d734b70cc1784276782a",
+    "lastSeenBlock": 52053516,
+    "estimatedHF": 1.3797877286266595,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xae877bf6c3c36d4eb55f86d6c585665a3175f326",
+    "lastSeenBlock": 52053547,
+    "estimatedHF": 2.364879594148677,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xdf41b77785e9a6b895ec2f3960ce831fca4ba4c5",
+    "lastSeenBlock": 52053597,
+    "estimatedHF": 1.6760265983894487,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xdc8e3e8108dd8c1604ebac1152726fe813f62c2a",
+    "lastSeenBlock": 52070275,
+    "estimatedHF": 2.505966801419361,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x6d2005a61cac1d666f71949df09b8a0a7f7b5692",
+    "lastSeenBlock": 52053767,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xba2b539e376a97a20c6c552e7b0c3d31d6121829",
+    "lastSeenBlock": 52053779,
+    "estimatedHF": 2.000809701847375,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x0d34dbe6cc3fcb1ce5627c46031b2f8fff923110",
+    "lastSeenBlock": 52053812,
+    "estimatedHF": 1.9819481052466144,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x8f848575bc26af3e3b4b2c00f6547c27d161967a",
+    "lastSeenBlock": 52054110,
+    "estimatedHF": 10.623753943217666,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x3c6640df2821b31fbb9d69e34dfbb40364a8068d",
+    "lastSeenBlock": 52054159,
+    "estimatedHF": 1.2359215961977583,
+    "tier": "Watch"
+  },
+  {
+    "address": "0xefd69dfc50408710aa2aae25766cbe45bf529ac9",
+    "lastSeenBlock": 52054490,
+    "estimatedHF": 1.2370864811190923,
+    "tier": "Watch"
+  },
+  {
+    "address": "0x4185242d6c72f33646e996a58348c9ec79e2fb50",
+    "lastSeenBlock": 52054496,
+    "estimatedHF": 1.507432453411472,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xb427da45176389fd4f1b0bcc454d0ffdbaf43888",
+    "lastSeenBlock": 52054572,
+    "estimatedHF": 1.2859544528357205,
+    "tier": "Watch"
+  },
+  {
+    "address": "0x2b01464bedf19c0d640274d5d435e994c9b28686",
+    "lastSeenBlock": 52054602,
+    "estimatedHF": 5.470108915929853,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xf70d14a039c9bfb0d87813c2c7dac48ac9e052a3",
+    "lastSeenBlock": 52054706,
+    "estimatedHF": 3.2788172043010753,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xec7712982ed40235f896687c5377cee883b2d420",
+    "lastSeenBlock": 52054774,
+    "estimatedHF": 1.7847033345921641,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x17484acee980596b4d2ddbe2abcf831fa89c4fb0",
+    "lastSeenBlock": 52054791,
+    "estimatedHF": 3.703672224047006,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xc4dcd2c4314169196580759bf86732fffc05e67b",
+    "lastSeenBlock": 52055392,
+    "estimatedHF": 1.8827206438246886,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x531b9a16ecb48db5a07eb0f303da5d6b98c10d60",
+    "lastSeenBlock": 52055545,
+    "estimatedHF": 1.2353139580149788,
+    "tier": "Watch"
+  },
+  {
+    "address": "0xe82f540f2a9fb38a452dfc9d7a22c63063ff5aed",
+    "lastSeenBlock": 52055621,
+    "estimatedHF": 2.5390167159367234,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xf1da6d8d354e0da276a9bf0717f0a01eefe9be8e",
+    "lastSeenBlock": 52055637,
+    "estimatedHF": 1.7805022034231286,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x5f8c125507b72737cdfce1f14486a777a45a05e7",
+    "lastSeenBlock": 52055818,
+    "estimatedHF": 1.3899419337805312,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xff0e7e5a5c558bb3a1a500da7350f8dbb01549d3",
+    "lastSeenBlock": 52056695,
+    "estimatedHF": 1.2505471092825933,
+    "tier": "Watch"
+  },
+  {
+    "address": "0xf91370bd25e36a516231fb9dec7b317b5ea64240",
+    "lastSeenBlock": 52056052,
+    "estimatedHF": 1.5424644448570368,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x1bd92a2f97f2fb82164474b0ef4b0b7d38650b52",
+    "lastSeenBlock": 52056127,
+    "estimatedHF": 1.8334917163607367,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x26834d8aea2d0d4722ea5b3df1e25399d070d756",
+    "lastSeenBlock": 52056362,
+    "estimatedHF": 1.3946467265894498,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xc80a5430d22e8f96b9fbf0d4d0925bc9e60daa1c",
+    "lastSeenBlock": 52056381,
+    "estimatedHF": 4.901903830288692,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xd54cf7019d0c3159807ccf29760b68de0aa43040",
+    "lastSeenBlock": 52065482,
+    "estimatedHF": 1.480487498521831,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x7194b40c3c6aeaf291f1a6e5791ffa187ca60b44",
+    "lastSeenBlock": 52056542,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x3bb1d5a9bc32ec2647622b578d308c548f3ea0c9",
+    "lastSeenBlock": 52056677,
+    "estimatedHF": 1.7229177140457477,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x84f9f3c9c1f5424bbdce7db0a720edbae9ea35bf",
+    "lastSeenBlock": 52056768,
+    "estimatedHF": 3.265338626020895,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xf887fb7e65c51e587e8f4613a105aa9ee957d2f5",
+    "lastSeenBlock": 52056908,
+    "estimatedHF": 2.8132085709374657,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xbfaf90eda11c04757e795012985f826cce9ddaf8",
+    "lastSeenBlock": 52057107,
+    "estimatedHF": 1.9499727042105433,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xbb0fc879942d6f5658e8eef44f8088960109f7ce",
+    "lastSeenBlock": 52057572,
+    "estimatedHF": 1.2353152661292197,
+    "tier": "Watch"
+  },
+  {
+    "address": "0xd1e1d5c9ef5556c2ac23c61232348cf8d7d759b8",
+    "lastSeenBlock": 52057675,
+    "estimatedHF": 2.0829019759438685,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x17b83cd29518d62aed968e9a500dbf7e2adcf2cf",
+    "lastSeenBlock": 52057921,
+    "estimatedHF": 10.383803442461668,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x4fd12237717ab8240fa6416c0dd4e6bf70749b96",
+    "lastSeenBlock": 52074593,
+    "estimatedHF": 1.151759365566982,
+    "tier": "Watch"
+  },
+  {
+    "address": "0x0d0dece9850e1747458ebad38554eaef0f137902",
+    "lastSeenBlock": 52058714,
+    "estimatedHF": 1.309353324435717,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x363298021ecc20ad8c2e57134aed4dc60dc1da00",
+    "lastSeenBlock": 52058762,
+    "estimatedHF": 2.087878535571051,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x4b3fa0c1deb47232ecd7a5ffad502eab6d67cf0b",
+    "lastSeenBlock": 52059192,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x325594b3b881c484958f97619b66383208b86f5e",
+    "lastSeenBlock": 52059315,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x1d42e0959470260cd6d88a56aaa073f65e5ccf47",
+    "lastSeenBlock": 52059546,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x0cc38d3384a9901e3d958669f250e5bf4a4a4ccb",
+    "lastSeenBlock": 52059615,
+    "estimatedHF": 2.0005440831077648,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x471aa346235c9857a5a3c6a6843b31bdfc00a4a2",
+    "lastSeenBlock": 52059627,
+    "estimatedHF": 1.119622599978375,
+    "tier": "Warning"
+  },
+  {
+    "address": "0x78edc717983c07f2d210503e302c264a30e57a26",
+    "lastSeenBlock": 52059962,
+    "estimatedHF": 1.381896624975982,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x05df4f18ca3a3a654e6bd7104282352f5a55b22c",
+    "lastSeenBlock": 52060112,
+    "estimatedHF": 1.1415750827361788,
+    "tier": "Warning"
+  },
+  {
+    "address": "0x50e26552fe56080e38cfa0b5f61067502abf1ffc",
+    "lastSeenBlock": 52069229,
+    "estimatedHF": 1.2492371806398619,
+    "tier": "Watch"
+  },
+  {
+    "address": "0x73358aeaada8c008c9afe2fccf7607b927a72a35",
+    "lastSeenBlock": 52060752,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x8faab950a7089cb6e92703494420f35ef7ecee68",
+    "lastSeenBlock": 52060776,
+    "estimatedHF": 1.7954880950056544,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xb78272f51662899f40c6fbd4fb077c84cac230dd",
+    "lastSeenBlock": 52061569,
+    "estimatedHF": 2.700777562599736,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xb0c73b16e49716aca47b5f338c777e0a00c81a3a",
+    "lastSeenBlock": 52061785,
+    "estimatedHF": 1.7262064604486036,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x266fd4f877ded0a93a3896e1a7b4f169ecb31bfa",
+    "lastSeenBlock": 52061838,
+    "estimatedHF": 4.863098126996412,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xbfacf4bbcf6d3db2639f7d28336adc4dcb82b59c",
+    "lastSeenBlock": 52061895,
+    "estimatedHF": 1.6997794838193425,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x675c8697949e0cc6269e8625d805a2749fad6707",
+    "lastSeenBlock": 52062369,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xe0b763ad8b0387d0a3b0a2d8fb7cd5fd0b14fb8a",
+    "lastSeenBlock": 52063538,
+    "estimatedHF": 1.239037382042917,
+    "tier": "Watch"
+  },
+  {
+    "address": "0x51d215890771106c531b44330ab9bcb1c4dd07b7",
+    "lastSeenBlock": 52062595,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x797ed728bda0000dc01d15e409199720554b7d44",
+    "lastSeenBlock": 52062641,
+    "estimatedHF": 1.367100728081002,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x38f51fb39a427ff785c222ba31066c11295b0c05",
+    "lastSeenBlock": 52062670,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xe98d7779f8412887af2191ddac0e58ddf17d60ef",
+    "lastSeenBlock": 52062859,
+    "estimatedHF": 2.6872407270194127,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x42b37a0867be69f15a6f9163e647497758291e74",
+    "lastSeenBlock": 52062867,
+    "estimatedHF": 3.6598313220120624,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xb0162f14cacfd814da753acd0e148ef183fb68be",
+    "lastSeenBlock": 52063090,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x75c67ba3ded290b86005745e57f8e43257162ffb",
+    "lastSeenBlock": 52063289,
+    "estimatedHF": 2.0019244120613524,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x96c0ef484155601034bdd3a35b54606d5b8d83c7",
+    "lastSeenBlock": 52063434,
+    "estimatedHF": 2.001918602069501,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x90b0c045c34bda1184b07cb0ec9b95ed82575cde",
+    "lastSeenBlock": 52063530,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x8075948d68eb31c3b0d43130d32236c1a69e55fc",
+    "lastSeenBlock": 52063572,
+    "estimatedHF": 1.3602164008802293,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x1d9b0cdc39b93e4166fb45d3e5d77688a3b9ec17",
+    "lastSeenBlock": 52063853,
+    "estimatedHF": 1.6155659039689427,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x9ad4ed0f6c703c5a7f21ffaaf3ba6a90f3ccafc9",
+    "lastSeenBlock": 52063975,
+    "estimatedHF": 1.3010737379498851,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x3e558df12b8da65202b3b88ce282c11f82bc111d",
+    "lastSeenBlock": 52063979,
+    "estimatedHF": 1.6593633879847622,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xa95f77eab29bd9910af723575f23d1dc796eee5d",
+    "lastSeenBlock": 52063995,
+    "estimatedHF": 1.9319623683618492,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x9d8e9f45046a42f941bb6c2d58c32f1562424957",
+    "lastSeenBlock": 52064028,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x8e6049b3640c133641123e6ba3e565efb8ccd1ff",
+    "lastSeenBlock": 52064140,
+    "estimatedHF": 3.6309876947801576,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x7de5a0adf70d6e4bd5fa88f159ecaa2d2608f46d",
+    "lastSeenBlock": 52064153,
+    "estimatedHF": 2.057340941518828,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x57d29aac656389645e3d2e4d5f8b15d1e171fa64",
+    "lastSeenBlock": 52064302,
+    "estimatedHF": 1.9957343971562729,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xe2d18861c892f4efbab6b2749e2ede16af458a94",
+    "lastSeenBlock": 52064350,
+    "estimatedHF": 2.360414512670941,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xab6477428a7e31b3b9dc15b63f855bf92dfcad0a",
+    "lastSeenBlock": 52064600,
+    "estimatedHF": 1.450435832508279,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xe88cc7a64b69200bf778820ea8b32a9e1a491cda",
+    "lastSeenBlock": 52066516,
+    "estimatedHF": 1.37642776716954,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xb5c14967cd8ad3b47488b66a0a5aa2cccd67dfcf",
+    "lastSeenBlock": 52064817,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x41bd1bc7e4220133fd5d8a002d76b38510ee18ea",
+    "lastSeenBlock": 52064821,
+    "estimatedHF": 1.8586563272835996,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xd3a9700721fc3b56a26215f445b44ceb25c1c0fd",
+    "lastSeenBlock": 52064824,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x6cabf068cf43beccfbea0ee0d939988c83fe596b",
+    "lastSeenBlock": 52064856,
+    "estimatedHF": 2.1579190109812854,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x7349a18039b9a6ba51e58bab714e5835bc934ad0",
+    "lastSeenBlock": 52065362,
+    "estimatedHF": 1.1783694671913822,
+    "tier": "Watch"
+  },
+  {
+    "address": "0x524e95a3a836d9b5a4623b80778c0889ad7d108d",
+    "lastSeenBlock": 52065473,
+    "estimatedHF": 2.0479168911461523,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x2bd2251419c5cb30bd14c77812eec1c5d895abff",
+    "lastSeenBlock": 52065055,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x82f5186cee1a30fb95d78052c1783fe3c88b412f",
+    "lastSeenBlock": 52065112,
+    "estimatedHF": 7.54401239491931,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x30623d06c36b85f80dec7b912b86821d6cbfdd52",
+    "lastSeenBlock": 52065226,
+    "estimatedHF": 3.6794290321472736,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x83b8986cad73de7a00b624ddc80eb2bfe7ccab5d",
+    "lastSeenBlock": 52065404,
+    "estimatedHF": 3.399375514240713,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x9ba7d2981a167b166ab12899430f458b3da372cc",
+    "lastSeenBlock": 52065641,
+    "estimatedHF": 2.7164660583941607,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xd553a35ba4da5d4971ccd1204c230e4d4a0fb462",
+    "lastSeenBlock": 52065769,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x3450f5a03a243227220e960e2f1f8ca7fbe76a20",
+    "lastSeenBlock": 52065914,
+    "estimatedHF": 1.9279164199789383,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xb51a9a44a8558c04ae821ea1088ab5857a4a7ca1",
+    "lastSeenBlock": 52065926,
+    "estimatedHF": 3.3222733285459305,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x5a7db11f7f996c7577286dde21ebf581b17d08c2",
+    "lastSeenBlock": 52065962,
+    "estimatedHF": 16.143908083732953,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xc20ce5b3aee1dfdb7128edd0c6ba72f9f09f8ec2",
+    "lastSeenBlock": 52066087,
+    "estimatedHF": 1.6680563084695132,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xf00e994d8898e556a8d86a09f1a10be3151d75e3",
+    "lastSeenBlock": 52066130,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x35399be51d70106a75df07830dc3a432562dfb49",
+    "lastSeenBlock": 52066242,
+    "estimatedHF": 1.502261090496435,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x9d1e3bb1b7905277b2117f6c0d8144fa20a6211a",
+    "lastSeenBlock": 52066365,
+    "estimatedHF": 2.105441635442136,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x8b7bc899706cc14670d79d9a20b669c5ac10bcbd",
+    "lastSeenBlock": 52066600,
+    "estimatedHF": 1.4536413712448488,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xfd8dc7aa026161ea21cbf9db56bfa2554fb394b5",
+    "lastSeenBlock": 52066622,
+    "estimatedHF": 5.173104959668942,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xcd8519a0148690eaaedbfb4cd251390c44b4099b",
+    "lastSeenBlock": 52071236,
+    "estimatedHF": 2.253167103156752,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xf7b5d9147ba59710343c061d1892ca30a9014d38",
+    "lastSeenBlock": 52066821,
+    "estimatedHF": 1.509747793069151,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x815136b59f60165813eb2c025e12520ee3949d42",
+    "lastSeenBlock": 52066895,
+    "estimatedHF": 4.058119626613308,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x4130a968472f4db6d2172e185df632a085176636",
+    "lastSeenBlock": 52067060,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x7a4a15619d7b2424cd3051727d51f04f98aff3a9",
+    "lastSeenBlock": 52067149,
+    "estimatedHF": 1.3454020968935523,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x426465ec8a50d56b160eddbb69745dee2fbd1a00",
+    "lastSeenBlock": 52067719,
+    "estimatedHF": 2.914544647744788,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x69c83f053dbf28c2f82d2f9de5d4d00020a3dec7",
+    "lastSeenBlock": 52068573,
+    "estimatedHF": 1.2564653924855387,
+    "tier": "Watch"
+  },
+  {
+    "address": "0x2b060b9c89b8ad04e5e1fd40f1f327e41dd32c72",
+    "lastSeenBlock": 52067747,
+    "estimatedHF": 2.277624249622363,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x156006c44ea4eaa3b91c4376632e1f135893047d",
+    "lastSeenBlock": 52067809,
+    "estimatedHF": 2.5744198672514216,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x3b883e19cf798ed078c5c93205fee610654180d4",
+    "lastSeenBlock": 52067908,
+    "estimatedHF": 1.9494061223753594,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xcb88abb046cddd3f0da73df1d52ac8a636b20431",
+    "lastSeenBlock": 52067983,
+    "estimatedHF": 1.2343108727608667,
+    "tier": "Watch"
+  },
+  {
+    "address": "0xf68a348d75ca81898d6ea7dd7946257c3c2e9406",
+    "lastSeenBlock": 52068124,
+    "estimatedHF": 1.7058215741227922,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x4157d63e1387eebcd095b2c8dce81f5262987427",
+    "lastSeenBlock": 52068146,
+    "estimatedHF": 1.595454568496393,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x7dcdb4ad4017f848879d17370aa6f32564e5cd08",
+    "lastSeenBlock": 52068158,
+    "estimatedHF": 1.3831443628796227,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xd8c269e977b5b338df39a55ec69c33ba09a0ef7b",
+    "lastSeenBlock": 52068170,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x826677ededd3e247dfe62d0b5b15285852d03bb5",
+    "lastSeenBlock": 52068186,
+    "estimatedHF": 2.5181518961435487,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x9a77166327cc8221298ae1e3f53327b8fd11e12c",
+    "lastSeenBlock": 52068254,
+    "estimatedHF": 1.1450354669692524,
+    "tier": "Warning"
+  },
+  {
+    "address": "0x7a9c6d7d28130d337916f7109802525d1d922519",
+    "lastSeenBlock": 52068290,
+    "estimatedHF": 1.3007091173893617,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xd35a74d9215af286fe53ab27f617f618621d8bc8",
+    "lastSeenBlock": 52068501,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x1950f983785b4cc4296cca4aae4156855de8be59",
+    "lastSeenBlock": 52068745,
+    "estimatedHF": 1.3705089137071897,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x16e9562ead5eb54151a34841866712c38655037a",
+    "lastSeenBlock": 52068667,
+    "estimatedHF": 1.272390652069667,
+    "tier": "Watch"
+  },
+  {
+    "address": "0x3c3595b9923a1d1405fb76d17277f64244ec570d",
+    "lastSeenBlock": 52068866,
+    "estimatedHF": 1.926993273083384,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xfe8eb2ee5e2bdbbcfe7bb214721dc6d95e4abd72",
+    "lastSeenBlock": 52069036,
+    "estimatedHF": 1.530279400447388,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xfaaccd2ad983599bdc387af7938d02f60ce8f95a",
+    "lastSeenBlock": 52069132,
+    "estimatedHF": 1.247222405787524,
+    "tier": "Watch"
+  },
+  {
+    "address": "0x69c3ae7445c13759ab71572066ec11520a513dad",
+    "lastSeenBlock": 52069384,
+    "estimatedHF": 1.6752708267938268,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xc8cda2b5d37e6b6290154df8f0981e2d0ca71f49",
+    "lastSeenBlock": 52069650,
+    "estimatedHF": 2.2199405567141994,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x93b0620da9197cc77a2c70e297494eb2a83fe9af",
+    "lastSeenBlock": 52069871,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x3356bbc2a2386cefa2678af4a1397f45fb14c082",
+    "lastSeenBlock": 52069926,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x6f03a5d13e8b3c420ef149df36a205bd6ce4f89c",
+    "lastSeenBlock": 52070012,
+    "estimatedHF": 1.636328425244247,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x7b15dde6c99fcc934da8bdc6e98f0d282049802e",
+    "lastSeenBlock": 52070089,
+    "estimatedHF": 1.6323682072000159,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x27fae42e93707f93018c965cf3f16a67d848d1ff",
+    "lastSeenBlock": 52070229,
+    "estimatedHF": 1.9306347854981505,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xabb4f79430002534df3f62e964d62659a010ef3c",
+    "lastSeenBlock": 52070367,
+    "estimatedHF": 2.2305416495497288,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x71bf37cd4fc3abd9e50187cc881e09d971c75bf5",
+    "lastSeenBlock": 52070493,
+    "estimatedHF": 1.934439315438166,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xbe651690777226369fa87363c0d049118c91e04f",
+    "lastSeenBlock": 52070508,
+    "estimatedHF": 2.532239386576186,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x6bdc729969793a54c2f670855f092dd9e4823930",
+    "lastSeenBlock": 52070526,
+    "estimatedHF": 7.7646126839072815,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x8d943a559683e9fad427aa5424dcc0b2426cda10",
+    "lastSeenBlock": 52070660,
+    "estimatedHF": 1.2431076392917644,
+    "tier": "Watch"
+  },
+  {
+    "address": "0xf1d9f7b7a279336d1d69d27e858eec82e1cc3ada",
+    "lastSeenBlock": 52070825,
+    "estimatedHF": 3.1284232490882276,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x7493631b958ec8db6b52d1b247dc54f786a42726",
+    "lastSeenBlock": 52071069,
+    "estimatedHF": 1.6432096094458364,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xaa3693738f9b075fffd41f54630ea45817a21953",
+    "lastSeenBlock": 52071161,
+    "estimatedHF": 3.151833975993573,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xed8696301c9dc00ac26aab1a0ef1f4e113688f1f",
+    "lastSeenBlock": 52071196,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x7d3b92d6028469c54f329838a1eb768f501f9bdf",
+    "lastSeenBlock": 52071242,
+    "estimatedHF": 1.7123436617299186,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xf5ab6b4a8d578807491ef59ce855982990932617",
+    "lastSeenBlock": 52071359,
+    "estimatedHF": 1.8765674269800703,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xc962711fd3e350c09b2f9b94073b0a8cc943c37b",
+    "lastSeenBlock": 52071494,
+    "estimatedHF": 1.1770770613469848,
+    "tier": "Watch"
+  },
+  {
+    "address": "0x52cfb01fc2ee9ecaae37aed19ce41a20082f845e",
+    "lastSeenBlock": 52071615,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x25e58696fbc8eb88301ee06a57f77d9f0715ec97",
+    "lastSeenBlock": 52071703,
+    "estimatedHF": 8.238346075170845,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x1e7d710aa3f9c1c40b28189e1bc9a6c3d7b283b6",
+    "lastSeenBlock": 52071792,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x140ed2f5c0fe8db68b22f4f1068e9f6bb0d0ca8d",
+    "lastSeenBlock": 52071797,
+    "estimatedHF": 2.800504740159416,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x257d74fc229f91de6285a4c7bdd6d5004de9aa31",
+    "lastSeenBlock": 52072022,
+    "estimatedHF": 1.9979637079446855,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xc818cfac035b67141ebc9b605df5502552aa4a69",
+    "lastSeenBlock": 52072064,
+    "estimatedHF": 1.6624365646244277,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xceb7ce83f16ff4b4331a290f36464cc6e90c2c64",
+    "lastSeenBlock": 52072065,
+    "estimatedHF": 1.7951663654061816,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xcbb54eda2048b57d1b0afb19a73948e9d58b6973",
+    "lastSeenBlock": 52072184,
+    "estimatedHF": 1.3012268763598822,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x1fbe3f69090c2cba0d1125681863c222fe2aaa2d",
+    "lastSeenBlock": 52072170,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x975a9b8fe755589a4ff5bc31c0210cf7807fcfeb",
+    "lastSeenBlock": 52072271,
+    "estimatedHF": 2.9326960257032537,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x0f27d200cfd54ab70baff37f79115875e6e7c75a",
+    "lastSeenBlock": 52072314,
+    "estimatedHF": 1.240363141962361,
+    "tier": "Watch"
+  },
+  {
+    "address": "0x035e8ede48caaca8809998b27758d72f8de82c5b",
+    "lastSeenBlock": 52072381,
+    "estimatedHF": 1.2031061276783221,
+    "tier": "Watch"
+  },
+  {
+    "address": "0xc1713733712d5fb70b0b66ce92c666869a10ea81",
+    "lastSeenBlock": 52072412,
+    "estimatedHF": 44.94566513353671,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xa2a8510a047d47c2dea98a3c9366421156ce1eed",
+    "lastSeenBlock": 52072429,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xa7f053d0a4df46577428b84fb3a59e98775ee698",
+    "lastSeenBlock": 52072444,
+    "estimatedHF": 1.783830091480482,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xd8293ad21678c6f09da139b4b62d38e514a03b78",
+    "lastSeenBlock": 52072604,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x8193b78bee9f14f386a85401f0fd3939bc3576e0",
+    "lastSeenBlock": 52072658,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x6af79b24ea58169841a4967751436e0124cf9ad2",
+    "lastSeenBlock": 52072671,
+    "estimatedHF": 1.915881063401134,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x42bc857b5751126a71d203bde38ee8243b3ad1ed",
+    "lastSeenBlock": 52072779,
+    "estimatedHF": 2.1833715631211104,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xfaad3a7435614688dbc872a82dfd4926035ffcf4",
+    "lastSeenBlock": 52072895,
+    "estimatedHF": 1.8791850164062138,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x210af05d8210b8e9bd35ca262d957bd895ed8853",
+    "lastSeenBlock": 52072900,
+    "estimatedHF": 2.542864768683274,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xbc851a88ce81a3a1ddd7032cb09f4c2f219bee3d",
+    "lastSeenBlock": 52072914,
+    "estimatedHF": 7.755051671991557,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x17f6fddd500b5a8a3548ab9ed885492232db2547",
+    "lastSeenBlock": 52073091,
+    "estimatedHF": 1.6221594276078644,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x8103fa9767d60478e5db420b08f36bb423931af2",
+    "lastSeenBlock": 52073143,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x5cf1de002d9fdb4142e27045e33c23a1e7c84ae5",
+    "lastSeenBlock": 52073289,
+    "estimatedHF": 2.596200783911053,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x6c965b656c450259a6d4d95a2e68fb4319eecbc0",
+    "lastSeenBlock": 52073541,
+    "estimatedHF": 2.400447146912756,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xf5274e2781fb06d34dd92bf3860c25ebec945df5",
+    "lastSeenBlock": 52073554,
+    "estimatedHF": 1.1713603560154948,
+    "tier": "Watch"
+  },
+  {
+    "address": "0xf0da34a30ed3a69d43cb6890a0a710dfb6a84c8c",
+    "lastSeenBlock": 52073651,
+    "estimatedHF": 2.40686343877069,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xc82208085f3ba87a5d5f5ae879304212b65bbdd9",
+    "lastSeenBlock": 52073762,
+    "estimatedHF": 1.4405973888639445,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x7b15eb48364d5401210e0fabc39a6bfc4c178828",
+    "lastSeenBlock": 52079618,
+    "estimatedHF": 3.551780333663096,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x79c46a9067ce5db67e94ff039506398334c123d2",
+    "lastSeenBlock": 52073879,
+    "estimatedHF": 1.5137679129700639,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x70736e1211111c86263b711f6f9ff533db0b7b11",
+    "lastSeenBlock": 52073888,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x78fd3da8e9fc0854a5aa6bd00c08985da2957366",
+    "lastSeenBlock": 52073924,
+    "estimatedHF": 1.2055800712411642,
+    "tier": "Watch"
+  },
+  {
+    "address": "0xffef2ba2595f6971c4988e9ec28bce327a827297",
+    "lastSeenBlock": 52074123,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x66d1a7a7922f664ff156930b592bc3eb105957b5",
+    "lastSeenBlock": 52074149,
+    "estimatedHF": 3.7784612128527377,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x687ca11281e490bad245ef3d19791c8750aa8329",
+    "lastSeenBlock": 52074202,
+    "estimatedHF": 2.1691174691192803,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xe65bbea6b7ef7dfd922df7b78d1344857638b197",
+    "lastSeenBlock": 52074335,
+    "estimatedHF": 3.939855531601796,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x0d611eb6d547dc687437828799aea4ad9bb4bf25",
+    "lastSeenBlock": 52074368,
+    "estimatedHF": 1.7947698293000711,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xb84f2022a67ea830b40d897742c4e731ffe9bfee",
+    "lastSeenBlock": 52074509,
+    "estimatedHF": 2.0609803717242725,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xf29fd31eb51c76e460fccf4190f70292a5679b64",
+    "lastSeenBlock": 52074583,
+    "estimatedHF": 4.306188039463327,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x549a1652239df64dab643f3622488cfcc72375d4",
+    "lastSeenBlock": 52076681,
+    "estimatedHF": 1.1070746066006658,
+    "tier": "Warning"
+  },
+  {
+    "address": "0xfb6a0634deeb334d240413c42e9e9fca949c9240",
+    "lastSeenBlock": 52074982,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x2f67ef45744b3a024756073f1b95b26ca1a66a1d",
+    "lastSeenBlock": 52074988,
+    "estimatedHF": 6.19470874465012,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x9451621d57d986d3d0ac55ec620fdbb067ab8bd4",
+    "lastSeenBlock": 52075028,
+    "estimatedHF": 1.0456899014766001,
+    "tier": "Critical"
+  },
+  {
+    "address": "0x760e97862dd8652e5bb8b4d8ad9c99a74bbe7e7a",
+    "lastSeenBlock": 52075040,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xedd5e743cec00e7733a418076058975ccf03baaa",
+    "lastSeenBlock": 52075129,
+    "estimatedHF": 2.990972240902089,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xdd38ebcda678329247774290d05f19d2f674a829",
+    "lastSeenBlock": 52075138,
+    "estimatedHF": 2.178052327511787,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xeba1f78bc6cdc33782b4aa695b6eacf2bdc50d01",
+    "lastSeenBlock": 52075187,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x028405912e282cda43dcb85e0d9ddc952f8bd6c8",
+    "lastSeenBlock": 52075195,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xe3aac57d69dfd2cd5397e5a4b908006f80e8ac24",
+    "lastSeenBlock": 52075224,
+    "estimatedHF": 1.0386085673835244,
+    "tier": "Critical"
+  },
+  {
+    "address": "0x2d30533d18823fe75d67715527f13b17de4c3180",
+    "lastSeenBlock": 52075260,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xc7964cf98eb028ad27855c78b30e2474f920f7e5",
+    "lastSeenBlock": 52077243,
+    "estimatedHF": 4.056515811446253,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x8864570592aa8e69e38f6a996eca7d30f5819520",
+    "lastSeenBlock": 52075468,
+    "estimatedHF": 2.2404449991649336,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xea6eb1eefef034e62c17e20bf40da38cc1f00011",
+    "lastSeenBlock": 52075631,
+    "estimatedHF": 1.1020381773010075,
+    "tier": "Warning"
+  },
+  {
+    "address": "0xd7a36e338c7d3b851bb96e947b1f01bf3663e0b2",
+    "lastSeenBlock": 52075667,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xa994d7d07469f49c38ad31ac213e23c13ac3ef7b",
+    "lastSeenBlock": 52075719,
+    "estimatedHF": 1.3149096117842045,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x9f9b823cd0e3cff32b2afb3e826e12e9b72ee57f",
+    "lastSeenBlock": 52075721,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x1b7cb2edf5e84ff420f1cc6cead90c00672d35c3",
+    "lastSeenBlock": 52075792,
+    "estimatedHF": 1.1063765126417142,
+    "tier": "Warning"
+  },
+  {
+    "address": "0xf77c4403387ddba943ae65b57be655162bd11c06",
+    "lastSeenBlock": 52078286,
+    "estimatedHF": 1.6129459870726122,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xa0b37bbcf663520fa90b73b72c0e0e769923412d",
+    "lastSeenBlock": 52075853,
+    "estimatedHF": 1.0503938469546712,
+    "tier": "Warning"
+  },
+  {
+    "address": "0x5a3303436725216a5f6f72cad311f63675312ad5",
+    "lastSeenBlock": 52075925,
+    "estimatedHF": 2.1373547941322895,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x21c76ad04e0dda4313406225769294ff50ff4fc3",
+    "lastSeenBlock": 52075970,
+    "estimatedHF": 1.4852427418127032,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xf6cc4859402d13e827405a98f24b13553912b4b5",
+    "lastSeenBlock": 52076016,
+    "estimatedHF": 1.515701159926705,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x8680b97bb4ca9b7e111c25cd8e763f799e935c57",
+    "lastSeenBlock": 52076029,
+    "estimatedHF": 1.369074816537411,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x6406686c42b04c300ea9928ce885ee8540e25ff1",
+    "lastSeenBlock": 52076034,
+    "estimatedHF": 1.6108084756176662,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x3fc6ccb52cccde593f40536a5fb75c6f87b434b6",
+    "lastSeenBlock": 52076102,
+    "estimatedHF": 2.719443511405508,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x48e7adf824830e0d740da51de90af03c8139371a",
+    "lastSeenBlock": 52076109,
+    "estimatedHF": 1.3478881591570069,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xf65966f9db06ede213f6c32e2b5906097aeb0d62",
+    "lastSeenBlock": 52076166,
+    "estimatedHF": 1.8820526393912766,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x7e4518f482fce22829f5e06490c2278c5a2eeeba",
+    "lastSeenBlock": 52076226,
+    "estimatedHF": 1.1979113105933175,
+    "tier": "Watch"
+  },
+  {
+    "address": "0xaca31e883c004320e46ce0abcd834bb67c27e88b",
+    "lastSeenBlock": 52076332,
+    "estimatedHF": 2.2098865276713355,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x01503b17ecd50e1c58d6064984d70c7680d2b8b9",
+    "lastSeenBlock": 52076341,
+    "estimatedHF": 1.6510334673751101,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x37ded80a091831c4b3293add5efc8ff23a1da95a",
+    "lastSeenBlock": 52076357,
+    "estimatedHF": 1.1970701658955951,
+    "tier": "Watch"
+  },
+  {
+    "address": "0x18b68146a25ea1a1661b1d58b4ebb1d79b72362b",
+    "lastSeenBlock": 52076370,
+    "estimatedHF": 1.412432995538103,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x97a116dab0d87173e35474c36ebca7fbd36a5594",
+    "lastSeenBlock": 52076406,
+    "estimatedHF": 1.1248893257687418,
+    "tier": "Warning"
+  },
+  {
+    "address": "0x2b76d89318b1c674bd1fe49491b2674326089cea",
+    "lastSeenBlock": 52076467,
+    "estimatedHF": 4.844797911946215,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x25ab09478bb4e70db3c8c4551bda42597b4d9e7a",
+    "lastSeenBlock": 52076479,
+    "estimatedHF": 2.3090079275167055,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xbb50b87d2ee76160c593077906ee9f6d03af4090",
+    "lastSeenBlock": 52076495,
+    "estimatedHF": 1.1600229627118372,
+    "tier": "Watch"
+  },
+  {
+    "address": "0x68ed3a59eaac49f1d715bce7b8896aa63d154d55",
+    "lastSeenBlock": 52076577,
+    "estimatedHF": 1.1582320963256458,
+    "tier": "Watch"
+  },
+  {
+    "address": "0x2c3e79d3dce90fb0886c89ec602e61757e589a94",
+    "lastSeenBlock": 52076613,
+    "estimatedHF": 1.583924573724321,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x78fe9cb131cc63f02e47a9c00bb793ffd72e7460",
+    "lastSeenBlock": 52076690,
+    "estimatedHF": 1.7880598098797436,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x6782afe3589595f51bc0d488af43b35273781bc9",
+    "lastSeenBlock": 52076767,
+    "estimatedHF": 1.6136382317419333,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x5980efbffc770083b7882c585bab9e2e1b6be4d6",
+    "lastSeenBlock": 52076799,
+    "estimatedHF": 1.276538529232121,
+    "tier": "Watch"
+  },
+  {
+    "address": "0xd06bbd28c9eb2d1c53df9e47244e1074c4dd4eeb",
+    "lastSeenBlock": 52076845,
+    "estimatedHF": 1.6257257749515017,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xfdf3d01dd6fa8f635e2007a75a995196d5ecdf1f",
+    "lastSeenBlock": 52076915,
+    "estimatedHF": 1.841433882064122,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x02eae65bacab4c7cc48d4b7b2c7c310adb9a7ded",
+    "lastSeenBlock": 52076962,
+    "estimatedHF": 1.6599783451858319,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xba70bb97b2153017ef8f6556c763e31f41f8c217",
+    "lastSeenBlock": 52076993,
+    "estimatedHF": 1.1731146975953526,
+    "tier": "Watch"
+  },
+  {
+    "address": "0x09976728409d406666d72233be1c710ef9aeedd1",
+    "lastSeenBlock": 52077005,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x1d6324060b87d0ecf8f62f4981b7c7eac9a0a5a0",
+    "lastSeenBlock": 52077068,
+    "estimatedHF": 1.1400270025864836,
+    "tier": "Warning"
+  },
+  {
+    "address": "0x8f09ad876763a2aa36102557d2a7b418d2c295a8",
+    "lastSeenBlock": 52077104,
+    "estimatedHF": 2.003449485157645,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xeb86783ae5ba2ab4eff27da9893e82a5e19e3301",
+    "lastSeenBlock": 52077153,
+    "estimatedHF": 1.3884223139074838,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xbd0912e6d472c59ecf15ea8913cf1267c2fef661",
+    "lastSeenBlock": 52077241,
+    "estimatedHF": 2.7274272046159926,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x1c36a48c7d6767669e979c60b367f2817b344054",
+    "lastSeenBlock": 52077339,
+    "estimatedHF": 1.2409030028678139,
+    "tier": "Watch"
+  },
+  {
+    "address": "0x88f1501fa4195ac32e2db6a08be4435b8e8b4620",
+    "lastSeenBlock": 52077399,
+    "estimatedHF": 1.5539220183591305,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x377bbc153f035f29e4ec3408d0de16c372fceb0f",
+    "lastSeenBlock": 52077522,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xd5d7db24a2876aaf69cf99a7095914c59b493304",
+    "lastSeenBlock": 52078993,
+    "estimatedHF": 1.1301718394049711,
+    "tier": "Warning"
+  },
+  {
+    "address": "0xdd3011e63b6a3c33c5b7a67fd33e49625422a39a",
+    "lastSeenBlock": 52078279,
+    "estimatedHF": 2.601641865068366,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xcbceda81bcf59dd0b3535444fb139f7e01be1d08",
+    "lastSeenBlock": 52078347,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x60339e0b4252e66f0670e3985514508b92506e41",
+    "lastSeenBlock": 52078452,
+    "estimatedHF": 3.224319953107314,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xb9e8c2f38ad7ba1e4d4be6434563b8b1ea8e3b7a",
+    "lastSeenBlock": 52078749,
+    "estimatedHF": 1.9074414368449504,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x7fc196e2e68f3ac4b6203ca9e545281de4b4d0f5",
+    "lastSeenBlock": 52078901,
+    "estimatedHF": 1.2672390072947175,
+    "tier": "Watch"
+  },
+  {
+    "address": "0x4a7ef87fc299b5102c35da4acd6e5f253b8f078b",
+    "lastSeenBlock": 52078831,
+    "estimatedHF": 1.8514637347683074,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xcf7e7c56614b6e22b0043895a37e3858971ec904",
+    "lastSeenBlock": 52078831,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x0a347295557c39bd69defd4a848bc56184eefca6",
+    "lastSeenBlock": 52078973,
+    "estimatedHF": 1.8158409647910154,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x32dabc0d0e037a1d6f0c1e9331bf7ad21eae748a",
+    "lastSeenBlock": 52078976,
+    "estimatedHF": 1.6101968854161675,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x0c98361f38ed48a5a287cc8e4d07f22e5fcbcacf",
+    "lastSeenBlock": 52079066,
+    "estimatedHF": 1.7182371441890634,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x1cc70b61bc4093ee301c42433b3aa2c7b66ee211",
+    "lastSeenBlock": 52079303,
+    "estimatedHF": 1.4203589307510027,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xb25d26c75e7efc0d79672873d9def9b708fae975",
+    "lastSeenBlock": 52079245,
+    "estimatedHF": 3.898867255045218,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x98a3499f5bbfde362c905ef889ba80fd8926ca22",
+    "lastSeenBlock": 52079327,
+    "estimatedHF": 1.9647198515680349,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x78bd586c5a4514fb954d05841a799a7d020d8fe9",
+    "lastSeenBlock": 52080360,
+    "estimatedHF": 1.5669552114888001,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x5e3c196a7fb3da0d1bcc53685572db96534f565a",
+    "lastSeenBlock": 52079375,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x90e5087667d36414e3bc450ae27fb3c50e0e6d3f",
+    "lastSeenBlock": 52079527,
+    "estimatedHF": 1.7822469378879948,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x108e6680568505f65a6c0c538643dbd9bd8aed65",
+    "lastSeenBlock": 52079601,
+    "estimatedHF": 1.9821124256111124,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xffdaddef3a54aae0aee36487f4eee6687fd43d87",
+    "lastSeenBlock": 52079618,
+    "estimatedHF": 2.090646674736327,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x9f58c9711af2bb0cbc0b4cdd94801207b405610e",
+    "lastSeenBlock": 52079732,
+    "estimatedHF": 3.068992422303675,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xac023f3f4c5a0190c76ba0454309021a93c6f35b",
+    "lastSeenBlock": 52079777,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x66e9ad496c00a7d3f979dab58471da94182461d9",
+    "lastSeenBlock": 52079795,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x7fc6279a18374b6cb2e99b988658e9ea54c17d77",
+    "lastSeenBlock": 52079847,
+    "estimatedHF": 3.027431579545114,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x6ed9548c81e49143721956d0dbb1ccc0564862e3",
+    "lastSeenBlock": 52079892,
+    "estimatedHF": 1.983962624198909,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x6b2bdf27e1fe3f0fb32cc35068b0f01e43f52cf1",
+    "lastSeenBlock": 52079962,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xf783471fa078c397dc3fd1975fa2f85fdd8676b0",
+    "lastSeenBlock": 52080004,
+    "estimatedHF": 2.4741568953864848,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x999db23894a83a55356f3cc44280828d1205538d",
+    "lastSeenBlock": 52080016,
+    "estimatedHF": 2.221784759812058,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x5fe3b35d11a07e89519903e7b244b09f7a449733",
+    "lastSeenBlock": 52080072,
+    "estimatedHF": 1.7237901740119974,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xd0a6a27adfc878238d836bd186d4ba0ea2c767db",
+    "lastSeenBlock": 52080081,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xd0778eca61ddc2902ca5cce0d9f9ad16336d6775",
+    "lastSeenBlock": 52080147,
+    "estimatedHF": 2.6146771767555888,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xefbc280afdaf6bad8a9f43d0fa9744aa3dc24f0b",
+    "lastSeenBlock": 52080284,
+    "estimatedHF": 1.2447655403433056,
+    "tier": "Watch"
+  },
+  {
+    "address": "0xb92aa2f5d3595d24c05e6e8d0763546cc1129da7",
+    "lastSeenBlock": 52080224,
+    "estimatedHF": 1.2045684009326416,
+    "tier": "Watch"
+  },
+  {
+    "address": "0xafe2a62b73a8dc274aa7c705bc46222ec6bed86e",
+    "lastSeenBlock": 52080298,
+    "estimatedHF": 2.2683777134249574,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x50cd7df654eab0b410a1228df6edbba31962e149",
+    "lastSeenBlock": 52080320,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x10d2156350ec6843e7304cc39d4f27f58a0a4254",
+    "lastSeenBlock": 52080404,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x567952e44354a3f88a9c23352b0f1ee04e00ac49",
+    "lastSeenBlock": 52080512,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x76b3709776c68ffb6958ba78b056f86528bec121",
+    "lastSeenBlock": 52080512,
+    "estimatedHF": 2.0460377451555525,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x92397432579b91b6de49f0f14aff64628912667d",
+    "lastSeenBlock": 52080544,
+    "estimatedHF": 2.07349011105434,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x644eee6338a125faa7438dabb64632ec8e0be5ac",
+    "lastSeenBlock": 52080602,
+    "estimatedHF": 100,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x032896f9babdcd66b50a1ef4234e6923bcd3502b",
+    "lastSeenBlock": 52080656,
+    "estimatedHF": 1.4543013059514953,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xfb6e735af2cfbd7d27ad13d1f975b02011c99ccd",
+    "lastSeenBlock": 52080673,
+    "estimatedHF": 1.0477857860821758,
+    "tier": "Critical"
+  },
+  {
+    "address": "0xfdab109be8c7c26df3142993c9c93c6f36c3ba5e",
+    "lastSeenBlock": 52080707,
+    "estimatedHF": 2.3841002816814747,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x7c3d2713fcc80100c5f345847320865e6eb6c301",
+    "lastSeenBlock": 52080716,
+    "estimatedHF": 1.5836621351972973,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xc01ee22528e6101d4cd38d2e53e9deb0fe6ad3a4",
+    "lastSeenBlock": 52080727,
+    "estimatedHF": 3.018937320668767,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x9f9baa2493d276510ce5ccb5c2c85fcceee94e99",
+    "lastSeenBlock": 52080739,
+    "estimatedHF": 1.6820688864556723,
+    "tier": "Safe"
+  },
+  {
+    "address": "0xcc79d3b2629df74ef5ce121ea3dc3c0b3fba2d99",
+    "lastSeenBlock": 52080803,
+    "estimatedHF": 2.2951848949582745,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x4cebb1119574f5a93dcf34850c784f295ed7e002",
+    "lastSeenBlock": 52081028,
+    "estimatedHF": 3.6953762417897424,
+    "tier": "Safe"
+  },
+  {
+    "address": "0x9ce5f223d3cb279a86d08308b29444fa48c52e12",
+    "lastSeenBlock": 52081033,
+    "estimatedHF": 3.6653585587245323,
+    "tier": "Safe"
+  }
+]

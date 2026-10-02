@@ -159,4 +159,8 @@ export class BorrowerIndex {
       breakdown: tiers
     };
   }
+
+  public getAllBorrowers(): BorrowerMetadata[] {
+    return Array.from(this.activeBorrowers.values());
+  }
 }
