@@ -1,36 +1,80 @@
-import { env } from './config/env';
+import { BlockListener } from './monitor/blockListener';
+import { BorrowerIndex } from './monitor/borrowerIndex';
+import { HealthScanner } from './monitor/healthScanner';
+import { OracleWatcher } from './monitor/oracleWatcher';
+import { MetricsTracker } from './monitor/metrics';
 import { logger } from './utils/logger';
-import { withRetry } from './utils/retry';
-import { WebSocketProvider } from 'ethers';
-const COMPONENT = 'Main';
-async function connectWebSocket(): Promise<WebSocketProvider> {
-  return await withRetry(
-    async () => {
-      logger.info(COMPONENT, `Connecting to WebSocket...`);
-      const provider = new WebSocketProvider(env.RPC_URL_WS);
-      await provider.ready;
-      return provider;
-    }, COMPONENT, 'WebSocketConnection', 10
-  );
-}
+
 async function main() {
-  logger.info(COMPONENT, `Bot initialized`);
-  let provider = await connectWebSocket();
-  let latestBlock = await provider.getBlockNumber();
-  logger.info(COMPONENT, `Latest block number: ${latestBlock}`);
-  const setupSubscription = async (p: WebSocketProvider) => {
-    p.on('block', async (blockNumber: number) => {
-      try {
-        const block = await p.getBlock(blockNumber);
-        if (block) { logger.info(COMPONENT, `New block header`, { number: block.number, hash: block.hash, timestamp: block.timestamp }); }
-      } catch (error: any) { logger.error(COMPONENT, `Failed to fetch block ${blockNumber}`, { error: error.message }); }
-    });
-    const ws = (p as any).websocket;
-    if (ws) {
-      ws.on('close', async () => { logger.warn(COMPONENT, `WebSocket disconnected. Reconnecting...`); p.removeAllListeners(); provider = await connectWebSocket(); setupSubscription(provider); });
-      ws.on('error', async (error: any) => { logger.error(COMPONENT, `WebSocket error`, { error: error.message }); });
+  logger.info('System', 'Booting Liquidation Bot (Phase 2 - Monitor & Alert)');
+  
+  const blockListener = new BlockListener();
+  const borrowerIndex = new BorrowerIndex();
+  const healthScanner = new HealthScanner();
+  const oracleWatcher = new OracleWatcher();
+  const metrics = new MetricsTracker();
+
+  let initialized = false;
+
+  await oracleWatcher.start();
+  metrics.start();
+
+  oracleWatcher.on('priceUpdated', async (data) => {
+    logger.info('System', `Oracle price update: ${data.symbol}`);
+    if (initialized) {
+      const allBorrowers = borrowerIndex.getAllBorrowers();
+      await healthScanner.scan(allBorrowers, 0, true);
     }
-  };
-  setupSubscription(provider);
+  });
+
+  healthScanner.on('liquidatable', (address, hf) => {
+    // Alert logic handled internally inside healthScanner.ts (fetchFullPositionDetails)
+    logger.info('System', `Event Triggered: Liquidation opportunity at ${address} (HF: ${hf})`);
+  });
+
+  blockListener.on('newBlock', async (block) => {
+    metrics.recordBlock();
+    
+    if (!initialized) {
+      initialized = true;
+      await borrowerIndex.initialize(block.blockNumber);
+    }
+
+    await borrowerIndex.processNewBlockEvents(block.blockNumber);
+    
+    const allBorrowers = borrowerIndex.getAllBorrowers();
+    
+    const start = performance.now();
+    await healthScanner.scan(allBorrowers, block.blockNumber);
+    const latency = performance.now() - start;
+    
+    metrics.recordScanLatency(latency);
+    // Rough estimate of RPC calls: 1 block fetch + 1 getLogs + multicalls
+    metrics.recordRpcCall(2 + Math.ceil(allBorrowers.length / 200));
+
+    const blockMetrics = blockListener.getMetrics();
+    metrics.updateConnections(1, blockMetrics.totalReconnects);
+
+    if (block.blockNumber % 10 === 0) {
+      const stats = borrowerIndex.getStats();
+      metrics.logMetrics(stats.breakdown);
+    }
+  });
+
+  blockListener.on('reorg', (data) => {
+    logger.warn('System', `Reorg detected! Depth: ${data.depth}`);
+  });
+
+  blockListener.on('catchup', (blockNumber) => {
+    logger.info('System', `Catching up missed block: ${blockNumber}`);
+  });
+
+  await blockListener.start();
+  
+  logger.info('System', 'System online. Running in stability mode.');
 }
-main().catch(error => { logger.error(COMPONENT, `Fatal error`, { error: error.message }); process.exit(1); });
+
+main().catch(e => {
+  logger.error('System', `Fatal crash: ${e.message}`);
+  process.exit(1);
+});
