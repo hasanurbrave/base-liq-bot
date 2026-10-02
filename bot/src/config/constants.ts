@@ -118,7 +118,7 @@ export const QUOTER_ABI = [
 ];
 
 // Testnet & Execution Layer (Phase 4)
-export const LIQUIDATION_EXECUTOR = ""; // TODO: Paste deployed contract address here
+export const LIQUIDATION_EXECUTOR = process.env.EXECUTOR_ADDRESS || "0x0000000000000000000000000000000000000000"; // TODO: Paste deployed contract address here
 
 export const TESTNET = {
   // Base Sepolia Testnet Aave V3 Pool
