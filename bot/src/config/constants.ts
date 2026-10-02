@@ -116,3 +116,12 @@ export const SWAP_ROUTER_ABI = [
 export const QUOTER_ABI = [
   "function quoteExactInputSingle(address tokenIn, address tokenOut, uint24 fee, uint256 amountIn, uint160 sqrtPriceLimitX96) external returns (uint256 amountOut, uint160 sqrtPriceX96After, uint32 initializedTicksCrossed, uint256 gasEstimate)"
 ];
+
+// Testnet & Execution Layer (Phase 4)
+export const LIQUIDATION_EXECUTOR = ""; // TODO: Paste deployed contract address here
+
+export const TESTNET = {
+  // Base Sepolia Testnet Aave V3 Pool
+  POOL: "0x4b787595c27Ff7E3C51A8D9f1f0aAA6BffBE992e", // Base Sepolia Aave Pool
+  BASE_SEPOLIA_RPC: "https://sepolia.base.org"
+};

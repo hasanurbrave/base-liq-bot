@@ -130,6 +130,9 @@ contract LiquidationExecutor is IFlashLoanSimpleReceiver, ReentrancyGuard {
             false // Receive underlying token, not aToken
         );
 
+        // Reset approval just in case
+        IERC20(decoded.debtAsset).forceApprove(address(aavePool), 0);
+
         // Step 2: Check collateral received
         uint256 collateralReceived = IERC20(decoded.collateralAsset).balanceOf(address(this));
 
@@ -141,6 +144,9 @@ contract LiquidationExecutor is IFlashLoanSimpleReceiver, ReentrancyGuard {
             // Execute the swap via raw call using the provided swapData (e.g., Uniswap or Aerodrome calldata)
             (bool success, ) = decoded.swapRouter.call(decoded.swapData);
             if (!success) revert SwapFailed();
+
+            // Reset router approval
+            IERC20(decoded.collateralAsset).forceApprove(decoded.swapRouter, 0);
         }
 
         // Step 4 & 5: Verify we have enough to repay the loan + premium
