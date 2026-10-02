@@ -1,0 +1,231 @@
+import { ethers } from 'ethers';
+import { ASSETS, POOL, POOL_ABI, AssetMetadata } from '../config/constants';
+import { GasEstimator } from './gasEstimator';
+import { SwapSimulator } from './swapSimulator';
+import { logger } from '../utils/logger';
+
+export interface AlertData {
+  borrower: string;
+  collaterals: { asset: string, amount: number, usdValue: number, aTokenBalance: string }[];
+  debts: { asset: string, amount: number, usdValue: number, debtTokenBalance: string }[];
+}
+
+export interface ProfitDecision {
+  decision: "EXECUTE" | "SKIP_UNPROFITABLE" | "SKIP_MARGINAL" | "ABORT_ERROR";
+  breakdown: {
+    grossRevenueUSD: number;
+    flashLoanFeeUSD: number;
+    swapCostUSD: number;
+    gasCostUSD: number;
+    netProfitUSD: number;
+    profitMarginPercent: number;
+  };
+  params?: {
+    collateralAsset: string;
+    debtAsset: string;
+    borrower: string;
+    debtToCover: bigint;
+    flashLoanAsset: string;
+    flashLoanAmount: bigint;
+    swapRoute: string[];
+    dex: string;
+    minSwapOutput: bigint;
+    minProfitOutUSD: number;
+  };
+  reason: string;
+}
+
+export const THRESHOLDS = {
+  MIN_PROFIT_USD: 1.00,
+  MAX_SLIPPAGE_BPS: 50, // 0.5%
+  GAS_BUFFER_MULTIPLIER: 1.20,
+  MAX_POSITION_SIZE_USD: 10000,
+};
+
+export class ProfitCalculator {
+  private gasEstimator: GasEstimator;
+  private swapSimulator: SwapSimulator;
+  private poolInterface: ethers.Interface;
+
+  constructor(gasEstimator: GasEstimator, swapSimulator: SwapSimulator) {
+    this.gasEstimator = gasEstimator;
+    this.swapSimulator = swapSimulator;
+    this.poolInterface = new ethers.Interface(POOL_ABI);
+  }
+
+  public async evaluateAllPairs(alert: AlertData): Promise<ProfitDecision> {
+    const start = performance.now();
+    
+    if (alert.collaterals.length === 0 || alert.debts.length === 0) {
+      return { decision: "ABORT_ERROR", breakdown: this.emptyBreakdown(), reason: "NO_ASSETS_FOUND" };
+    }
+
+    let bestDecision: ProfitDecision | null = null;
+
+    for (const collateral of alert.collaterals) {
+      for (const debt of alert.debts) {
+        const cAsset = ASSETS[collateral.asset];
+        const dAsset = ASSETS[debt.asset];
+
+        if (!cAsset || !dAsset) continue;
+        if (cAsset.isFrozen || dAsset.isFrozen) {
+           logger.debug('ProfitCalc', `Skipping pair ${cAsset.symbol}/${dAsset.symbol}: ASSET_FROZEN`);
+           continue;
+        }
+
+        const decision = await this.evaluatePair(alert.borrower, collateral, debt, cAsset, dAsset);
+        
+        if (!bestDecision || decision.breakdown.netProfitUSD > bestDecision.breakdown.netProfitUSD) {
+          bestDecision = decision;
+        }
+      }
+    }
+
+    const latency = performance.now() - start;
+    if (bestDecision) {
+      logger.info('ProfitCalc', `Evaluated all pairs in ${latency.toFixed(2)}ms. Best decision: ${bestDecision.decision} (${bestDecision.reason})`);
+      return bestDecision;
+    }
+
+    return { decision: "ABORT_ERROR", breakdown: this.emptyBreakdown(), reason: "NO_VALID_PAIRS_EVALUATED" };
+  }
+
+  private async evaluatePair(
+    borrower: string,
+    collateral: any,
+    debt: any,
+    cAsset: AssetMetadata,
+    dAsset: AssetMetadata
+  ): Promise<ProfitDecision> {
+    
+    // Check Dust
+    if (debt.usdValue < 1.0) {
+      return { decision: "SKIP_UNPROFITABLE", breakdown: this.emptyBreakdown(), reason: "DUST_POSITION" };
+    }
+
+    // Aave V3 Close Factor is 50%
+    const closeFactor = 0.5;
+    let debtToCoverUSD = debt.usdValue * closeFactor;
+    
+    if (debtToCoverUSD > THRESHOLDS.MAX_POSITION_SIZE_USD) {
+      debtToCoverUSD = THRESHOLDS.MAX_POSITION_SIZE_USD;
+    }
+
+    const priceOfDebtAsset = debt.usdValue / debt.amount;
+    const debtToCoverTokens = debtToCoverUSD / priceOfDebtAsset;
+    const debtToCoverBigInt = ethers.parseUnits(debtToCoverTokens.toFixed(dAsset.decimals), dAsset.decimals);
+
+    const bonus = cAsset.liquidationBonus / 10000; // e.g. 10500 / 10000 = 1.05 -> 5% bonus
+    const grossRevenueUSD = debtToCoverUSD * (bonus - 1.0);
+
+    // Flash loan fee (Aave is 0.05%)
+    const flashLoanFeeUSD = debtToCoverUSD * 0.0005;
+
+    // We will receive collateral: roughly (debtToCoverUSD * bonus) in collateral tokens
+    const priceOfCollateralAsset = collateral.usdValue / collateral.amount;
+    const expectedCollateralTokens = (debtToCoverUSD * bonus) / priceOfCollateralAsset;
+    const expectedCollateralBigInt = ethers.parseUnits(expectedCollateralTokens.toFixed(cAsset.decimals), cAsset.decimals);
+
+    // Swap simulator: We swap expectedCollateral back to Debt asset to repay flash loan
+    // Or we swap to USDC. Assuming flash loan was in Debt Asset, we must swap Collateral -> Debt
+    let swapCostUSD = 0;
+    let swapRoute: string[] = [];
+    let dex = "";
+    let minSwapOutput = 0n;
+
+    if (cAsset.address !== dAsset.address) {
+      const quote = await this.swapSimulator.getBestQuote(cAsset.address, dAsset.address, expectedCollateralBigInt);
+      if (!quote.success) {
+        return { decision: "ABORT_ERROR", breakdown: this.emptyBreakdown(), reason: quote.reason === 'NO_POOL' ? "NO_SWAP_ROUTE" : quote.reason || "SWAP_QUOTE_FAILED" };
+      }
+      
+      const expectedOutWithoutSlippage = debtToCoverTokens * bonus; 
+      const actualOutTokens = Number(ethers.formatUnits(quote.outputAmount!, dAsset.decimals));
+      
+      swapCostUSD = (expectedOutWithoutSlippage - actualOutTokens) * priceOfDebtAsset;
+      swapRoute = quote.route!;
+      dex = quote.dex!;
+      minSwapOutput = (quote.outputAmount! * 995n) / 1000n; // 0.5% max slippage applied to quote
+    } else {
+      // Same asset (e.g. USDC debt, USDC collateral). No swap needed.
+      minSwapOutput = expectedCollateralBigInt;
+    }
+
+    // Gas Estimation
+    const tx = {
+      to: POOL,
+      data: this.poolInterface.encodeFunctionData('liquidationCall', [
+        cAsset.address,
+        dAsset.address,
+        borrower,
+        debtToCoverBigInt,
+        false // receive underlying
+      ]),
+      from: "0x0000000000000000000000000000000000000001" // dummy sender
+    };
+
+    const gasEst = await this.gasEstimator.estimate(tx);
+    let gasCostUSD = 0;
+    if (gasEst.success) {
+       gasCostUSD = gasEst.totalCostUSD || 0;
+    } else {
+       return { decision: "ABORT_ERROR", breakdown: this.emptyBreakdown(), reason: `GAS_ESTIMATE_FAILED: ${gasEst.reason}` };
+    }
+
+    // Net Profit
+    const netProfitUSD = grossRevenueUSD - flashLoanFeeUSD - swapCostUSD - gasCostUSD;
+    const profitMarginPercent = (netProfitUSD / debtToCoverUSD) * 100;
+
+    const breakdown = {
+      grossRevenueUSD,
+      flashLoanFeeUSD,
+      swapCostUSD,
+      gasCostUSD,
+      netProfitUSD,
+      profitMarginPercent
+    };
+
+    let decision: ProfitDecision["decision"] = "ABORT_ERROR";
+    let reason = "";
+
+    if (netProfitUSD > THRESHOLDS.MIN_PROFIT_USD) {
+      decision = "EXECUTE";
+      reason = `Profitable: $${netProfitUSD.toFixed(2)}`;
+    } else if (netProfitUSD > 0) {
+      decision = "SKIP_MARGINAL";
+      reason = `Marginal Profit: $${netProfitUSD.toFixed(2)} (< $${THRESHOLDS.MIN_PROFIT_USD})`;
+    } else {
+      decision = "SKIP_UNPROFITABLE";
+      reason = `Unprofitable: $${netProfitUSD.toFixed(2)}`;
+    }
+
+    return {
+      decision,
+      breakdown,
+      params: decision === "EXECUTE" ? {
+        collateralAsset: cAsset.address,
+        debtAsset: dAsset.address,
+        borrower,
+        debtToCover: debtToCoverBigInt,
+        flashLoanAsset: dAsset.address,
+        flashLoanAmount: debtToCoverBigInt,
+        swapRoute,
+        dex,
+        minSwapOutput,
+        minProfitOutUSD: THRESHOLDS.MIN_PROFIT_USD
+      } : undefined,
+      reason
+    };
+  }
+
+  private emptyBreakdown() {
+    return {
+      grossRevenueUSD: 0,
+      flashLoanFeeUSD: 0,
+      swapCostUSD: 0,
+      gasCostUSD: 0,
+      netProfitUSD: 0,
+      profitMarginPercent: 0
+    };
+  }
+}
