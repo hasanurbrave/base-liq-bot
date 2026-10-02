@@ -77,6 +77,13 @@ export class BlockListener extends EventEmitter {
     }
   }
 
+  public stop() {
+    if (this.provider) {
+      this.provider.removeAllListeners();
+      this.provider.destroy();
+    }
+  }
+
   private async handleNewBlock(blockNumber: number) {
     if (this.recentBlocks.has(blockNumber)) return; // Deduplication
     
@@ -141,6 +148,10 @@ export class BlockListener extends EventEmitter {
         }
       }
     }
+  }
+
+  public getTipBlock(): number {
+    return this.lastProcessedBlock;
   }
 
   public getMetrics() {

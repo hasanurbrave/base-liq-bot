@@ -55,9 +55,8 @@ export class TxSubmitter {
         const start = performance.now();
         await this.providers[i].getBlockNumber();
         const latency = performance.now() - start;
-        // If the active one is too slow, and we are not on primary, we could rotate, but for now just log
         if (i !== this.activeRpcIndex && latency < 50) {
-          // Could implement auto-fallback to faster node here
+          // Could implement auto-fallback
         }
       } catch (err) {
         logger.error('TxSubmitter', `RPC index ${i} failed health check`);
@@ -128,7 +127,6 @@ export class TxSubmitter {
     if (!receipt) {
       result.status = "DROPPED";
       // We abandon it if it's dropped (stale opportunity)
-      // Usually requires replacing the tx, but for simplicity we log as dropped
     } else {
       result.blockNumber = receipt.blockNumber;
       result.gasUsed = receipt.gasUsed;
@@ -136,8 +134,6 @@ export class TxSubmitter {
 
       if (receipt.status === 1) {
         result.status = "SUCCESS";
-        // Recalculate profit if we want to be exact, but we'll use the estimated for now, 
-        // minus exact gas cost
         const grossUSD = decision.breakdown.grossRevenueUSD - decision.breakdown.flashLoanFeeUSD - decision.breakdown.swapCostUSD;
         result.profitUSD = grossUSD - result.gasCostUSD;
       } else {
@@ -159,8 +155,6 @@ export class TxSubmitter {
     let attempts = 0;
     while (attempts < this.providers.length) {
       try {
-        // Extract hash by sending raw
-        // ethers v6 send method:
         const hash = await this.activeProvider.send("eth_sendRawTransaction", [signedTx]);
         return hash;
       } catch (err: any) {
@@ -194,7 +188,6 @@ export class TxSubmitter {
         } catch (callErr: any) {
           if (callErr.data) {
             reason = callErr.data;
-            // Decode string if possible
             try {
               reason = ethers.toUtf8String(callErr.data);
             } catch { }
@@ -204,12 +197,9 @@ export class TxSubmitter {
         }
       }
 
-      // Check if it's the Aave V3 health factor error (42)
       if (reason.includes("42") || reason.includes("HEALTH_FACTOR_NOT_BELOW_THRESHOLD")) {
         isRaceLoss = true;
         reason = "HEALTH_FACTOR_NOT_BELOW_THRESHOLD (Race Loss)";
-        
-        // Find winning tx
         latencyGapMs = await this.findWinningTx(receipt.blockNumber, decision.params!.borrower);
       }
     } catch (e) {
@@ -221,19 +211,14 @@ export class TxSubmitter {
 
   private async findWinningTx(blockNumber: number, borrower: string): Promise<number> {
     try {
-      // Check current block and previous block
       for (let b = blockNumber; b >= blockNumber - 1; b--) {
         const block = await this.activeProvider.getBlock(b, true);
         if (!block || !block.prefetchedTransactions) continue;
         
         for (const tx of block.prefetchedTransactions) {
-          // Look for interactions with Aave Pool
           if (tx.data.includes(borrower.replace("0x", "").toLowerCase())) {
-            // Rough estimation of block time gap
-            // If they beat us in the same block, we assume 0-2000ms latency gap
-            // If they beat us in the previous block, we assume 2000ms block time gap
             if (b === blockNumber - 1) return 2000;
-            return 500; // Same block race loss estimate
+            return 500;
           }
         }
       }

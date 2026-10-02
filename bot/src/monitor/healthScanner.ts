@@ -208,7 +208,8 @@ export class HealthScanner extends EventEmitter {
         classification: { size, urgency }
       };
 
-      logger.error('AlertSystem', JSON.stringify(alert, null, 2));
+      this.emit('liquidationOpportunity', alert);
+      logger.info('AlertSystem', `Detected Liquidation Opportunity: ${userAddress}`);
 
     } catch (e: any) {
       logger.error('HealthScanner', `Failed to fetch full position details: ${e.message}`);
