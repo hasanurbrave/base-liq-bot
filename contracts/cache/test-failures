@@ -1,0 +1,1 @@
+{"version":1,"failures":[{"contract":"test/LiquidationExecutor.t.sol:LiquidationExecutorTest","test":"test_multipleCollateral_correctAssetSeized"},{"contract":"test/LiquidationExecutor.t.sol:LiquidationExecutorTest","test":"test_revert_noSwapLiquidity"}]}
