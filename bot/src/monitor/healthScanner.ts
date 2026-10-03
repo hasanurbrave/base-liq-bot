@@ -1,7 +1,7 @@
 import { ethers } from 'ethers';
 import { EventEmitter } from 'events';
 import { env } from '../config/env';
-import { POOL, POOL_ABI } from '../config/constants';
+import { POOL, POOL_ABI, SUPPORTED_ASSETS, POOL_DATA_PROVIDER, POOL_DATA_PROVIDER_ABI, ORACLE, ORACLE_ABI } from '../config/constants';
 import { BorrowerIndex, BorrowerMetadata } from './borrowerIndex';
 import { logger } from '../utils/logger';
 
@@ -134,27 +134,26 @@ export class HealthScanner extends EventEmitter {
   }
 
   private async fetchFullPositionDetails(userAddress: string, hf: number) {
-    const { SUPPORTED_ASSETS, POOL_DATA_PROVIDER, POOL_DATA_PROVIDER_ABI, ORACLE, ORACLE_ABI } = require('../config/constants');
-    const dataProvider = new ethers.Interface(POOL_DATA_PROVIDER_ABI);
-    const oracle = new ethers.Interface(ORACLE_ABI);
-    
-    const calls: any[] = [];
-    
-    // Build multicall for all assets
-    for (const asset of SUPPORTED_ASSETS) {
-      calls.push({
-        target: POOL_DATA_PROVIDER,
-        allowFailure: true,
-        callData: dataProvider.encodeFunctionData('getUserReserveData', [asset.address, userAddress])
-      });
-      calls.push({
-        target: ORACLE,
-        allowFailure: true,
-        callData: oracle.encodeFunctionData('getAssetPrice', [asset.address])
-      });
-    }
-
     try {
+      const dataProvider = new ethers.Interface(POOL_DATA_PROVIDER_ABI);
+      const oracle = new ethers.Interface(ORACLE_ABI);
+      
+      const calls: any[] = [];
+      
+      // Build multicall for all assets
+      for (const asset of SUPPORTED_ASSETS) {
+        calls.push({
+          target: POOL_DATA_PROVIDER,
+          allowFailure: true,
+          callData: dataProvider.encodeFunctionData('getUserReserveData', [asset.address, userAddress])
+        });
+        calls.push({
+          target: ORACLE,
+          allowFailure: true,
+          callData: oracle.encodeFunctionData('getAssetPrice', [asset.address])
+        });
+      }
+
       const results = await this.multicall.aggregate3.staticCall(calls);
       
       const collaterals = [];
@@ -209,10 +208,9 @@ export class HealthScanner extends EventEmitter {
       };
 
       this.emit('liquidationOpportunity', alert);
-      logger.info('AlertSystem', `Detected Liquidation Opportunity: ${userAddress}`);
-
+      logger.info('AlertSystem', `Detected Liquidation Opportunity: ${userAddress} | Collateral: $${totalCollateralUsd.toFixed(2)} | Debt: $${totalDebtUsd.toFixed(2)}`);
     } catch (e: any) {
-      logger.error('HealthScanner', `Failed to fetch full position details: ${e.message}`);
+      logger.error('HealthScanner', `Failed to fetch full position details: ${e.message}\n${e.stack}`);
     }
   }
 }
