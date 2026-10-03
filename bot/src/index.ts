@@ -4,7 +4,6 @@ import * as dotenv from 'dotenv';
 import { BlockListener } from './monitor/blockListener';
 import { BorrowerIndex } from './monitor/borrowerIndex';
 import { HealthScanner } from './monitor/healthScanner';
-import { OracleWatcher } from './monitor/oracleWatcher';
 import { MetricsTracker } from './monitor/metrics';
 import { Monitoring } from './monitor/monitoring';
 
@@ -39,7 +38,10 @@ async function main() {
     process.env.BACKUP_RPC_URL || ''
   ].filter(url => url !== '');
   
-  const provider = new ethers.JsonRpcProvider(rpcUrls[0], undefined, { staticNetwork: true });
+  const providers = rpcUrls.map(url => new ethers.JsonRpcProvider(url, undefined, { staticNetwork: true }));
+  const provider = providers.length > 1 
+    ? new ethers.FallbackProvider(providers.map((p, i) => ({ provider: p, priority: i, weight: 1, stallTimeout: 400 }))) 
+    : providers[0];
   
   if (!process.env.PRIVATE_KEY) {
     logger.error('System', 'PRIVATE_KEY is missing. Halting.');
@@ -87,12 +89,30 @@ async function main() {
 
   logger.info('System', 'All C-03 Startup safety checks passed.');
 
-  // Fake ETH price for simulation (could be fetched dynamically)
-  const ethPriceUSD = 3000;
+  // H-09 Fix: Dynamic ETH Price from Aave Oracle (Base WETH = 0x4200000000000000000000000000000000000006)
+  const ORACLE_ADDRESS = "0x2A152140A73Aa52a5E82bBDcAE16fF4F7A9D6aF8";
+  const oracleContract = new ethers.Contract(ORACLE_ADDRESS, ["function getAssetPrice(address asset) view returns (uint256)"], provider);
+  let ethPriceUSD = 3000;
+  try {
+    const priceWei = await oracleContract.getAssetPrice("0x4200000000000000000000000000000000000006");
+    ethPriceUSD = Number(ethers.formatUnits(priceWei, 8)); // Aave oracle uses 8 decimals for USD
+    logger.info('System', `Fetched live ETH price: ${ethPriceUSD}`);
+  } catch (e) {
+    logger.warn('System', 'Failed to fetch live ETH price, falling back to $3000');
+  }
+
+  // Update ETH price periodically (every 10 mins)
+  setInterval(async () => {
+    try {
+      const priceWei = await oracleContract.getAssetPrice("0x4200000000000000000000000000000000000006");
+      ethPriceUSD = Number(ethers.formatUnits(priceWei, 8));
+      gasEstimator.updateEthPrice(ethPriceUSD);
+    } catch (e) {}
+  }, 10 * 60 * 1000);
 
   // 1. Execution Layer
   const resultHandler = new ResultHandler();
-  const nonceManager = new NonceManager(provider, wallet.address);
+  const nonceManager = new NonceManager(provider as any, wallet.address);
   await nonceManager.init();
   
   const txBuilder = new TxBuilder({ provider, wallet, nonceManager });
@@ -104,15 +124,14 @@ async function main() {
   });
 
   // 2. Simulation Layer
-  const gasEstimator = new GasEstimator(provider, ethPriceUSD);
-  const swapSimulator = new SwapSimulator(provider);
+  const gasEstimator = new GasEstimator(provider as any, ethPriceUSD);
+  const swapSimulator = new SwapSimulator(provider as any);
   const profitCalculator = new ProfitCalculator(gasEstimator, swapSimulator);
 
   // 3. Monitor Layer
   const blockListener = new BlockListener();
   const borrowerIndex = new BorrowerIndex();
   const healthScanner = new HealthScanner();
-  const oracleWatcher = new OracleWatcher();
   
   // Tracking
   const metrics = new MetricsTracker();
@@ -127,7 +146,6 @@ async function main() {
   let opportunityQueue: { alert: AlertData, timestamp: number }[] = [];
   let isProcessingQueue = false;
 
-  await oracleWatcher.start();
   metrics.start();
   monitoring.start();
 
@@ -244,11 +262,9 @@ async function main() {
   };
 
   // --- Listeners ---
-  oracleWatcher.on('priceUpdated', async (data) => {
-    if (initialized && !isShuttingDown) {
-      const allBorrowers = borrowerIndex.getAllBorrowers();
-      await healthScanner.scan(allBorrowers, 0, true);
-    }
+
+  healthScanner.on('cleanBorrower', (address: string) => {
+    borrowerIndex.removeBorrower(address);
   });
 
   healthScanner.on('liquidationOpportunity', (alert: AlertData) => {

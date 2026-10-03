@@ -47,6 +47,7 @@ async function main() {
 
     const mockAlert: AlertData = {
       borrower,
+      healthFactor: 0.8,
       collaterals: [
         { asset: cAssetSymbol, amount: 1.5, usdValue: 4500, aTokenBalance: ethers.parseUnits('1.5', 18).toString() }
       ],

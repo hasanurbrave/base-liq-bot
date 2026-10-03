@@ -6,6 +6,7 @@ import { logger } from '../utils/logger';
 
 export interface AlertData {
   borrower: string;
+  healthFactor: number;
   collaterals: { asset: string, amount: number, usdValue: number, aTokenBalance: string }[];
   debts: { asset: string, amount: number, usdValue: number, debtTokenBalance: string }[];
 }
@@ -24,6 +25,7 @@ export interface ProfitDecision {
     collateralAsset: string;
     debtAsset: string;
     borrower: string;
+  healthFactor: number;
     debtToCover: bigint;
     flashLoanAsset: string;
     flashLoanAmount: bigint;
@@ -69,11 +71,14 @@ export class ProfitCalculator {
 
         if (!cAsset || !dAsset) continue;
         if (cAsset.isFrozen || dAsset.isFrozen) {
-           logger.debug('ProfitCalc', `Skipping pair ${cAsset.symbol}/${dAsset.symbol}: ASSET_FROZEN`);
+           logger.debug('ProfitCalc', `Skipping pair ${collateral.asset}/${debt.asset}: ASSET_FROZEN`);
+           continue;
+        }
+        if (cAsset.usageAsCollateralEnabled === false) {
            continue;
         }
 
-        const decision = await this.evaluatePair(alert.borrower, collateral, debt, cAsset, dAsset);
+        const decision = await this.evaluatePair(alert.healthFactor, alert.borrower, collateral, debt, cAsset, dAsset);
         
         if (!bestDecision || decision.breakdown.netProfitUSD > bestDecision.breakdown.netProfitUSD) {
           bestDecision = decision;
@@ -91,6 +96,7 @@ export class ProfitCalculator {
   }
 
   private async evaluatePair(
+    hf: number,
     borrower: string,
     collateral: any,
     debt: any,
@@ -103,9 +109,16 @@ export class ProfitCalculator {
       return { decision: "SKIP_UNPROFITABLE", breakdown: this.emptyBreakdown(), reason: "DUST_POSITION" };
     }
 
-    // Aave V3 Close Factor is 50%
-    const closeFactor = 0.5;
+    // H-09 Fix: Aave V3 Close Factor is 100% if HF < 0.95, else 50%
+    const closeFactor = hf < 0.95 ? 1.0 : 0.5;
     let debtToCoverUSD = debt.usdValue * closeFactor;
+    
+    // Cap debtToCover by the actual collateral available (bonus adjusted)
+    // If they have $1000 collateral, and bonus is 5%, max debt we can cover is $1000 / 1.05 = $952.38
+    const maxDebtCoverable = collateral.usdValue / (cAsset.liquidationBonus / 10000);
+    if (debtToCoverUSD > maxDebtCoverable) {
+       debtToCoverUSD = maxDebtCoverable;
+    }
     
     if (debtToCoverUSD > THRESHOLDS.MAX_POSITION_SIZE_USD) {
       debtToCoverUSD = THRESHOLDS.MAX_POSITION_SIZE_USD;
@@ -161,6 +174,7 @@ export class ProfitCalculator {
         collateralAsset: cAsset.address,
         debtAsset: dAsset.address,
         user: borrower,
+        healthFactor: hf,
         debtToCover: debtToCoverBigInt,
         receiveAToken: false,
         swap: {
@@ -222,6 +236,7 @@ export class ProfitCalculator {
         collateralAsset: cAsset.address,
         debtAsset: dAsset.address,
         borrower,
+        healthFactor: hf,
         debtToCover: debtToCoverBigInt,
         flashLoanAsset: dAsset.address,
         flashLoanAmount: debtToCoverBigInt,

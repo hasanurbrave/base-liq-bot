@@ -22,14 +22,14 @@ export interface GasEstimateResult {
 }
 
 export class GasEstimator {
-  private provider: ethers.JsonRpcProvider;
+  private provider: ethers.Provider;
   private oracle: ethers.Contract;
   private ethPriceUSD: number;
   
   // Track recent L1 fees for the "abnormally high" check
   private recentL1Fees: bigint[] = [];
 
-  constructor(provider: ethers.JsonRpcProvider, ethPriceUSD: number = 3000) {
+  constructor(provider: ethers.Provider, ethPriceUSD: number = 3000) {
     this.provider = provider;
     this.oracle = new ethers.Contract(GAS_PRICE_ORACLE_ADDRESS, GAS_PRICE_ORACLE_ABI, this.provider);
     this.ethPriceUSD = ethPriceUSD;

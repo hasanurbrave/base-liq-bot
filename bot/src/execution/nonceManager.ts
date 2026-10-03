@@ -2,7 +2,7 @@ import { ethers } from 'ethers';
 import { logger } from '../utils/logger';
 
 export class NonceManager {
-  private provider: ethers.JsonRpcProvider;
+  private provider: ethers.Provider;
   private signerAddress: string;
   private currentNonce: number = -1;
   private isSyncing: boolean = false;
@@ -10,7 +10,7 @@ export class NonceManager {
   // Mutex for concurrent processing
   private lockPromise: Promise<void> | null = null;
 
-  constructor(provider: ethers.JsonRpcProvider, signerAddress: string) {
+  constructor(provider: ethers.Provider, signerAddress: string) {
     this.provider = provider;
     this.signerAddress = signerAddress;
   }

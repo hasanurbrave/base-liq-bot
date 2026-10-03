@@ -38,7 +38,6 @@ const dotenv = __importStar(require("dotenv"));
 const blockListener_1 = require("./monitor/blockListener");
 const borrowerIndex_1 = require("./monitor/borrowerIndex");
 const healthScanner_1 = require("./monitor/healthScanner");
-const oracleWatcher_1 = require("./monitor/oracleWatcher");
 const metrics_1 = require("./monitor/metrics");
 const monitoring_1 = require("./monitor/monitoring");
 const profitCalculator_1 = require("./simulation/profitCalculator");
@@ -64,7 +63,10 @@ async function main() {
         process.env.RPC_URL_HTTP || 'http://127.0.0.1:8545',
         process.env.BACKUP_RPC_URL || ''
     ].filter(url => url !== '');
-    const provider = new ethers_1.ethers.JsonRpcProvider(rpcUrls[0], undefined, { staticNetwork: true });
+    const providers = rpcUrls.map(url => new ethers_1.ethers.JsonRpcProvider(url, undefined, { staticNetwork: true }));
+    const provider = providers.length > 1
+        ? new ethers_1.ethers.FallbackProvider(providers.map((p, i) => ({ provider: p, priority: i, weight: 1, stallTimeout: 400 })))
+        : providers[0];
     if (!process.env.PRIVATE_KEY) {
         logger_1.logger.error('System', 'PRIVATE_KEY is missing. Halting.');
         process.exit(1);
@@ -104,8 +106,27 @@ async function main() {
         process.exit(1);
     }
     logger_1.logger.info('System', 'All C-03 Startup safety checks passed.');
-    // Fake ETH price for simulation (could be fetched dynamically)
-    const ethPriceUSD = 3000;
+    // H-09 Fix: Dynamic ETH Price from Aave Oracle (Base WETH = 0x4200000000000000000000000000000000000006)
+    const ORACLE_ADDRESS = "0x2A152140A73Aa52a5E82bBDcAE16fF4F7A9D6aF8";
+    const oracleContract = new ethers_1.ethers.Contract(ORACLE_ADDRESS, ["function getAssetPrice(address asset) view returns (uint256)"], provider);
+    let ethPriceUSD = 3000;
+    try {
+        const priceWei = await oracleContract.getAssetPrice("0x4200000000000000000000000000000000000006");
+        ethPriceUSD = Number(ethers_1.ethers.formatUnits(priceWei, 8)); // Aave oracle uses 8 decimals for USD
+        logger_1.logger.info('System', `Fetched live ETH price: ${ethPriceUSD}`);
+    }
+    catch (e) {
+        logger_1.logger.warn('System', 'Failed to fetch live ETH price, falling back to $3000');
+    }
+    // Update ETH price periodically (every 10 mins)
+    setInterval(async () => {
+        try {
+            const priceWei = await oracleContract.getAssetPrice("0x4200000000000000000000000000000000000006");
+            ethPriceUSD = Number(ethers_1.ethers.formatUnits(priceWei, 8));
+            gasEstimator.updateEthPrice(ethPriceUSD);
+        }
+        catch (e) { }
+    }, 10 * 60 * 1000);
     // 1. Execution Layer
     const resultHandler = new resultHandler_1.ResultHandler();
     const nonceManager = new nonceManager_1.NonceManager(provider, wallet.address);
@@ -125,7 +146,6 @@ async function main() {
     const blockListener = new blockListener_1.BlockListener();
     const borrowerIndex = new borrowerIndex_1.BorrowerIndex();
     const healthScanner = new healthScanner_1.HealthScanner();
-    const oracleWatcher = new oracleWatcher_1.OracleWatcher();
     // Tracking
     const metrics = new metrics_1.MetricsTracker();
     const monitoring = new monitoring_1.Monitoring(resultHandler);
@@ -136,7 +156,6 @@ async function main() {
     const activeSubmissions = new Set();
     let opportunityQueue = [];
     let isProcessingQueue = false;
-    await oracleWatcher.start();
     metrics.start();
     monitoring.start();
     // --- Shutdown Handling ---
@@ -236,11 +255,8 @@ async function main() {
         }
     };
     // --- Listeners ---
-    oracleWatcher.on('priceUpdated', async (data) => {
-        if (initialized && !isShuttingDown) {
-            const allBorrowers = borrowerIndex.getAllBorrowers();
-            await healthScanner.scan(allBorrowers, 0, true);
-        }
+    healthScanner.on('cleanBorrower', (address) => {
+        borrowerIndex.removeBorrower(address);
     });
     healthScanner.on('liquidationOpportunity', (alert) => {
         opportunityQueue.push({ alert, timestamp: Date.now() });

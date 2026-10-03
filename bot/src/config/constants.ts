@@ -41,6 +41,7 @@ export interface AssetMetadata {
   liquidationThreshold: number;
   liquidationBonus: number;
   isFrozen: boolean;
+  usageAsCollateralEnabled?: boolean;
 }
 
 export const ASSETS: Record<string, AssetMetadata> = {

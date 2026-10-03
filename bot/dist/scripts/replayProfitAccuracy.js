@@ -42,6 +42,7 @@ async function main() {
         const dAssetSymbol = Object.keys(constants_1.ASSETS).find(key => constants_1.ASSETS[key].address.toLowerCase() === dAssetAddr.toLowerCase()) || 'USDC';
         const mockAlert = {
             borrower,
+            healthFactor: 0.8,
             collaterals: [
                 { asset: cAssetSymbol, amount: 1.5, usdValue: 4500, aTokenBalance: ethers_1.ethers.parseUnits('1.5', 18).toString() }
             ],

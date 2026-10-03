@@ -25,11 +25,11 @@ export interface SwapQuote {
 }
 
 export class SwapSimulator {
-  private provider: ethers.JsonRpcProvider;
+  private provider: ethers.Provider;
   private uniQuoter: ethers.Contract;
   private aeroRouter: ethers.Contract;
 
-  constructor(provider: ethers.JsonRpcProvider) {
+  constructor(provider: ethers.Provider) {
     this.provider = provider;
     this.uniQuoter = new ethers.Contract(UNISWAP_V3_QUOTER, QUOTER_ABI, this.provider);
     this.aeroRouter = new ethers.Contract(AERODROME_ROUTER, AERODROME_ABI, this.provider);
