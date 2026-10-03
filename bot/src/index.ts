@@ -88,9 +88,11 @@ async function main() {
   }
 
   const balance = await provider.getBalance(wallet.address);
-  if (balance < ethers.parseEther("0.005")) { // Minimum 0.005 ETH required
+  if (balance < ethers.parseEther("0.005") && !isDryRun) { // Minimum 0.005 ETH required
     logger.error('System', `Insufficient ETH balance (${ethers.formatEther(balance)}). Need at least 0.005 ETH. Halting.`);
     process.exit(1);
+  } else if (balance < ethers.parseEther("0.005") && isDryRun) {
+    logger.warn('System', `DRY_RUN: Insufficient ETH balance (${ethers.formatEther(balance)}), but continuing anyway.`);
   }
 
   logger.info('System', 'All C-03 Startup safety checks passed.');
