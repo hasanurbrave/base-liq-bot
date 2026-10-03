@@ -88,15 +88,16 @@ export class HealthScanner extends EventEmitter {
         const MAX_HF = ethers.parseUnits("100", 18);
         const actualHf = hfBigInt > MAX_HF ? MAX_HF : hfBigInt;
         const hfValue = Number(ethers.formatUnits(actualHf, 18));
+        const totalDebtBase = decoded.totalDebtBase;
         
-        this.processHF(borrowers[i], hfValue);
+        this.processHF(borrowers[i], hfValue, totalDebtBase);
       }
     } catch (e: any) {
       logger.error('HealthScanner', `Multicall batch failed: ${e.message}`);
     }
   }
 
-  private processHF(borrower: BorrowerMetadata, hf: number) {
+  private processHF(borrower: BorrowerMetadata, hf: number, totalDebtBase: bigint) {
     const oldTier = borrower.tier;
     borrower.estimatedHF = hf;
     
@@ -116,7 +117,8 @@ export class HealthScanner extends EventEmitter {
     }
 
     // Liquidation debounce logic
-    if (hf < 1.0) {
+    // Dust filter: Require at least $10 of debt (8 decimals = 1_000_000_000n)
+    if (hf < 1.0 && totalDebtBase > 1000000000n) {
       const count = (this.lowHFCount.get(borrower.address) || 0) + 1;
       this.lowHFCount.set(borrower.address, count);
       
