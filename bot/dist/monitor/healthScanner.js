@@ -52,7 +52,7 @@ class HealthScanner extends events_1.EventEmitter {
         const CHUNK_SIZE = 200;
         for (let i = 0; i < toScan.length; i += CHUNK_SIZE) {
             const chunk = toScan.slice(i, i + CHUNK_SIZE);
-            await this.executeBatch(chunk);
+            await this.executeBatch(chunk, blockNumber);
         }
         const duration = performance.now() - start;
         if (forceRescan) {
@@ -62,7 +62,7 @@ class HealthScanner extends events_1.EventEmitter {
             logger_1.logger.info('HealthScanner', `Scanned ${toScan.length} accounts in ${duration.toFixed(2)}ms (Block ${blockNumber})`);
         }
     }
-    async executeBatch(borrowers) {
+    async executeBatch(borrowers, blockNumber) {
         const calls = borrowers.map(b => ({
             target: constants_1.POOL,
             allowFailure: true,
@@ -80,14 +80,14 @@ class HealthScanner extends events_1.EventEmitter {
                 const actualHf = hfBigInt > MAX_HF ? MAX_HF : hfBigInt;
                 const hfValue = Number(ethers_1.ethers.formatUnits(actualHf, 18));
                 const totalDebtBase = decoded.totalDebtBase;
-                this.processHF(borrowers[i], hfValue, totalDebtBase);
+                this.processHF(borrowers[i], hfValue, totalDebtBase, blockNumber);
             }
         }
         catch (e) {
             logger_1.logger.error('HealthScanner', `Multicall batch failed: ${e.message}`);
         }
     }
-    processHF(borrower, hf, totalDebtBase) {
+    processHF(borrower, hf, totalDebtBase, blockNumber) {
         const oldTier = borrower.tier;
         borrower.estimatedHF = hf;
         // Tier classification
@@ -115,7 +115,7 @@ class HealthScanner extends events_1.EventEmitter {
             if (count >= 2) {
                 logger_1.logger.warn('HealthScanner', `LIQUIDATABLE: Borrower ${borrower.address} has confirmed HF < 1.0 (${hf.toFixed(4)})`);
                 this.emit('liquidatable', borrower.address, hf);
-                this.fetchFullPositionDetails(borrower.address, hf);
+                this.fetchFullPositionDetails(borrower.address, hf, blockNumber);
                 this.lowHFCount.delete(borrower.address);
             }
         }
@@ -125,7 +125,7 @@ class HealthScanner extends events_1.EventEmitter {
             }
         }
     }
-    async fetchFullPositionDetails(userAddress, hf) {
+    async fetchFullPositionDetails(userAddress, hf, blockNumber) {
         try {
             const dataProvider = new ethers_1.ethers.Interface(constants_1.POOL_DATA_PROVIDER_ABI);
             const oracle = new ethers_1.ethers.Interface(constants_1.ORACLE_ABI);
@@ -159,17 +159,19 @@ class HealthScanner extends events_1.EventEmitter {
                 const priceBase = Number(ethers_1.ethers.formatUnits(priceData[0], 8)); // Aave base oracle uses 8 decimals
                 const aTokenBalance = reserveData.currentATokenBalance;
                 const variableDebt = reserveData.currentVariableDebt;
+                const stableDebt = reserveData.currentStableDebt;
                 if (aTokenBalance > 0n) {
                     const amount = Number(ethers_1.ethers.formatUnits(aTokenBalance, asset.decimals));
                     const usdValue = amount * priceBase;
                     totalCollateralUsd += usdValue;
                     collaterals.push({ asset: asset.symbol, amount, usdValue, aTokenBalance: aTokenBalance.toString() });
                 }
-                if (variableDebt > 0n) {
-                    const amount = Number(ethers_1.ethers.formatUnits(variableDebt, asset.decimals));
+                const totalDebt = variableDebt + stableDebt;
+                if (totalDebt > 0n) {
+                    const amount = Number(ethers_1.ethers.formatUnits(totalDebt, asset.decimals));
                     const usdValue = amount * priceBase;
                     totalDebtUsd += usdValue;
-                    debts.push({ asset: asset.symbol, amount, usdValue, debtTokenBalance: variableDebt.toString() });
+                    debts.push({ asset: asset.symbol, amount, usdValue, debtTokenBalance: totalDebt.toString() });
                 }
             }
             // Determine size and urgency
@@ -181,7 +183,7 @@ class HealthScanner extends events_1.EventEmitter {
                 healthFactor: hf,
                 collaterals,
                 debts,
-                blockNumber: 0, // In real system, pass blockNumber from scan
+                blockNumber,
                 timestamp: new Date().toISOString(),
                 classification: { size, urgency }
             };

@@ -22,7 +22,7 @@ class CircuitBreaker extends events_1.EventEmitter {
         this.config = config;
         this.provider = provider;
         this.walletAddress = walletAddress;
-        this.killSwitchPath = path_1.default.resolve(__dirname, '../../../../kill.switch');
+        this.killSwitchPath = path_1.default.resolve(process.cwd(), 'kill.switch');
     }
     start() {
         setInterval(() => this.checkRuntimeKillSwitch(), 5000);

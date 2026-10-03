@@ -57,7 +57,7 @@ export class HealthScanner extends EventEmitter {
     const CHUNK_SIZE = 200;
     for (let i = 0; i < toScan.length; i += CHUNK_SIZE) {
       const chunk = toScan.slice(i, i + CHUNK_SIZE);
-      await this.executeBatch(chunk);
+      await this.executeBatch(chunk, blockNumber);
     }
     
     const duration = performance.now() - start;
@@ -68,7 +68,7 @@ export class HealthScanner extends EventEmitter {
     }
   }
 
-  private async executeBatch(borrowers: BorrowerMetadata[]) {
+  private async executeBatch(borrowers: BorrowerMetadata[], blockNumber: number) {
     const calls = borrowers.map(b => ({
       target: POOL,
       allowFailure: true,
@@ -90,14 +90,14 @@ export class HealthScanner extends EventEmitter {
         const hfValue = Number(ethers.formatUnits(actualHf, 18));
         const totalDebtBase = decoded.totalDebtBase;
         
-        this.processHF(borrowers[i], hfValue, totalDebtBase);
+        this.processHF(borrowers[i], hfValue, totalDebtBase, blockNumber);
       }
     } catch (e: any) {
       logger.error('HealthScanner', `Multicall batch failed: ${e.message}`);
     }
   }
 
-  private processHF(borrower: BorrowerMetadata, hf: number, totalDebtBase: bigint) {
+  private processHF(borrower: BorrowerMetadata, hf: number, totalDebtBase: bigint, blockNumber: number) {
     const oldTier = borrower.tier;
     borrower.estimatedHF = hf;
     
@@ -125,7 +125,7 @@ export class HealthScanner extends EventEmitter {
       if (count >= 2) {
         logger.warn('HealthScanner', `LIQUIDATABLE: Borrower ${borrower.address} has confirmed HF < 1.0 (${hf.toFixed(4)})`);
         this.emit('liquidatable', borrower.address, hf);
-        this.fetchFullPositionDetails(borrower.address, hf);
+        this.fetchFullPositionDetails(borrower.address, hf, blockNumber);
         this.lowHFCount.delete(borrower.address); 
       }
     } else {
@@ -135,7 +135,7 @@ export class HealthScanner extends EventEmitter {
     }
   }
 
-  private async fetchFullPositionDetails(userAddress: string, hf: number) {
+  private async fetchFullPositionDetails(userAddress: string, hf: number, blockNumber: number) {
     try {
       const dataProvider = new ethers.Interface(POOL_DATA_PROVIDER_ABI);
       const oracle = new ethers.Interface(ORACLE_ABI);
@@ -178,6 +178,7 @@ export class HealthScanner extends EventEmitter {
         
         const aTokenBalance = reserveData.currentATokenBalance;
         const variableDebt = reserveData.currentVariableDebt;
+        const stableDebt = reserveData.currentStableDebt;
         
         if (aTokenBalance > 0n) {
           const amount = Number(ethers.formatUnits(aTokenBalance, asset.decimals));
@@ -186,11 +187,12 @@ export class HealthScanner extends EventEmitter {
           collaterals.push({ asset: asset.symbol, amount, usdValue, aTokenBalance: aTokenBalance.toString() });
         }
         
-        if (variableDebt > 0n) {
-          const amount = Number(ethers.formatUnits(variableDebt, asset.decimals));
+        const totalDebt = variableDebt + stableDebt;
+        if (totalDebt > 0n) {
+          const amount = Number(ethers.formatUnits(totalDebt, asset.decimals));
           const usdValue = amount * priceBase;
           totalDebtUsd += usdValue;
-          debts.push({ asset: asset.symbol, amount, usdValue, debtTokenBalance: variableDebt.toString() });
+          debts.push({ asset: asset.symbol, amount, usdValue, debtTokenBalance: totalDebt.toString() });
         }
       }
 
@@ -204,7 +206,7 @@ export class HealthScanner extends EventEmitter {
         healthFactor: hf,
         collaterals,
         debts,
-        blockNumber: 0, // In real system, pass blockNumber from scan
+        blockNumber,
         timestamp: new Date().toISOString(),
         classification: { size, urgency }
       };

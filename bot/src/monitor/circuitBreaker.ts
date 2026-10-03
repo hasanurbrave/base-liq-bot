@@ -24,7 +24,7 @@ export class CircuitBreaker extends EventEmitter {
     this.config = config;
     this.provider = provider;
     this.walletAddress = walletAddress;
-    this.killSwitchPath = path.resolve(__dirname, '../../../../kill.switch');
+    this.killSwitchPath = path.resolve(process.cwd(), 'kill.switch');
   }
 
   public start() {

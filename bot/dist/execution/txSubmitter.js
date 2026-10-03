@@ -160,7 +160,7 @@ class TxSubmitter {
                         nonce: tx.nonce,
                         maxFeePerGas: tx.maxFeePerGas,
                         maxPriorityFeePerGas: tx.maxPriorityFeePerGas,
-                        blockTag: receipt.blockNumber - 1
+                        blockTag: receipt.blockNumber
                     });
                 }
                 catch (callErr) {

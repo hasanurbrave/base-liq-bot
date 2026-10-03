@@ -86,12 +86,14 @@ class SwapSimulator {
     async getBestQuote(tokenIn, tokenOut, amountIn) {
         const start = performance.now();
         // Try both concurrently
-        const [uni500, uni3000, aeroVolatile] = await Promise.all([
+        const [uni500, uni3000, uni10000, aeroVolatile, aeroStable] = await Promise.all([
             this.quoteUniswapV3(tokenIn, tokenOut, amountIn, 500),
             this.quoteUniswapV3(tokenIn, tokenOut, amountIn, 3000),
-            this.quoteAerodrome(tokenIn, tokenOut, amountIn, false)
+            this.quoteUniswapV3(tokenIn, tokenOut, amountIn, 10000), // MED-02: 1% fee tier
+            this.quoteAerodrome(tokenIn, tokenOut, amountIn, false),
+            this.quoteAerodrome(tokenIn, tokenOut, amountIn, true) // MED-01: stable pool
         ]);
-        const successfulQuotes = [uni500, uni3000, aeroVolatile].filter(q => q.success);
+        const successfulQuotes = [uni500, uni3000, uni10000, aeroVolatile, aeroStable].filter(q => q.success);
         if (successfulQuotes.length === 0) {
             return { success: false, reason: "NO_ROUTES_AVAILABLE" };
         }

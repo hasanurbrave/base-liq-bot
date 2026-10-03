@@ -7,6 +7,7 @@ import {IPool} from "@aave/core-v3/contracts/interfaces/IPool.sol";
 import {IERC20} from "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 import {Ownable} from "@openzeppelin/contracts/access/Ownable.sol";
 import {SafeERC20} from "@openzeppelin/contracts/token/ERC20/utils/SafeERC20.sol";
+import {Pausable} from "@openzeppelin/contracts/utils/Pausable.sol";
 
 interface ISwapRouter {
     struct ExactInputSingleParams {
@@ -38,7 +39,7 @@ interface IAerodromeRouter {
     ) external returns (uint256[] memory amounts);
 }
 
-contract LiquidationExecutor is FlashLoanSimpleReceiverBase, Ownable {
+contract LiquidationExecutor is FlashLoanSimpleReceiverBase, Ownable, Pausable {
     using SafeERC20 for IERC20;
 
     address public immutable uniswapRouter;
@@ -60,6 +61,7 @@ contract LiquidationExecutor is FlashLoanSimpleReceiverBase, Ownable {
         address user;
         uint256 debtToCover;
         bool receiveAToken;
+        uint256 minProfit; // CRIT-NEW-01 Fix: Restore minProfit field
         SwapParams swap;
     }
 
@@ -78,7 +80,15 @@ contract LiquidationExecutor is FlashLoanSimpleReceiverBase, Ownable {
         aerodromeRouter = _aerodromeRouter;
     }
 
-    function executeLiquidation(LiquidationParams memory params) external onlyOwner {
+    function pause() external onlyOwner {
+        _pause();
+    }
+
+    function unpause() external onlyOwner {
+        _unpause();
+    }
+
+    function executeLiquidation(LiquidationParams memory params) external onlyOwner whenNotPaused {
         bytes memory data = abi.encode(params);
         
         // Initiate Flash Loan
@@ -108,7 +118,7 @@ contract LiquidationExecutor is FlashLoanSimpleReceiverBase, Ownable {
         uint256 premium,
         address initiator,
         bytes calldata params
-    ) external override returns (bool) {
+    ) external override whenNotPaused returns (bool) {
         if (msg.sender != address(POOL)) revert Unauthorized();
         if (initiator != address(this)) revert Unauthorized();
 
@@ -133,7 +143,9 @@ contract LiquidationExecutor is FlashLoanSimpleReceiverBase, Ownable {
         uint256 amountIn = IERC20(liqParams.collateralAsset).balanceOf(address(this));
 
         // 4. Swap Collateral for Debt Asset
-        if (liqParams.dex == Dex.UNISWAP_V3) {
+        // Important: check swap.dex instead of liqParams.dex! 
+        // Previously it was liqParams.dex which doesn't exist on LiquidationParams directly.
+        if (liqParams.swap.dex == Dex.UNISWAP_V3) {
             IERC20(liqParams.collateralAsset).forceApprove(uniswapRouter, amountIn);
             
             ISwapRouter.ExactInputSingleParams memory swapParams = ISwapRouter.ExactInputSingleParams({
@@ -141,7 +153,7 @@ contract LiquidationExecutor is FlashLoanSimpleReceiverBase, Ownable {
                 tokenOut: liqParams.debtAsset,
                 fee: liqParams.swap.fee,
                 recipient: address(this),
-                deadline: block.timestamp,
+                deadline: block.timestamp + 60, // LOW-08 Fix: 60s tolerance
                 amountIn: amountIn,
                 amountOutMinimum: liqParams.swap.minOut,
                 sqrtPriceLimitX96: 0
@@ -154,7 +166,7 @@ contract LiquidationExecutor is FlashLoanSimpleReceiverBase, Ownable {
             }
             IERC20(liqParams.collateralAsset).forceApprove(uniswapRouter, 0);
 
-        } else if (liqParams.dex == Dex.AERODROME) {
+        } else if (liqParams.swap.dex == Dex.AERODROME) {
             IERC20(liqParams.collateralAsset).forceApprove(aerodromeRouter, amountIn);
             
             IAerodromeRouter.Route[] memory route = new IAerodromeRouter.Route[](1);
@@ -170,7 +182,7 @@ contract LiquidationExecutor is FlashLoanSimpleReceiverBase, Ownable {
                 liqParams.swap.minOut,
                 route,
                 address(this),
-                block.timestamp
+                block.timestamp + 60 // LOW-08 Fix
             ) {
                 // Success
             } catch {
@@ -179,12 +191,14 @@ contract LiquidationExecutor is FlashLoanSimpleReceiverBase, Ownable {
             IERC20(liqParams.collateralAsset).forceApprove(aerodromeRouter, 0);
         }
 
-        // 5. Verify we can repay flash loan
+        // 5. Verify we can repay flash loan and hit min profit
         uint256 amountToRepay = amount + premium;
         uint256 currentBalance = IERC20(asset).balanceOf(address(this));
         
-        if (currentBalance < amountToRepay) {
-            revert InsufficientProfit(amountToRepay, currentBalance);
+        // CRIT-NEW-01 Fix: enforce on-chain minProfit check
+        uint256 requiredBalance = amountToRepay + liqParams.minProfit;
+        if (currentBalance < requiredBalance) {
+            revert InsufficientProfit(requiredBalance, currentBalance);
         }
 
         // Record profit event
