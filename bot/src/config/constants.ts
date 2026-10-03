@@ -125,3 +125,8 @@ export const TESTNET = {
   POOL: "0x4b787595c27Ff7E3C51A8D9f1f0aAA6BffBE992e", // Base Sepolia Aave Pool
   BASE_SEPOLIA_RPC: "https://sepolia.base.org"
 };
+
+// Exporting wallet public key to fix gas estimation sender issue
+export const OWNER_ADDRESS = process.env.PRIVATE_KEY 
+  ? new ethers.Wallet(process.env.PRIVATE_KEY).address 
+  : "0x0000000000000000000000000000000000000000";

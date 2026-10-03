@@ -18,6 +18,7 @@ import { NonceManager } from './execution/nonceManager';
 import { ResultHandler } from './execution/resultHandler';
 
 import { logger } from './utils/logger';
+import { LIQUIDATION_EXECUTOR, POOL } from './config/constants';
 
 dotenv.config();
 
@@ -39,8 +40,53 @@ async function main() {
   ].filter(url => url !== '');
   
   const provider = new ethers.JsonRpcProvider(rpcUrls[0], undefined, { staticNetwork: true });
-  const wallet = new ethers.Wallet(process.env.PRIVATE_KEY || '0x0000000000000000000000000000000000000000000000000000000000000001', provider);
   
+  if (!process.env.PRIVATE_KEY) {
+    logger.error('System', 'PRIVATE_KEY is missing. Halting.');
+    process.exit(1);
+  }
+  const wallet = new ethers.Wallet(process.env.PRIVATE_KEY, provider);
+  
+  // 0. Startup Safety Checks (C-03)
+  if (LIQUIDATION_EXECUTOR === "0x0000000000000000000000000000000000000000") {
+    logger.error('System', 'EXECUTOR_ADDRESS is not set. Halting.');
+    process.exit(1);
+  }
+  
+  const network = await provider.getNetwork();
+  if (network.chainId !== 8453n) { // Base Mainnet
+    logger.error('System', `Wrong chain ID! Expected 8453, got ${network.chainId}. Halting.`);
+    process.exit(1);
+  }
+
+  const executorCode = await provider.getCode(LIQUIDATION_EXECUTOR);
+  if (executorCode === '0x' || executorCode === '') {
+    logger.error('System', `No contract code at ${LIQUIDATION_EXECUTOR}. Halting.`);
+    process.exit(1);
+  }
+  
+  const EXECUTOR_ABI = ["function owner() view returns (address)", "function POOL() view returns (address)"];
+  const executorContract = new ethers.Contract(LIQUIDATION_EXECUTOR, EXECUTOR_ABI, provider);
+  
+  try {
+    const owner = await executorContract.owner();
+    if (owner.toLowerCase() !== wallet.address.toLowerCase()) {
+      logger.error('System', `Wallet ${wallet.address} is not owner of Executor (${owner}). Halting.`);
+      process.exit(1);
+    }
+  } catch (e) {
+    logger.error('System', 'Failed to verify Executor owner. Halting.');
+    process.exit(1);
+  }
+
+  const balance = await provider.getBalance(wallet.address);
+  if (balance < ethers.parseEther("0.005")) { // Minimum 0.005 ETH required
+    logger.error('System', `Insufficient ETH balance (${ethers.formatEther(balance)}). Need at least 0.005 ETH. Halting.`);
+    process.exit(1);
+  }
+
+  logger.info('System', 'All C-03 Startup safety checks passed.');
+
   // Fake ETH price for simulation (could be fetched dynamically)
   const ethPriceUSD = 3000;
 
@@ -77,6 +123,7 @@ async function main() {
   
   // Concurrency and Processing State
   const pendingTxs = new Set<string>(); // borrowers currently being liquidated
+  const activeSubmissions: Set<Promise<any>> = new Set();
   let opportunityQueue: { alert: AlertData, timestamp: number }[] = [];
   let isProcessingQueue = false;
 
@@ -95,6 +142,12 @@ async function main() {
     metrics.stop();
     monitoring.stop();
     
+    logger.info('System', `Waiting for ${activeSubmissions.size} active submissions to finish...`);
+    
+    // Await with timeout
+    const timeout = new Promise(resolve => setTimeout(resolve, 10000));
+    await Promise.race([Promise.all(activeSubmissions), timeout]);
+
     // Log final stats
     logger.info('System', '--- FINAL BOT STATS ---');
     resultHandler.logCumulativeMetrics();
@@ -169,16 +222,21 @@ async function main() {
         pendingTxs.add(borrower);
         
         // Don't await submission confirmation so we can process next queue item or block
-        txSubmitter.submitTransaction(signedTx, decision, {
+        const submissionPromise = txSubmitter.submitTransaction(signedTx, decision, {
           detected: timestamp,
           calculated: calculatedTimestamp,
           built: builtTimestamp
         }, txRequest.nonce as number)
-          .then(() => pendingTxs.delete(borrower))
+          .then(() => {
+            pendingTxs.delete(borrower);
+            activeSubmissions.delete(submissionPromise);
+          })
           .catch(e => {
             logger.error('Orchestrator', `Submission error for ${borrower}: ${e.message}`);
             pendingTxs.delete(borrower);
+            activeSubmissions.delete(submissionPromise);
           });
+        activeSubmissions.add(submissionPromise);
       }
     } finally {
       isProcessingQueue = false;

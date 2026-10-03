@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.TESTNET = exports.LIQUIDATION_EXECUTOR = exports.QUOTER_ABI = exports.SWAP_ROUTER_ABI = exports.AERODROME_ROUTER = exports.UNISWAP_V3_QUOTER = exports.UNISWAP_V3_ROUTER = exports.SUPPORTED_ASSETS = exports.ASSETS = exports.POOL_DATA_PROVIDER_ABI = exports.ORACLE_ABI = exports.POOL_ABI = exports.ACL_MANAGER = exports.POOL_DATA_PROVIDER = exports.ORACLE = exports.POOL = exports.POOL_ADDRESSES_PROVIDER = void 0;
+exports.OWNER_ADDRESS = exports.TESTNET = exports.LIQUIDATION_EXECUTOR = exports.QUOTER_ABI = exports.SWAP_ROUTER_ABI = exports.AERODROME_ROUTER = exports.UNISWAP_V3_QUOTER = exports.UNISWAP_V3_ROUTER = exports.SUPPORTED_ASSETS = exports.ASSETS = exports.POOL_DATA_PROVIDER_ABI = exports.ORACLE_ABI = exports.POOL_ABI = exports.ACL_MANAGER = exports.POOL_DATA_PROVIDER = exports.ORACLE = exports.POOL = exports.POOL_ADDRESSES_PROVIDER = void 0;
+const ethers_1 = require("ethers");
 // Core Protocol Contracts (Aave V3 on Base Mainnet)
 exports.POOL_ADDRESSES_PROVIDER = "0xe20fCBdBfFC4Dd138cE8b2E6FBb6CB49777ad64D";
 exports.POOL = "0xA238Dd80C259a72e81d7e4664a9801593F98d1c5";
@@ -104,3 +105,7 @@ exports.TESTNET = {
     POOL: "0x4b787595c27Ff7E3C51A8D9f1f0aAA6BffBE992e", // Base Sepolia Aave Pool
     BASE_SEPOLIA_RPC: "https://sepolia.base.org"
 };
+// Exporting wallet public key to fix gas estimation sender issue
+exports.OWNER_ADDRESS = process.env.PRIVATE_KEY
+    ? new ethers_1.ethers.Wallet(process.env.PRIVATE_KEY).address
+    : "0x0000000000000000000000000000000000000000";

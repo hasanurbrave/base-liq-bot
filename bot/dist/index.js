@@ -49,6 +49,7 @@ const txSubmitter_1 = require("./execution/txSubmitter");
 const nonceManager_1 = require("./execution/nonceManager");
 const resultHandler_1 = require("./execution/resultHandler");
 const logger_1 = require("./utils/logger");
+const constants_1 = require("./config/constants");
 dotenv.config();
 const BOT_MODE = process.env.BOT_MODE?.toLowerCase() === 'live' ? 'LIVE' : 'DRY_RUN';
 const IS_KILL_SWITCH = process.env.KILL_SWITCH === 'true';
@@ -64,7 +65,45 @@ async function main() {
         process.env.BACKUP_RPC_URL || ''
     ].filter(url => url !== '');
     const provider = new ethers_1.ethers.JsonRpcProvider(rpcUrls[0], undefined, { staticNetwork: true });
-    const wallet = new ethers_1.ethers.Wallet(process.env.PRIVATE_KEY || '0x0000000000000000000000000000000000000000000000000000000000000001', provider);
+    if (!process.env.PRIVATE_KEY) {
+        logger_1.logger.error('System', 'PRIVATE_KEY is missing. Halting.');
+        process.exit(1);
+    }
+    const wallet = new ethers_1.ethers.Wallet(process.env.PRIVATE_KEY, provider);
+    // 0. Startup Safety Checks (C-03)
+    if (constants_1.LIQUIDATION_EXECUTOR === "0x0000000000000000000000000000000000000000") {
+        logger_1.logger.error('System', 'EXECUTOR_ADDRESS is not set. Halting.');
+        process.exit(1);
+    }
+    const network = await provider.getNetwork();
+    if (network.chainId !== 8453n) { // Base Mainnet
+        logger_1.logger.error('System', `Wrong chain ID! Expected 8453, got ${network.chainId}. Halting.`);
+        process.exit(1);
+    }
+    const executorCode = await provider.getCode(constants_1.LIQUIDATION_EXECUTOR);
+    if (executorCode === '0x' || executorCode === '') {
+        logger_1.logger.error('System', `No contract code at ${constants_1.LIQUIDATION_EXECUTOR}. Halting.`);
+        process.exit(1);
+    }
+    const EXECUTOR_ABI = ["function owner() view returns (address)", "function POOL() view returns (address)"];
+    const executorContract = new ethers_1.ethers.Contract(constants_1.LIQUIDATION_EXECUTOR, EXECUTOR_ABI, provider);
+    try {
+        const owner = await executorContract.owner();
+        if (owner.toLowerCase() !== wallet.address.toLowerCase()) {
+            logger_1.logger.error('System', `Wallet ${wallet.address} is not owner of Executor (${owner}). Halting.`);
+            process.exit(1);
+        }
+    }
+    catch (e) {
+        logger_1.logger.error('System', 'Failed to verify Executor owner. Halting.');
+        process.exit(1);
+    }
+    const balance = await provider.getBalance(wallet.address);
+    if (balance < ethers_1.ethers.parseEther("0.005")) { // Minimum 0.005 ETH required
+        logger_1.logger.error('System', `Insufficient ETH balance (${ethers_1.ethers.formatEther(balance)}). Need at least 0.005 ETH. Halting.`);
+        process.exit(1);
+    }
+    logger_1.logger.info('System', 'All C-03 Startup safety checks passed.');
     // Fake ETH price for simulation (could be fetched dynamically)
     const ethPriceUSD = 3000;
     // 1. Execution Layer
@@ -94,6 +133,7 @@ async function main() {
     let isShuttingDown = false;
     // Concurrency and Processing State
     const pendingTxs = new Set(); // borrowers currently being liquidated
+    const activeSubmissions = new Set();
     let opportunityQueue = [];
     let isProcessingQueue = false;
     await oracleWatcher.start();
@@ -109,6 +149,10 @@ async function main() {
         blockListener.stop();
         metrics.stop();
         monitoring.stop();
+        logger_1.logger.info('System', `Waiting for ${activeSubmissions.size} active submissions to finish...`);
+        // Await with timeout
+        const timeout = new Promise(resolve => setTimeout(resolve, 10000));
+        await Promise.race([Promise.all(activeSubmissions), timeout]);
         // Log final stats
         logger_1.logger.info('System', '--- FINAL BOT STATS ---');
         resultHandler.logCumulativeMetrics();
@@ -170,16 +214,21 @@ async function main() {
                 // 4. Submit Transaction
                 pendingTxs.add(borrower);
                 // Don't await submission confirmation so we can process next queue item or block
-                txSubmitter.submitTransaction(signedTx, decision, {
+                const submissionPromise = txSubmitter.submitTransaction(signedTx, decision, {
                     detected: timestamp,
                     calculated: calculatedTimestamp,
                     built: builtTimestamp
                 }, txRequest.nonce)
-                    .then(() => pendingTxs.delete(borrower))
+                    .then(() => {
+                    pendingTxs.delete(borrower);
+                    activeSubmissions.delete(submissionPromise);
+                })
                     .catch(e => {
                     logger_1.logger.error('Orchestrator', `Submission error for ${borrower}: ${e.message}`);
                     pendingTxs.delete(borrower);
+                    activeSubmissions.delete(submissionPromise);
                 });
+                activeSubmissions.add(submissionPromise);
             }
         }
         finally {
