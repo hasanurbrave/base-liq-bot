@@ -118,7 +118,7 @@ class ProfitCalculator {
                 dex: dex === 'aerodrome' ? 1 : 0,
                 fee: feeTier, // CRIT-03 Fix: pass real fee tier
                 stable: false,
-                factory: "0x420DD381b31aEf6683db6B902084cB0FFECe40Da",
+                factory: constants_1.AERODROME_FACTORY,
                 minOut: 0n // Use 0 for gas estimation only
             }
         };

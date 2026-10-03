@@ -1,5 +1,5 @@
 import { ethers } from 'ethers';
-import { UNISWAP_V3_QUOTER, QUOTER_ABI, AERODROME_ROUTER } from '../config/constants';
+import { UNISWAP_V3_QUOTER, QUOTER_ABI, AERODROME_ROUTER , AERODROME_FACTORY } from '../config/constants';
 import { logger } from '../utils/logger';
 
 // Velodrome/Aerodrome uses this route struct
@@ -93,8 +93,7 @@ export class SwapSimulator {
     stable: boolean = false
   ): Promise<SwapQuote> {
     // CRIT-06 Fix: Aerodrome V2 on Base requires 4-field route: {from, to, stable, factory}
-    const AERODROME_FACTORY = "0x420DD381b31aEf6683db6B902084cB0FFECe40Da";
-    try {
+        try {
       const route = [{ from: tokenIn, to: tokenOut, stable, factory: AERODROME_FACTORY }];
       const amounts = await this.aeroRouter["getAmountsOut(uint256,(address,address,bool,address)[])"](amountIn, route);
       const outputAmount = amounts[amounts.length - 1];

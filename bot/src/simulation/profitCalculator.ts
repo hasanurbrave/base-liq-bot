@@ -1,5 +1,5 @@
 import { ethers } from 'ethers';
-import { ASSETS, POOL, POOL_ABI, AssetMetadata, LIQUIDATION_EXECUTOR, OWNER_ADDRESS } from '../config/constants';
+import { ASSETS, POOL, POOL_ABI, AssetMetadata, LIQUIDATION_EXECUTOR, OWNER_ADDRESS , AERODROME_FACTORY } from '../config/constants';
 import { GasEstimator } from './gasEstimator';
 import { SwapSimulator } from './swapSimulator';
 import { logger } from '../utils/logger';
@@ -186,7 +186,7 @@ export class ProfitCalculator {
             dex: dex === 'aerodrome' ? 1 : 0,
             fee: feeTier, // CRIT-03 Fix: pass real fee tier
             stable: false,
-            factory: "0x420DD381b31aEf6683db6B902084cB0FFECe40Da",
+            factory: AERODROME_FACTORY,
             minOut: 0n   // Use 0 for gas estimation only
         }
     };

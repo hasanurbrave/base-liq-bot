@@ -29,7 +29,7 @@ class TxBuilder {
             // Determine Dex enum (0 for UniV3, 1 for Aerodrome)
             const dexEnum = dex === 'aerodrome' ? 1 : 0;
             // Aerodrome factory on Base
-            const factory = "0x420DD381b31aEf6683db6B902084cB0FFECe40Da";
+            const factory = constants_1.AERODROME_FACTORY;
             const stable = false;
             // CRIT-05 Fix: use real debtDecimals and live ethPriceUSD for minProfit conversion
             const minProfitOutTokens = ethers_1.ethers.parseUnits((minProfitOutUSD / (debtDecimals === 18 ? ethPriceUSD : 1)).toFixed(debtDecimals), debtDecimals);

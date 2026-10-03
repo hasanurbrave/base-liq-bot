@@ -57,9 +57,8 @@ class SwapSimulator {
     }
     async quoteAerodrome(tokenIn, tokenOut, amountIn, stable = false) {
         // CRIT-06 Fix: Aerodrome V2 on Base requires 4-field route: {from, to, stable, factory}
-        const AERODROME_FACTORY = "0x420DD381b31aEf6683db6B902084cB0FFECe40Da";
         try {
-            const route = [{ from: tokenIn, to: tokenOut, stable, factory: AERODROME_FACTORY }];
+            const route = [{ from: tokenIn, to: tokenOut, stable, factory: constants_1.AERODROME_FACTORY }];
             const amounts = await this.aeroRouter["getAmountsOut(uint256,(address,address,bool,address)[])"](amountIn, route);
             const outputAmount = amounts[amounts.length - 1];
             if (!outputAmount || outputAmount === 0n) {

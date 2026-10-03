@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.OWNER_ADDRESS = exports.TESTNET = exports.LIQUIDATION_EXECUTOR = exports.QUOTER_ABI = exports.SWAP_ROUTER_ABI = exports.AERODROME_ROUTER = exports.UNISWAP_V3_QUOTER = exports.UNISWAP_V3_ROUTER = exports.SUPPORTED_ASSETS = exports.ASSETS = exports.POOL_DATA_PROVIDER_ABI = exports.ORACLE_ABI = exports.POOL_ABI = exports.ACL_MANAGER = exports.POOL_DATA_PROVIDER = exports.ORACLE = exports.POOL = exports.POOL_ADDRESSES_PROVIDER = void 0;
+exports.AERODROME_FACTORY = exports.OWNER_ADDRESS = exports.TESTNET = exports.LIQUIDATION_EXECUTOR = exports.QUOTER_ABI = exports.SWAP_ROUTER_ABI = exports.AERODROME_ROUTER = exports.UNISWAP_V3_QUOTER = exports.UNISWAP_V3_ROUTER = exports.SUPPORTED_ASSETS = exports.ASSETS = exports.POOL_DATA_PROVIDER_ABI = exports.ORACLE_ABI = exports.POOL_ABI = exports.ACL_MANAGER = exports.POOL_DATA_PROVIDER = exports.ORACLE = exports.POOL = exports.POOL_ADDRESSES_PROVIDER = void 0;
 const ethers_1 = require("ethers");
 // Core Protocol Contracts (Aave V3 on Base Mainnet)
 exports.POOL_ADDRESSES_PROVIDER = "0xe20fCBdBfFC4Dd138cE8b2E6FBb6CB49777ad64D";
@@ -109,3 +109,4 @@ exports.TESTNET = {
 exports.OWNER_ADDRESS = process.env.PRIVATE_KEY
     ? new ethers_1.ethers.Wallet(process.env.PRIVATE_KEY).address
     : "0x0000000000000000000000000000000000000000";
+exports.AERODROME_FACTORY = "0x420DD381b31aEf6683db6B902084cB0FFECe40Da";

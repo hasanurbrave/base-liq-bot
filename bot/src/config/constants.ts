@@ -131,3 +131,5 @@ export const TESTNET = {
 export const OWNER_ADDRESS = process.env.PRIVATE_KEY 
   ? new ethers.Wallet(process.env.PRIVATE_KEY).address 
   : "0x0000000000000000000000000000000000000000";
+
+export const AERODROME_FACTORY = "0x420DD381b31aEf6683db6B902084cB0FFECe40Da";

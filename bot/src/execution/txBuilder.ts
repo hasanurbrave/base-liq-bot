@@ -2,7 +2,7 @@ import { ethers } from 'ethers';
 import { NonceManager } from './nonceManager';
 import { ProfitDecision } from '../simulation/profitCalculator';
 import { logger } from '../utils/logger';
-import { LIQUIDATION_EXECUTOR, AERODROME_ROUTER, UNISWAP_V3_ROUTER } from '../config/constants';
+import { LIQUIDATION_EXECUTOR, AERODROME_ROUTER, UNISWAP_V3_ROUTER , AERODROME_FACTORY } from '../config/constants';
 
 // The ABI for our updated LiquidationExecutor contract
 const EXECUTOR_ABI = [
@@ -49,7 +49,7 @@ export class TxBuilder {
       const dexEnum = dex === 'aerodrome' ? 1 : 0;
 
       // Aerodrome factory on Base
-      const factory = "0x420DD381b31aEf6683db6B902084cB0FFECe40Da";
+      const factory = AERODROME_FACTORY;
       const stable = false;
 
       // CRIT-05 Fix: use real debtDecimals and live ethPriceUSD for minProfit conversion
