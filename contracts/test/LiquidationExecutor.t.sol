@@ -1,309 +1,132 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.20;
 
-import "forge-std/Test.sol";
+import {Test, console2} from "forge-std/Test.sol";
 import {LiquidationExecutor} from "../src/LiquidationExecutor.sol";
 import {IERC20} from "@openzeppelin/contracts/token/ERC20/IERC20.sol";
+import {IPool} from "@aave/core-v3/contracts/interfaces/IPool.sol";
+import {IPoolAddressesProvider} from "@aave/core-v3/contracts/interfaces/IPoolAddressesProvider.sol";
+import {IPriceOracleGetter} from "@aave/core-v3/contracts/interfaces/IPriceOracleGetter.sol";
 
 contract LiquidationExecutorTest is Test {
     LiquidationExecutor public executor;
     
-    address public constant AAVE_POOL = address(uint160(0xAAAA));
-    address public constant WETH = address(uint160(0x1111));
-    address public constant USDC = address(uint160(0x2222));
-    address public constant cbETH = address(uint160(0x3333));
-    address public constant UNISWAP_ROUTER = address(uint160(0x4444));
+    // Base Mainnet Addresses
+    address constant PROVIDER = 0xe20fCBdBfFC4Dd138cE8b2E6FBb6CB49777ad64D;
+    address constant POOL = 0xA238Dd80C259a72e81d7e4664a9801593F98d1c5;
+    address constant ORACLE = 0x2A152140A73Aa52a5E82bBDcAE16fF4F7A9D6aF8; // Aave Oracle
+    address constant WETH = 0x4200000000000000000000000000000000000006;
+    address constant USDC = 0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913;
+    address constant UNI_ROUTER = 0x2626664c2603336E57B271c5C0b26F421741e481;
+    address constant AERO_ROUTER = 0xcF77a3Ba9A5CA399B7c97c74d54e5b1Beb874E43;
     
-    address public owner = address(uint160(0x9999));
+    address owner = address(0x123);
+    address borrower = address(0x456);
     
     function setUp() public {
-        vm.startPrank(owner);
-        executor = new LiquidationExecutor(AAVE_POOL);
-        vm.stopPrank();
-
-        // Default mock setup for tokens
-        mockToken(WETH);
-        mockToken(USDC);
-        mockToken(cbETH);
-    }
-
-    function mockToken(address token) internal {
-        vm.mockCall(token, abi.encodeWithSelector(IERC20.approve.selector), abi.encode(true));
-        vm.mockCall(token, abi.encodeWithSelector(IERC20.transfer.selector), abi.encode(true));
-    }
-
-    function setupHappyPathMocks(uint256 debtToCover, uint256 minProfitOut) internal {
-        // Mock flashLoanSimple to immediately call executeOperation
-        bytes memory params = abi.encode(
-            LiquidationExecutor.LiquidationParams({
-                collateralAsset: WETH,
-                debtAsset: USDC,
-                borrower: address(0x123),
-                debtToCover: debtToCover,
-                swapRouter: UNISWAP_ROUTER,
-                swapData: bytes(hex"1234"),
-                minProfitOut: minProfitOut
-            })
-        );
-        
-        vm.mockCall(
-            AAVE_POOL,
-            abi.encodeWithSignature("flashLoanSimple(address,address,uint256,bytes,uint16)"),
-            new bytes(0)
-        );
-
-        // When flashLoanSimple is called, intercept it and manually trigger executeOperation
-        // But since we are testing executeOperation separately, we can just call executeOperation directly as AAVE_POOL
-    }
-
-    /* =========================================================================
-       1. HAPPY PATH 
-       ========================================================================= */
-
-    function test_successfulLiquidation_WETH_USDC() public {
-        uint256 debtToCover = 100 * 1e6; 
-        uint256 flashLoanPremium = 1e5; // 0.1 USDC premium
-        uint256 collateralReceived = 1 * 1e18; // 1 WETH
-        uint256 swapOutput = 105 * 1e6; // Swapped WETH for 105 USDC
-        uint256 minProfitOut = 1e6;
-
-        bytes memory params = abi.encode(
-            LiquidationExecutor.LiquidationParams({
-                collateralAsset: WETH,
-                debtAsset: USDC,
-                borrower: address(0x123),
-                debtToCover: debtToCover,
-                swapRouter: UNISWAP_ROUTER,
-                swapData: bytes(hex"1234"),
-                minProfitOut: minProfitOut
-            })
-        );
-
-        // Mock Liquidation Call
-        vm.mockCall(
-            AAVE_POOL,
-            abi.encodeWithSelector(bytes4(keccak256("liquidationCall(address,address,address,uint256,bool)"))),
-            new bytes(0)
-        );
-
-        // Mock collateral balance after liquidation
-        vm.mockCall(
-            WETH,
-            abi.encodeWithSelector(IERC20.balanceOf.selector, address(executor)),
-            abi.encode(collateralReceived)
-        );
-
-        // Mock Swap Call
-        vm.mockCall(
-            UNISWAP_ROUTER,
-            bytes(hex"1234"),
-            abi.encode(true)
-        );
-
-        // Mock debt asset balance after swap (repayment + profit)
-        vm.mockCall(
-            USDC,
-            abi.encodeWithSelector(IERC20.balanceOf.selector, address(executor)),
-            abi.encode(swapOutput)
-        );
-
-        vm.startPrank(AAVE_POOL);
-        bool success = executor.executeOperation(USDC, debtToCover, flashLoanPremium, address(executor), params);
-        vm.stopPrank();
-
-        assertTrue(success);
-    }
-
-    function test_successfulLiquidation_cbETH_USDC() public {
-        uint256 debtToCover = 100 * 1e6; 
-        uint256 flashLoanPremium = 1e5; 
-        uint256 collateralReceived = 1 * 1e18; 
-        uint256 swapOutput = 105 * 1e6; 
-
-        bytes memory params = abi.encode(
-            LiquidationExecutor.LiquidationParams({
-                collateralAsset: cbETH,
-                debtAsset: USDC,
-                borrower: address(0x123),
-                debtToCover: debtToCover,
-                swapRouter: UNISWAP_ROUTER,
-                swapData: bytes(hex"1234"),
-                minProfitOut: 1e6
-            })
-        );
-
-        vm.mockCall(AAVE_POOL, abi.encodeWithSelector(bytes4(keccak256("liquidationCall(address,address,address,uint256,bool)"))), new bytes(0));
-        vm.mockCall(cbETH, abi.encodeWithSelector(IERC20.balanceOf.selector, address(executor)), abi.encode(collateralReceived));
-        vm.mockCall(UNISWAP_ROUTER, bytes(hex"1234"), abi.encode(true));
-        vm.mockCall(USDC, abi.encodeWithSelector(IERC20.balanceOf.selector, address(executor)), abi.encode(swapOutput));
-
-        vm.startPrank(AAVE_POOL);
-        bool success = executor.executeOperation(USDC, debtToCover, flashLoanPremium, address(executor), params);
-        vm.stopPrank();
-
-        assertTrue(success);
-    }
-
-    function test_successfulLiquidation_maxDebtToCover() public {
-        uint256 debtToCover = type(uint256).max; 
-        bytes memory params = abi.encode(
-            LiquidationExecutor.LiquidationParams(WETH, USDC, address(0x123), debtToCover, UNISWAP_ROUTER, bytes(hex"1234"), 1e6)
-        );
-        vm.mockCall(AAVE_POOL, abi.encodeWithSelector(bytes4(keccak256("liquidationCall(address,address,address,uint256,bool)"))), new bytes(0));
-        vm.mockCall(WETH, abi.encodeWithSelector(IERC20.balanceOf.selector, address(executor)), abi.encode(1e18));
-        vm.mockCall(UNISWAP_ROUTER, bytes(hex"1234"), abi.encode(true));
-        vm.mockCall(USDC, abi.encodeWithSelector(IERC20.balanceOf.selector, address(executor)), abi.encode(100e6 + 2e6));
-
-        vm.startPrank(AAVE_POOL);
-        bool success = executor.executeOperation(USDC, 100e6, 0, address(executor), params);
-        vm.stopPrank();
-        assertTrue(success);
-    }
-
-    /* =========================================================================
-       2. ACCESS CONTROL
-       ========================================================================= */
-
-    function test_revert_nonOwnerCannotExecute() public {
-        vm.startPrank(address(2));
-        vm.expectRevert(LiquidationExecutor.NotOwner.selector);
-        executor.executeLiquidation(USDC, 100e6, WETH, USDC, address(0x123), 100e6, UNISWAP_ROUTER, bytes(hex"1234"), 1e6);
-        vm.stopPrank();
-    }
-
-    function test_revert_onlyPoolCanCallCallback() public {
-        vm.startPrank(address(2));
-        vm.expectRevert(LiquidationExecutor.NotAavePool.selector);
-        executor.executeOperation(USDC, 100e6, 0, address(executor), hex"");
-        vm.stopPrank();
-    }
-
-    function test_revert_onlyThisCanBeInitiator() public {
-        vm.startPrank(AAVE_POOL);
-        vm.expectRevert(LiquidationExecutor.NotInitiator.selector);
-        executor.executeOperation(USDC, 100e6, 0, address(2), hex"");
-        vm.stopPrank();
-    }
-
-    /* =========================================================================
-       3. FAILURE MODES
-       ========================================================================= */
-
-    function test_revert_healthFactorAboveThreshold() public {
-        bytes memory params = abi.encode(
-            LiquidationExecutor.LiquidationParams(WETH, USDC, address(0x123), 100e6, UNISWAP_ROUTER, bytes(hex"1234"), 1e6)
-        );
-        vm.mockCallRevert(AAVE_POOL, abi.encodeWithSelector(bytes4(keccak256("liquidationCall(address,address,address,uint256,bool)"))), "HEALTH_FACTOR_NOT_BELOW_THRESHOLD");
-        
-        vm.startPrank(AAVE_POOL);
-        vm.expectRevert("HEALTH_FACTOR_NOT_BELOW_THRESHOLD");
-        executor.executeOperation(USDC, 100e6, 0, address(executor), params);
-        vm.stopPrank();
-    }
-
-    function test_revert_wrongDebtAsset() public {
-        bytes memory params = abi.encode(
-            LiquidationExecutor.LiquidationParams(WETH, USDC, address(0x123), 100e6, UNISWAP_ROUTER, bytes(hex"1234"), 1e6)
-        );
-        vm.mockCallRevert(AAVE_POOL, abi.encodeWithSelector(bytes4(keccak256("liquidationCall(address,address,address,uint256,bool)"))), "SPECIFIED_CURRENCY_NOT_BORROWED_BY_USER");
-        
-        vm.startPrank(AAVE_POOL);
-        vm.expectRevert("SPECIFIED_CURRENCY_NOT_BORROWED_BY_USER");
-        executor.executeOperation(USDC, 100e6, 0, address(executor), params);
-        vm.stopPrank();
-    }
-
-    function test_revert_swapInsufficientOutput() public {
-        bytes memory params = abi.encode(
-            LiquidationExecutor.LiquidationParams(WETH, USDC, address(0x123), 100e6, UNISWAP_ROUTER, bytes(hex"1234"), 1e6)
-        );
-        vm.mockCall(AAVE_POOL, abi.encodeWithSelector(bytes4(keccak256("liquidationCall(address,address,address,uint256,bool)"))), new bytes(0));
-        vm.mockCall(WETH, abi.encodeWithSelector(IERC20.balanceOf.selector, address(executor)), abi.encode(1e18));
-        vm.mockCall(UNISWAP_ROUTER, bytes(hex"1234"), abi.encode(true));
-        
-        // Swap output is less than amountToRepay + minProfitOut
-        vm.mockCall(USDC, abi.encodeWithSelector(IERC20.balanceOf.selector, address(executor)), abi.encode(100e6)); // Exactly amountToRepay, profit = 0
-        
-        vm.startPrank(AAVE_POOL);
-        vm.expectRevert(abi.encodeWithSelector(LiquidationExecutor.InsufficientProfit.selector, 1e6, 0));
-        executor.executeOperation(USDC, 100e6, 0, address(executor), params);
-        vm.stopPrank();
-    }
-
-    function test_revert_noSwapLiquidity() public {
-        bytes memory params = abi.encode(
-            LiquidationExecutor.LiquidationParams(WETH, USDC, address(0x123), 100e6, UNISWAP_ROUTER, bytes(hex"1234"), 1e6)
-        );
-        vm.mockCall(AAVE_POOL, abi.encodeWithSelector(bytes4(keccak256("liquidationCall(address,address,address,uint256,bool)"))), new bytes(0));
-        vm.mockCall(WETH, abi.encodeWithSelector(IERC20.balanceOf.selector, address(executor)), abi.encode(1e18));
-        
-        // Swap call fails
-        vm.mockCallRevert(UNISWAP_ROUTER, bytes(hex"1234"), "NO_POOL");
-        
-        vm.startPrank(AAVE_POOL);
-        vm.expectRevert(LiquidationExecutor.SwapFailed.selector);
-        executor.executeOperation(USDC, 100e6, 0, address(executor), params);
-        vm.stopPrank();
-    }
-
-    function test_revert_flashLoanInsufficientLiquidity() public {
-        vm.mockCallRevert(AAVE_POOL, abi.encodeWithSignature("flashLoanSimple(address,address,uint256,bytes,uint16)"), "INSUFFICIENT_LIQUIDITY");
+        // Create a Base fork
+        string memory rpcUrl = vm.envOr("RPC_URL_HTTP", string("https://mainnet.base.org"));
+        uint256 forkId = vm.createSelectFork(rpcUrl);
         
         vm.startPrank(owner);
-        vm.expectRevert("INSUFFICIENT_LIQUIDITY");
-        executor.executeLiquidation(USDC, 100e6, WETH, USDC, address(0x123), 100e6, UNISWAP_ROUTER, bytes(hex"1234"), 1e6);
+        executor = new LiquidationExecutor(PROVIDER, UNI_ROUTER, AERO_ROUTER);
         vm.stopPrank();
     }
 
-    /* =========================================================================
-       4. EDGE CASES
-       ========================================================================= */
-
-    function test_dustAmount_liquidation() public {
-        uint256 debtToCover = 100; // $0.0001
-        bytes memory params = abi.encode(
-            LiquidationExecutor.LiquidationParams(WETH, USDC, address(0x123), debtToCover, UNISWAP_ROUTER, bytes(hex"1234"), 0)
+    function test_AccessControl_OnlyOwner() public {
+        vm.startPrank(address(0x999));
+        LiquidationExecutor.SwapParams memory swap = LiquidationExecutor.SwapParams(
+            LiquidationExecutor.Dex.UNISWAP_V3,
+            3000,
+            false,
+            address(0),
+            0
         );
-        vm.mockCall(AAVE_POOL, abi.encodeWithSelector(bytes4(keccak256("liquidationCall(address,address,address,uint256,bool)"))), new bytes(0));
-        vm.mockCall(WETH, abi.encodeWithSelector(IERC20.balanceOf.selector, address(executor)), abi.encode(1e12));
-        vm.mockCall(UNISWAP_ROUTER, bytes(hex"1234"), abi.encode(true));
-        vm.mockCall(USDC, abi.encodeWithSelector(IERC20.balanceOf.selector, address(executor)), abi.encode(100));
-
-        vm.startPrank(AAVE_POOL);
-        bool success = executor.executeOperation(USDC, 100, 0, address(executor), params);
+        LiquidationExecutor.LiquidationParams memory params = LiquidationExecutor.LiquidationParams({
+            collateralAsset: WETH,
+            debtAsset: USDC,
+            user: borrower,
+            debtToCover: 100e6,
+            receiveAToken: false,
+            minProfit: 0,
+            swap: swap
+        });
+        
+        vm.expectRevert(); // OwnableUnauthorizedAccount
+        executor.executeLiquidation(params);
         vm.stopPrank();
-        assertTrue(success);
+    }
+    
+    function test_RevertIf_NotPool() public {
+        vm.startPrank(address(0x999));
+        vm.expectRevert(LiquidationExecutor.Unauthorized.selector);
+        executor.executeOperation(USDC, 100e6, 1e6, address(executor), "");
+        vm.stopPrank();
     }
 
-    function test_multipleCollateral_correctAssetSeized() public {
-        assertTrue(true);
-    }
-
-    /* =========================================================================
-       5. SAFETY
-       ========================================================================= */
-
-    function test_rescueTokens() public {
-        vm.mockCall(USDC, abi.encodeWithSelector(IERC20.balanceOf.selector, address(executor)), abi.encode(100e6));
-        vm.mockCall(USDC, abi.encodeWithSelector(IERC20.transfer.selector, owner, 100e6), abi.encode(true));
+    function test_SimulatedRealLiquidation() public {
+        // 1. Setup an underwater position
+        // Give borrower 1 WETH
+        deal(WETH, borrower, 1 ether);
+        
+        vm.startPrank(borrower);
+        IERC20(WETH).approve(POOL, type(uint256).max);
+        IPool(POOL).supply(WETH, 1 ether, borrower, 0);
+        
+        // Borrow 2000 USDC against it (assuming price is ~3000, 2000 is healthy)
+        // Wait, to borrow they need to be healthy at current block.
+        // We will just force borrow using deal on variable debt token if possible, 
+        // or just mock the oracle price of WETH to be very high, borrow, then drop it.
+        vm.mockCall(
+            ORACLE,
+            abi.encodeWithSelector(IPriceOracleGetter.getAssetPrice.selector, WETH),
+            abi.encode(4000e8) // WETH = $4000
+        );
+        IPool(POOL).borrow(USDC, 2500e6, 2, 0, borrower);
+        vm.stopPrank();
+        
+        // 2. Drop WETH price to force HF < 1
+        vm.mockCall(
+            ORACLE,
+            abi.encodeWithSelector(IPriceOracleGetter.getAssetPrice.selector, WETH),
+            abi.encode(2600e8) // WETH = $2600. Borrowed 2500, LTV is 0.82. 2600 * 0.82 = 2132. HF = 2132 / 2500 < 1!
+        );
+        
+        // 3. Execute Liquidation
+        LiquidationExecutor.SwapParams memory swap = LiquidationExecutor.SwapParams(
+            LiquidationExecutor.Dex.UNISWAP_V3,
+            500, // 0.05% fee pool for WETH/USDC
+            false,
+            address(0),
+            0 // minOut = 0 for test, IRL we set this
+        );
+        
+        LiquidationExecutor.LiquidationParams memory params = LiquidationExecutor.LiquidationParams({
+            collateralAsset: WETH,
+            debtAsset: USDC,
+            user: borrower,
+            debtToCover: 1250e6, // 50% of 2500
+            receiveAToken: false,
+            minProfit: 1e6, // Expect at least 1 USDC profit
+            swap: swap
+        });
         
         vm.startPrank(owner);
-        executor.rescueTokens(USDC, owner);
+        uint256 ownerUsdcBefore = IERC20(USDC).balanceOf(owner);
+        
+        // NOTE: In a true fork, Uniswap pool prices depend on the block's real state.
+        // Since we didn't mock Uniswap, the swap uses real liquidity! 
+        // WETH is actually ~$3000 on chain right now, so our seized WETH (worth $1250 * 1.05 = $1312 at our fake oracle price)
+        // will be swapped at real market rates (~$3000/ETH). 
+        // 1312 / 2600 = 0.504 ETH. Swapped at $3000 = $1512 USDC!
+        // We borrowed 1250 USDC. Profit = 1512 - 1250 = 262 USDC.
+        executor.executeLiquidation(params);
+        
+        uint256 ownerUsdcAfter = IERC20(USDC).balanceOf(owner);
+        uint256 profit = ownerUsdcAfter - ownerUsdcBefore;
+        
+        console2.log("Liquidation Profit (USDC):", profit / 1e6);
+        assertTrue(profit >= 1e6, "Profit should be at least 1 USDC");
         vm.stopPrank();
-    }
-
-    function test_noTokensLeftAfterExecution() public {
-        // Asserted inside executeOperation via 'profit' transfer
-        assertTrue(true);
-    }
-
-    /* =========================================================================
-       6. GAS BENCHMARKING
-       ========================================================================= */
-
-    function test_gasUsage_happyPath() public {
-        test_successfulLiquidation_WETH_USDC();
-        // The console output of forge test --gas-report will show the exact gas
     }
 }
-

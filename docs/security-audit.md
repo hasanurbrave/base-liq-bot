@@ -1,25 +1,43 @@
-# Security Self-Audit: LiquidationExecutor.sol
+# Base Liquidation Bot - Threat Model & Self-Review
 
-As part of Phase 4 (Smart Contract Deployment), a systematic review of the `LiquidationExecutor` contract was conducted to guarantee absolute fund safety.
+**Date:** 2026-10-03
+**Type:** Self-Review / Threat Model
+**Status:** Phase 2 Remediation Active
 
-## Audit Checklist
+*Note: This is a self-assessment and threat model. It does not replace an independent security audit. Do not execute with high capital until verified by a third party.*
 
-| Category | Check | Status | Notes |
-|----------|-------|--------|-------|
-| **Reentrancy** | Is `executeLiquidation()` protected? | ✅ | Yes, protected by OpenZeppelin's `nonReentrant` modifier. |
-| **Reentrancy** | Can `executeOperation()` be re-entered? | ✅ | Only callable by the trusted Aave Pool contract. Any router reentrancy would revert due to `msg.sender` constraint. |
-| **Access Control** | Can non-owner call entry points? | ✅ | `executeLiquidation()`, `rescueTokens()`, and `rescueETH()` are strictly protected by `onlyOwner`. |
-| **Access Control** | Can non-Pool call the callback? | ✅ | `executeOperation()` explicitly enforces `require(msg.sender == address(aavePool))`. |
-| **Access Control** | Is initiator verified in callback? | ✅ | `executeOperation()` enforces `require(initiator == address(this))`, preventing malicious third-party flash loans from triggering logic. |
-| **Approval Hygiene** | Are approvals reset to 0 after use? | ✅ | **[FIXED]** Added `forceApprove(0)` after `liquidationCall` and `swapRouter.call` to ensure zero residual allowances. |
-| **Approval Hygiene** | Do we approve to trusted contracts only? | ✅ | `swapRouter` is dynamically provided by the `owner`. Since the `owner` is 100% trusted, approvals only go to expected DEX routers. |
-| **Token Safety** | Using `SafeERC20` for all transfers? | ✅ | Contract exclusively relies on OpenZeppelin `SafeERC20` (`safeTransfer`, `forceApprove`). |
-| **Token Safety** | Handle non-standard ERC20 (USDT)? | ✅ | Yes, `forceApprove` mitigates USDT's zero-to-non-zero allowance issue. |
-| **Fund Safety** | Contract holds 0 tokens between txs? | ✅ | Any remaining `profit` is immediately `safeTransfer`red to the `owner` before the transaction concludes. |
-| **Fund Safety** | `rescueTokens()` only callable by owner? | ✅ | Enforced via `onlyOwner`. |
-| **Delegatecall** | No `delegatecall` to untrusted contracts? | ✅ | The executor uses standard `.call(swapData)` to execute the swap, keeping the contract's storage entirely isolated. |
-| **Overflow** | All math safe (Solidity 0.8+ checks)? | ✅ | Safe by default. `unchecked` blocks are carefully scoped only where logical `require`s guarantee no underflow (e.g., `profit = debtAssetBalance - amountToRepay`). |
-| **Gas griefing** | Can a malicious token waste gas? | ✅ | The executor only interacts with Aave's whitelisted assets and router contracts determined by the `owner`. |
+## 1. Smart Contract Risks (LiquidationExecutor.sol)
 
-## Conclusion
-The `LiquidationExecutor.sol` contract contains exactly 0 unresolved vulnerabilities. It strictly follows the Principle of Least Privilege, requires zero standing token balances, and maintains complete immutability of core dependencies.
+### 1.1 Funds Loss via Flash Loan
+- **Risk:** The contract requests a flash loan but fails to swap enough collateral to repay the principal + fee, causing a reversion.
+- **Mitigation:** The `executeOperation` strictly requires `currentBalance >= amountToRepay + liqParams.minProfit`. If the swap outcome is insufficient (e.g., due to high slippage), the transaction safely reverts on-chain. Only the gas fee is lost, protecting the principal capital.
+
+### 1.2 Access Control
+- **Risk:** Malicious actors call `executeLiquidation` to drain funds or `executeOperation` to spoof a flash loan callback.
+- **Mitigation:** 
+  - `executeLiquidation` uses OpenZeppelin's `onlyOwner` modifier.
+  - `executeOperation` asserts `msg.sender == address(POOL)` and `initiator == address(this)`.
+
+### 1.3 Asset Sweeping
+- **Risk:** Dust or unexpected tokens get stuck in the executor.
+- **Mitigation:** The contract natively sweeps the `debtAsset` and `collateralAsset` back to the owner immediately after the flash loan concludes. `rescueTokens` and `rescueETH` are also available for manual sweeps.
+
+## 2. Execution Layer Risks (Off-Chain)
+
+### 2.1 Gas Estimation Failure / Reverts
+- **Risk:** The bot estimates gas successfully against a dummy state, but reverts in reality, wasting gas.
+- **Mitigation (Phase 2):** Gas is estimated against the exact `calldata` using the real `OWNER_ADDRESS`. Any transaction that reverts during estimation (`eth_estimateGas`) is skipped and not sent to the mempool.
+
+### 2.2 Oracle Desync
+- **Risk:** The bot triggers a liquidation based on stale off-chain prices, but the on-chain Aave oracle hasn't crossed the threshold, resulting in a revert.
+- **Mitigation:** The bot scans block-by-block. By querying the on-chain `getUserAccountData` natively, the bot relies on the exact on-chain health factor, bypassing stale off-chain math.
+
+### 2.3 RPC Latency & Rate Limits
+- **Risk:** The RPC provider rate-limits the bot during a market crash, preventing execution.
+- **Mitigation:** Multicall is used to batch health checks. `NonceManager` guarantees sequential nonces locally so transactions don't stall. A backup RPC URL can be configured.
+
+## 3. Deployment Checklist
+- [ ] Contract source verified on Basescan.
+- [ ] Wallet funded only with gas (e.g., 0.1 ETH).
+- [ ] `.env` secured and excluded from version control.
+- [ ] 24-hour shadow mode execution with 0 reverts.
