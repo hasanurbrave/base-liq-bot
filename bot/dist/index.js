@@ -47,6 +47,7 @@ const txBuilder_1 = require("./execution/txBuilder");
 const txSubmitter_1 = require("./execution/txSubmitter");
 const nonceManager_1 = require("./execution/nonceManager");
 const resultHandler_1 = require("./execution/resultHandler");
+const circuitBreaker_1 = require("./monitor/circuitBreaker");
 const logger_1 = require("./utils/logger");
 const constants_1 = require("./config/constants");
 dotenv.config();
@@ -127,6 +128,13 @@ async function main() {
         }
         catch (e) { }
     }, 10 * 60 * 1000);
+    // 3. Monitor Layer
+    const circuitBreaker = new circuitBreaker_1.CircuitBreaker({
+        maxConsecutiveReverts: 5,
+        maxDailyLossUSD: 50.00,
+        minWalletBalanceETH: 0.005
+    }, provider, wallet.address);
+    circuitBreaker.start();
     // 1. Execution Layer
     const resultHandler = new resultHandler_1.ResultHandler();
     const nonceManager = new nonceManager_1.NonceManager(provider, wallet.address);
@@ -136,7 +144,8 @@ async function main() {
         rpcUrls,
         nonceManager,
         resultHandler,
-        ethPriceUSD
+        ethPriceUSD,
+        circuitBreaker
     });
     // 2. Simulation Layer
     const gasEstimator = new gasEstimator_1.GasEstimator(provider, ethPriceUSD);
@@ -179,6 +188,10 @@ async function main() {
     };
     process.on('SIGINT', shutdown);
     process.on('SIGTERM', shutdown);
+    circuitBreaker.on('halt', (reason) => {
+        logger_1.logger.error('System', `HALTING BOT: ${reason}`);
+        shutdown();
+    });
     // --- Queue Processor ---
     const processQueue = async () => {
         if (isProcessingQueue || isShuttingDown)

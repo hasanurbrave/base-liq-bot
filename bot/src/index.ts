@@ -16,6 +16,7 @@ import { TxSubmitter } from './execution/txSubmitter';
 import { NonceManager } from './execution/nonceManager';
 import { ResultHandler } from './execution/resultHandler';
 
+import { CircuitBreaker } from './monitor/circuitBreaker';
 import { logger } from './utils/logger';
 import { LIQUIDATION_EXECUTOR, POOL } from './config/constants';
 
@@ -110,6 +111,14 @@ async function main() {
     } catch (e) {}
   }, 10 * 60 * 1000);
 
+  // 3. Monitor Layer
+  const circuitBreaker = new CircuitBreaker({
+    maxConsecutiveReverts: 5,
+    maxDailyLossUSD: 50.00,
+    minWalletBalanceETH: 0.005
+  }, provider, wallet.address);
+  circuitBreaker.start();
+
   // 1. Execution Layer
   const resultHandler = new ResultHandler();
   const nonceManager = new NonceManager(provider as any, wallet.address);
@@ -120,7 +129,8 @@ async function main() {
     rpcUrls,
     nonceManager,
     resultHandler,
-    ethPriceUSD
+    ethPriceUSD,
+    circuitBreaker
   });
 
   // 2. Simulation Layer
@@ -175,6 +185,13 @@ async function main() {
 
   process.on('SIGINT', shutdown);
   process.on('SIGTERM', shutdown);
+
+  circuitBreaker.on('halt', (reason) => {
+    logger.error('System', `HALTING BOT: ${reason}`);
+    shutdown();
+  });
+
+
 
   // --- Queue Processor ---
   const processQueue = async () => {

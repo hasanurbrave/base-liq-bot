@@ -1,6 +1,7 @@
 import { ethers } from 'ethers';
 import { NonceManager } from './nonceManager';
 import { ResultHandler, ExecutionResult } from './resultHandler';
+import { CircuitBreaker } from '../monitor/circuitBreaker';
 import { ProfitDecision } from '../simulation/profitCalculator';
 import { logger } from '../utils/logger';
 import { POOL_ABI } from '../config/constants';
@@ -10,6 +11,7 @@ export interface TxSubmitterConfig {
   nonceManager: NonceManager;
   resultHandler: ResultHandler;
   ethPriceUSD: number;
+  circuitBreaker?: CircuitBreaker;
 }
 
 export class TxSubmitter {
@@ -126,7 +128,8 @@ export class TxSubmitter {
 
     if (!receipt) {
       result.status = "DROPPED";
-      // We abandon it if it's dropped (stale opportunity)
+      logger.warn('TxSubmitter', `Tx dropped (Timeout): ${txHash}`);
+      await this.config.nonceManager.syncFromChain();
     } else {
       result.blockNumber = receipt.blockNumber;
       result.gasUsed = receipt.gasUsed;
@@ -136,6 +139,7 @@ export class TxSubmitter {
         result.status = "SUCCESS";
         const grossUSD = decision.breakdown.grossRevenueUSD - decision.breakdown.flashLoanFeeUSD - decision.breakdown.swapCostUSD;
         result.profitUSD = grossUSD - result.gasCostUSD;
+        this.config.circuitBreaker?.recordSuccess();
       } else {
         result.status = "REVERTED";
         
@@ -144,6 +148,7 @@ export class TxSubmitter {
         result.revertReason = revertAnalysis.reason;
         result.isRaceLoss = revertAnalysis.isRaceLoss;
         result.raceLossGapMs = revertAnalysis.latencyGapMs;
+        this.config.circuitBreaker?.recordRevert(result.gasCostUSD);
       }
     }
 

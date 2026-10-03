@@ -103,7 +103,8 @@ class TxSubmitter {
         };
         if (!receipt) {
             result.status = "DROPPED";
-            // We abandon it if it's dropped (stale opportunity)
+            logger_1.logger.warn('TxSubmitter', `Tx dropped (Timeout): ${txHash}`);
+            await this.config.nonceManager.syncFromChain();
         }
         else {
             result.blockNumber = receipt.blockNumber;
@@ -113,6 +114,7 @@ class TxSubmitter {
                 result.status = "SUCCESS";
                 const grossUSD = decision.breakdown.grossRevenueUSD - decision.breakdown.flashLoanFeeUSD - decision.breakdown.swapCostUSD;
                 result.profitUSD = grossUSD - result.gasCostUSD;
+                this.config.circuitBreaker?.recordSuccess();
             }
             else {
                 result.status = "REVERTED";
@@ -121,6 +123,7 @@ class TxSubmitter {
                 result.revertReason = revertAnalysis.reason;
                 result.isRaceLoss = revertAnalysis.isRaceLoss;
                 result.raceLossGapMs = revertAnalysis.latencyGapMs;
+                this.config.circuitBreaker?.recordRevert(result.gasCostUSD);
             }
         }
         // 4. Log and Track
