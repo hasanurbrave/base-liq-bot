@@ -65,7 +65,8 @@ async function main() {
   }
 
   const executorCode = await provider.getCode(LIQUIDATION_EXECUTOR);
-  if (executorCode === '0x' || executorCode === '') {
+  const isDryRun = process.env.BOT_MODE === 'DRY_RUN';
+  if ((executorCode === '0x' || executorCode === '') && !isDryRun) {
     logger.error('System', `No contract code at ${LIQUIDATION_EXECUTOR}. Halting.`);
     process.exit(1);
   }
@@ -74,14 +75,16 @@ async function main() {
   const executorContract = new ethers.Contract(LIQUIDATION_EXECUTOR, EXECUTOR_ABI, provider);
   
   try {
-    const owner = await executorContract.owner();
-    if (owner.toLowerCase() !== wallet.address.toLowerCase()) {
-      logger.error('System', `Wallet ${wallet.address} is not owner of Executor (${owner}). Halting.`);
-      process.exit(1);
+    if (executorCode !== '0x' && executorCode !== '') {
+      const owner = await executorContract.owner();
+      if (owner.toLowerCase() !== wallet.address.toLowerCase()) {
+        logger.error('System', `Wallet ${wallet.address} is not owner of Executor (${owner}). Halting.`);
+        process.exit(1);
+      }
     }
   } catch (e) {
     logger.error('System', 'Failed to verify Executor owner. Halting.');
-    process.exit(1);
+    if (!isDryRun) process.exit(1);
   }
 
   const balance = await provider.getBalance(wallet.address);
