@@ -97,6 +97,7 @@ class BorrowerIndex {
                 }
             }
             this.blocksSinceLastSave++;
+            this.lastProcessedBlock = blockNumber; // CRIT-02 Fix: persist progress every block
             if (this.blocksSinceLastSave >= 100) {
                 this.saveToFile();
                 this.blocksSinceLastSave = 0;

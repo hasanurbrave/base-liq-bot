@@ -24,6 +24,9 @@ class GasEstimator {
     updateEthPrice(price) {
         this.ethPriceUSD = price;
     }
+    getEthPrice() {
+        return this.ethPriceUSD;
+    }
     async estimate(tx) {
         try {
             const start = performance.now();

@@ -1,5 +1,7 @@
-import { ethers } from 'ethers';
 import * as dotenv from 'dotenv';
+dotenv.config(); // MUST be called before any import that reads process.env (e.g. constants.ts OWNER_ADDRESS)
+
+import { ethers } from 'ethers';
 
 import { BlockListener } from './monitor/blockListener';
 import { BorrowerIndex } from './monitor/borrowerIndex';
@@ -20,7 +22,7 @@ import { CircuitBreaker } from './monitor/circuitBreaker';
 import { logger } from './utils/logger';
 import { LIQUIDATION_EXECUTOR, POOL } from './config/constants';
 
-dotenv.config();
+
 
 const BOT_MODE = process.env.BOT_MODE?.toLowerCase() === 'live' ? 'LIVE' : 'DRY_RUN';
 const IS_KILL_SWITCH = process.env.KILL_SWITCH === 'true';

@@ -60,7 +60,6 @@ contract LiquidationExecutor is FlashLoanSimpleReceiverBase, Ownable {
         address user;
         uint256 debtToCover;
         bool receiveAToken;
-        uint256 minProfit;
         SwapParams swap;
     }
 
@@ -184,8 +183,8 @@ contract LiquidationExecutor is FlashLoanSimpleReceiverBase, Ownable {
         uint256 amountToRepay = amount + premium;
         uint256 currentBalance = IERC20(asset).balanceOf(address(this));
         
-        if (currentBalance < amountToRepay + liqParams.minProfit) {
-            revert InsufficientProfit(amountToRepay + liqParams.minProfit, currentBalance);
+        if (currentBalance < amountToRepay) {
+            revert InsufficientProfit(amountToRepay, currentBalance);
         }
 
         // Record profit event
@@ -209,3 +208,4 @@ contract LiquidationExecutor is FlashLoanSimpleReceiverBase, Ownable {
     
     receive() external payable {}
 }
+

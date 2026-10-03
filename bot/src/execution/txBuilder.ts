@@ -36,60 +36,41 @@ export class TxBuilder {
       borrower,
       debtToCover,
       dex,
+      feeTier,          // CRIT-03: real winning pool fee tier
       minSwapOutput,
-      minProfitOutUSD
+      minProfitOutUSD,
+      gasUnits,         // CRIT-04: real estimated gas units
+      debtDecimals,     // CRIT-05: real token decimals
+      ethPriceUSD       // CRIT-05: live ETH price at time of evaluation
     } = decision.params;
 
     try {
-      const deadline = Math.floor(Date.now() / 1000) + 60 * 5; // 5 min deadline
-
       // Determine Dex enum (0 for UniV3, 1 for Aerodrome)
       const dexEnum = dex === 'aerodrome' ? 1 : 0;
-      
-      // Default to 3000 (0.3%) for UniV3 if not specified, though ideally it should be dynamic
-      // H-01 fix: Extract the correct fee tier from the quote. Since we don't have it in decision.params yet, 
-      // we'll default to 500 (0.05%) or 3000 (0.3%). For now 3000.
-      const feeTier = 3000; 
 
-      // Aerodrome params
+      // Aerodrome factory on Base
+      const factory = "0x420DD381b31aEf6683db6B902084cB0FFECe40Da";
       const stable = false;
-      const factory = "0x420DD381b31aEf6683db6B902084cB0FFECe40Da"; // Standard Aero factory on Base
-      
-      // Convert minProfitOutUSD to actual token units correctly using the debtAsset decimals
-      // For this step, we assume debtAsset decimals = 6 if USDC, 18 if WETH. 
-      // We will do a generic lookup or pass it from ProfitDecision.
-      // H-03 Fix: Use correct decimals. (Assuming USDC=6, WETH=18 based on token address if known, else we need to pass it).
-      // Let's assume debtAsset Decimals is passed in decision.params or lookup:
-      // For now we will rely on minSwapOutput which is already scaled appropriately from ProfitCalculator.
 
-      // Determine decimals. In a full implementation, this comes from ASSETS via decision.params
-      // For now, if debtAsset is USDC (0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913), decimals = 6. Else assume 18.
-      const debtDecimals = debtAsset.toLowerCase() === "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913" ? 6 : 18;
-      
-      // We don't have oracle price here easily, but we can assume $1 for USDC.
-      // If it's WETH, minProfitOutUSD / 3000. For simplicity, we fallback to a safe small amount if we can't derive price here.
-      // Ideally this is calculated in ProfitCalculator and passed as `minProfitOutTokens`.
-      // Let's assume we update ProfitDecision to include `minProfitOutTokens` later, for now:
-      let minProfitOutTokens = 0n;
-      if (debtDecimals === 6) {
-         minProfitOutTokens = ethers.parseUnits(minProfitOutUSD.toFixed(6), 6);
-      } else {
-         minProfitOutTokens = ethers.parseUnits((minProfitOutUSD / 3000).toFixed(18), 18); // assuming $3000/ETH fallback
-      }
+      // CRIT-05 Fix: use real debtDecimals and live ethPriceUSD for minProfit conversion
+      const minProfitOutTokens = ethers.parseUnits(
+        (minProfitOutUSD / (debtDecimals === 18 ? ethPriceUSD : 1)).toFixed(debtDecimals),
+        debtDecimals
+      );
 
       const liquidationParams = {
-        collateralAsset: collateralAsset,
-        debtAsset: debtAsset,
+        collateralAsset,
+        debtAsset,
         user: borrower,
-        debtToCover: debtToCover,
+        debtToCover,
         receiveAToken: false,
         minProfit: minProfitOutTokens,
         swap: {
-            dex: dexEnum,
-            fee: feeTier,
-            stable: stable,
-            factory: factory,
-            minOut: minSwapOutput
+          dex: dexEnum,
+          fee: feeTier,   // CRIT-03 Fix: actual winning fee tier (500 or 3000)
+          stable,
+          factory,
+          minOut: minSwapOutput
         }
       };
 
@@ -97,22 +78,15 @@ export class TxBuilder {
 
       const block = await this.config.provider.getBlock("latest");
       const baseFee = block?.baseFeePerGas || ethers.parseUnits("0.01", "gwei");
-      
-      // H-05 Fix: Dynamic maxPriorityFeePerGas based on profit
+
+      // Dynamic priority fee: up to 20% of net profit, using the live ethPriceUSD
       const netProfitUSD = decision.breakdown.netProfitUSD || 0;
-      // We are willing to spend up to 20% of our net profit on the MEV bribe/tip.
-      const maxTipUSD = netProfitUSD * 0.20;
-      // Assuming ETH = $3000 for simplicity (should be fetched dynamically).
-      const maxTipETH = maxTipUSD / 3000;
-      const maxTipWei = ethers.parseEther(maxTipETH.toFixed(18));
-      
-      // Target Gas Limit
-      const estimatedGas = decision.breakdown?.gasCostUSD ? 800000n : 800000n; // Fallback 800k
-      
-      // Tip per gas unit = maxTipWei / estimatedGas
-      let calculatedPriorityFee = maxTipWei / estimatedGas;
-      
-      // Enforce bounds: min 0.01 gwei, max 50 gwei
+      const maxTipWei = ethers.parseEther(((netProfitUSD * 0.20) / ethPriceUSD).toFixed(18));
+
+      // CRIT-04 Fix: use real gas units from estimator instead of hardcoded 800k
+      const gasLimit = (gasUnits * 125n) / 100n; // 1.25x buffer on top of real estimate
+
+      let calculatedPriorityFee = gasLimit > 0n ? maxTipWei / gasLimit : 0n;
       const minTip = ethers.parseUnits("0.01", "gwei");
       const maxTipBound = ethers.parseUnits("50", "gwei");
       if (calculatedPriorityFee < minTip) calculatedPriorityFee = minTip;
@@ -120,8 +94,6 @@ export class TxBuilder {
 
       const maxPriorityFeePerGas = calculatedPriorityFee;
       const maxFeePerGas = (baseFee * 150n) / 100n + maxPriorityFeePerGas;
-
-      const gasLimit = 800000n; 
 
       const nonce = await this.config.nonceManager.getNextNonce();
 
@@ -133,11 +105,10 @@ export class TxBuilder {
         gasLimit,
         nonce,
         chainId: (await this.config.provider.getNetwork()).chainId,
-        type: 2 // EIP-1559
+        type: 2
       };
 
-      logger.info('TxBuilder', `Constructed TX for ${borrower}. Nonce: ${nonce}. Gas Limit: ${gasLimit}`);
-      
+      logger.info('TxBuilder', `Constructed TX for ${borrower}. Nonce: ${nonce}. Gas Limit: ${gasLimit}. Tip: ${ethers.formatUnits(maxPriorityFeePerGas, 'gwei')} gwei`);
       return txRequest;
 
     } catch (error: any) {

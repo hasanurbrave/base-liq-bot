@@ -33,8 +33,9 @@ var __importStar = (this && this.__importStar) || (function () {
     };
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
-const ethers_1 = require("ethers");
 const dotenv = __importStar(require("dotenv"));
+dotenv.config(); // MUST be called before any import that reads process.env (e.g. constants.ts OWNER_ADDRESS)
+const ethers_1 = require("ethers");
 const blockListener_1 = require("./monitor/blockListener");
 const borrowerIndex_1 = require("./monitor/borrowerIndex");
 const healthScanner_1 = require("./monitor/healthScanner");
@@ -50,7 +51,6 @@ const resultHandler_1 = require("./execution/resultHandler");
 const circuitBreaker_1 = require("./monitor/circuitBreaker");
 const logger_1 = require("./utils/logger");
 const constants_1 = require("./config/constants");
-dotenv.config();
 const BOT_MODE = process.env.BOT_MODE?.toLowerCase() === 'live' ? 'LIVE' : 'DRY_RUN';
 const IS_KILL_SWITCH = process.env.KILL_SWITCH === 'true';
 async function main() {

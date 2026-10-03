@@ -25,14 +25,18 @@ export interface ProfitDecision {
     collateralAsset: string;
     debtAsset: string;
     borrower: string;
-  healthFactor: number;
+    healthFactor: number;
     debtToCover: bigint;
     flashLoanAsset: string;
     flashLoanAmount: bigint;
     swapRoute: string[];
     dex: string;
+    feeTier: number;      // CRIT-03: exact winning pool fee tier (500 or 3000)
     minSwapOutput: bigint;
     minProfitOutUSD: number;
+    gasUnits: bigint;     // CRIT-04: actual estimated gas units from GasEstimator
+    debtDecimals: number; // CRIT-05: real decimals for min-profit token conversion
+    ethPriceUSD: number;  // CRIT-05: live ETH price at time of evaluation
   };
   reason: string;
 }
@@ -140,10 +144,10 @@ export class ProfitCalculator {
     const expectedCollateralBigInt = ethers.parseUnits(expectedCollateralTokens.toFixed(cAsset.decimals), cAsset.decimals);
 
     // Swap simulator: We swap expectedCollateral back to Debt asset to repay flash loan
-    // Or we swap to USDC. Assuming flash loan was in Debt Asset, we must swap Collateral -> Debt
     let swapCostUSD = 0;
     let swapRoute: string[] = [];
     let dex = "";
+    let feeTier = 3000; // default
     let minSwapOutput = 0n;
 
     if (cAsset.address !== dAsset.address) {
@@ -158,35 +162,36 @@ export class ProfitCalculator {
       swapCostUSD = (expectedOutWithoutSlippage - actualOutTokens) * priceOfDebtAsset;
       swapRoute = quote.route!;
       dex = quote.dex!;
+      feeTier = quote.poolFee ?? 3000; // CRIT-03 Fix: use actual winning fee tier
       minSwapOutput = (quote.outputAmount! * 995n) / 1000n; // 0.5% max slippage applied to quote
     } else {
       // Same asset (e.g. USDC debt, USDC collateral). No swap needed.
       minSwapOutput = expectedCollateralBigInt;
     }
 
-    // Gas Estimation
-    const EXECUTOR_ABI = [
-      "function executeLiquidation(tuple(address collateralAsset, address debtAsset, address user, uint256 debtToCover, bool receiveAToken, tuple(uint8 dex, uint24 fee, bool stable, address factory, uint256 minOut) swap) params) external"
+    // Gas Estimation — use minProfit=0 for estimation to get unbiased gas units
+    const EXECUTOR_ABI_GAS = [
+      "function executeLiquidation(tuple(address collateralAsset, address debtAsset, address user, uint256 debtToCover, bool receiveAToken, uint256 minProfit, tuple(uint8 dex, uint24 fee, bool stable, address factory, uint256 minOut) swap) params) external"
     ];
-    const executorIface = new ethers.Interface(EXECUTOR_ABI);
+    const executorIface = new ethers.Interface(EXECUTOR_ABI_GAS);
     
-    const liquidationParams = {
+    const liquidationParamsForGas = {
         collateralAsset: cAsset.address,
         debtAsset: dAsset.address,
         user: borrower,
-        healthFactor: hf,
         debtToCover: debtToCoverBigInt,
         receiveAToken: false,
+        minProfit: 0n, // Use 0 so estimateGas doesn't revert on profit check
         swap: {
             dex: dex === 'aerodrome' ? 1 : 0,
-            fee: 3000,
+            fee: feeTier, // CRIT-03 Fix: pass real fee tier
             stable: false,
             factory: "0x420DD381b31aEf6683db6B902084cB0FFECe40Da",
-            minOut: minSwapOutput
+            minOut: 0n   // Use 0 for gas estimation only
         }
     };
     
-    const calldata = executorIface.encodeFunctionData("executeLiquidation", [liquidationParams]);
+    const calldata = executorIface.encodeFunctionData("executeLiquidation", [liquidationParamsForGas]);
 
     const tx = {
       to: LIQUIDATION_EXECUTOR,
@@ -196,8 +201,10 @@ export class ProfitCalculator {
 
     const gasEst = await this.gasEstimator.estimate(tx);
     let gasCostUSD = 0;
+    let gasUnits = 800000n; // safe fallback
     if (gasEst.success) {
        gasCostUSD = gasEst.totalCostUSD || 0;
+       gasUnits = gasEst.l2GasUnits || 800000n; // CRIT-04 Fix: propagate real gas units
     } else {
        return { decision: "ABORT_ERROR", breakdown: this.emptyBreakdown(), reason: `GAS_ESTIMATE_FAILED: ${gasEst.reason}` };
     }
@@ -242,8 +249,12 @@ export class ProfitCalculator {
         flashLoanAmount: debtToCoverBigInt,
         swapRoute,
         dex,
+        feeTier,                          // CRIT-03 Fix: pass real fee tier
         minSwapOutput,
-        minProfitOutUSD: THRESHOLDS.MIN_PROFIT_USD
+        minProfitOutUSD: THRESHOLDS.MIN_PROFIT_USD,
+        gasUnits,                         // CRIT-04 Fix: pass real gas units
+        debtDecimals: dAsset.decimals,    // CRIT-05 Fix: real decimals
+        ethPriceUSD: this.gasEstimator.getEthPrice() // CRIT-05 Fix: live ETH price
       } : undefined,
       reason
     };

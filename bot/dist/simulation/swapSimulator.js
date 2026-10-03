@@ -56,11 +56,15 @@ class SwapSimulator {
         }
     }
     async quoteAerodrome(tokenIn, tokenOut, amountIn, stable = false) {
+        // CRIT-06 Fix: Aerodrome V2 on Base requires 4-field route: {from, to, stable, factory}
+        const AERODROME_FACTORY = "0x420DD381b31aEf6683db6B902084cB0FFECe40Da";
         try {
-            // Basic 1-hop route without factory
-            const route = [{ from: tokenIn, to: tokenOut, stable }];
-            const amounts = await this.aeroRouter["getAmountsOut(uint256,(address,address,bool)[])"](amountIn, route);
+            const route = [{ from: tokenIn, to: tokenOut, stable, factory: AERODROME_FACTORY }];
+            const amounts = await this.aeroRouter["getAmountsOut(uint256,(address,address,bool,address)[])"](amountIn, route);
             const outputAmount = amounts[amounts.length - 1];
+            if (!outputAmount || outputAmount === 0n) {
+                return { success: false, reason: "NO_POOL" };
+            }
             return {
                 success: true,
                 inputAsset: tokenIn,
@@ -71,12 +75,11 @@ class SwapSimulator {
                 priceImpactPercent: 0.2,
                 route: [tokenIn, tokenOut],
                 dex: "aerodrome",
-                poolFee: stable ? 1 : 30, // 0.01% or 0.3% typically
+                poolFee: stable ? 1 : 30,
                 slippageEstimate: 0.5
             };
         }
         catch (e) {
-            // fallback if it needs factory
             return { success: false, reason: "NO_POOL" };
         }
     }

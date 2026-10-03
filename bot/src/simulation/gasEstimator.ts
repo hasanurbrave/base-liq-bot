@@ -39,6 +39,10 @@ export class GasEstimator {
     this.ethPriceUSD = price;
   }
 
+  public getEthPrice(): number {
+    return this.ethPriceUSD;
+  }
+
   public async estimate(tx: ethers.TransactionRequest): Promise<GasEstimateResult> {
     try {
       const start = performance.now();
